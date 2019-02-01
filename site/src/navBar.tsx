@@ -5,9 +5,11 @@ import {
   Image,
   Menu,
   Sidebar,
-  Responsive
+  Responsive,
+  Button
 } from "semantic-ui-react";
 import logo from "./logo.png"
+import { Link } from "react-router-dom";
 
 const NavBarMobile = ({
   children,
@@ -61,7 +63,7 @@ const NavBarDesktop = (
     }
 ) => (
     <Menu fixed="top" inverted>
-      <Menu.Item>
+      <Menu.Item onClick={() => console.log('test')}>
         <Image size="mini" src={logo} />
       </Menu.Item>
       <NavBarLeftDesktop leftItems={leftItems} />
@@ -76,7 +78,9 @@ const NavBarChildren = ({ children }: { children: ReactNode }) => (
 const NavBarRight = ({ rightItems }: { rightItems?: Array<object> }) => {
   let items;
   if (rightItems) {
-    items = rightItems.map((item: object) => <Menu.Item {...item} />);
+    items = rightItems.map((item: object) => (
+      <Menu.Item {...item} />
+    ));
     return (
       <Menu.Menu position="right">
         {items}
@@ -114,7 +118,9 @@ const NavBarLeftMobile = ({ leftItems }: { leftItems?: Array<object> }) => {
 const NavBarLeftDesktop = ({ leftItems }: { leftItems?: Array<object> }) => {
   let items;
   if (leftItems) {
-    items = leftItems.map((item: object) => <Menu.Item {...item} />);
+    items = leftItems.map((item: object) => (
+      <Menu.Item {...item} />
+    ));
   }
   else {
     items = (
