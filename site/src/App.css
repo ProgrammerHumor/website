@@ -1,5 +1,42 @@
 .App {
   text-align: center;
 }
-
-
+.Welcome {
+  background-color: rgb(26, 26, 134);
+  width: 90%;
+  padding-bottom: 3%;
+  padding-top: 1%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.WelcomeCom {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.bottomHalfOfPage {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgb(26, 26, 134);
+}
+.bottomHalfComL {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: left;
+  background-image: url("redditImage.png");
+  background-size: 100%;
+}
+.bottomHalfComR {
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 25%;
+}
+.redditImage {
+  max-width: 45%;
+}

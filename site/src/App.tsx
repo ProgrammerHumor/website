@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
-import NavBar from './navBar';
+import React, { Component } from "react";
+import "./App.css";
+import NavBar from "./navBar";
 const leftItems = [
   { as: "a", content: "AboutUs", key: "AboutUs" },
   { as: "a", content: "Hackathon", key: "Hackathon" },
@@ -12,12 +12,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <NavBar leftItems={leftItems}>
-          </NavBar>
+          <NavBar leftItems={leftItems} />
         </header>
       </div>
     );
   }
 }
-
 export default App;
