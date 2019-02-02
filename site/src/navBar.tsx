@@ -8,8 +8,7 @@ import {
   Responsive,
   Button
 } from "semantic-ui-react";
-import logo from "./logo.png"
-import { Link } from "react-router-dom";
+import logo from "./logo.png";
 
 const NavBarMobile = ({
   children,
@@ -18,6 +17,7 @@ const NavBarMobile = ({
   onToggle,
   rightItems,
   visible,
+  changeRoute
 }:
   {
     children: ReactNode,
@@ -26,6 +26,7 @@ const NavBarMobile = ({
     onPusherClick: Function,
     onToggle: (event: React.MouseEvent<HTMLAnchorElement>) => void,
     visible: boolean,
+    changeRoute: Function;
   }) => (
     <Sidebar.Pushable>
       <Sidebar
@@ -41,7 +42,7 @@ const NavBarMobile = ({
       </Sidebar>
       <Sidebar.Pusher dimmed={visible} onClick={onPusherClick} style={{ minHeight: "100vh" }}>
         <Menu fixed="top" inverted>
-          <Menu.Item>
+          <Menu.Item onClick={() => { changeRoute('/Home') }}>
             <Image size="mini" src={logo} />
           </Menu.Item>
           <Menu.Item onClick={onToggle} position="right">
@@ -56,20 +57,24 @@ const NavBarMobile = ({
 
 
 const NavBarDesktop = (
-  { leftItems, rightItems }:
+  { leftItems, rightItems, changeRoute }:
     {
       leftItems?: Array<object>,
-      rightItems?: Array<object>
+      rightItems?: Array<object>,
+      changeRoute: Function,
     }
-) => (
+) => {
+  // console.log(changeRoute);
+  return (
     <Menu fixed="top" inverted>
-      <Menu.Item onClick={() => console.log('test')}>
+      <Menu.Item onClick={() => { changeRoute('/Home') }}>
         <Image size="mini" src={logo} />
       </Menu.Item>
       <NavBarLeftDesktop leftItems={leftItems} />
       <NavBarRight rightItems={rightItems} />
     </Menu>
-  );
+  )
+};
 
 const NavBarChildren = ({ children }: { children: ReactNode }) => (
   <Container style={{ marginTop: "5em" }}>{children}</Container>
@@ -136,9 +141,10 @@ const NavBarLeftDesktop = ({ leftItems }: { leftItems?: Array<object> }) => {
   )
 }
 
-export default class NavBar extends Component<{ leftItems?: Array<object>, rightItems?: Array<object> }, {}> {
+export default class NavBar extends Component<{ leftItems?: Array<object>, rightItems?: Array<object>, changeRoute: Function }, {}> {
   state = {
-    visible: false
+    visible: false,
+    direction: null,
   };
 
   handlePusher = () => {
@@ -150,9 +156,8 @@ export default class NavBar extends Component<{ leftItems?: Array<object>, right
   handleToggle = () => this.setState({ visible: !this.state.visible });
 
   render() {
-    const { children, leftItems, rightItems }: { children?: ReactNode, leftItems?: Array<object>, rightItems?: Array<object> } = this.props;
+    const { children, leftItems, rightItems, changeRoute }: { children?: ReactNode, leftItems?: Array<object>, rightItems?: Array<object>, changeRoute: Function } = this.props;
     const { visible } = this.state;
-
     return (
       <div>
         <Responsive {...Responsive.onlyMobile}>
@@ -162,12 +167,13 @@ export default class NavBar extends Component<{ leftItems?: Array<object>, right
             onToggle={this.handleToggle}
             rightItems={rightItems}
             visible={visible}
+            changeRoute={changeRoute}
           >
             <NavBarChildren>{children}</NavBarChildren>
           </NavBarMobile>
         </Responsive>
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-          <NavBarDesktop leftItems={leftItems} rightItems={rightItems} />
+          <NavBarDesktop leftItems={leftItems} rightItems={rightItems} changeRoute={changeRoute} />
           <NavBarChildren>{children}</NavBarChildren>
         </Responsive>
       </div>
