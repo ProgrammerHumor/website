@@ -11,8 +11,13 @@ class footerCom extends React.Component<footerComProps, footerComState> {
   render() {
     return (
       <div className="footer">
+        <button className="ui small secondary button">Facebook</button>
+        <button className="ui secondary button ">Instagram</button>
+        <button className="ui secondary button ">Reddit</button>
         <img src={image} />
-        <h2 className="ui medium inverted header">Hi</h2>
+        <button className="ui secondary button ">Merch</button>
+        <button className="ui small secondary button ">Hackathon</button>
+        <button className="ui secondary button ">About Us</button>
       </div>
     );
   }
