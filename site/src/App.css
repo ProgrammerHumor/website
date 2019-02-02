@@ -2,8 +2,11 @@
   text-align: center;
 }
 .Welcome {
-  background-image: url("redditImage.png");
-  opacity: 0.99;
+  /* background-image: url("redditImage.png"); */
+  background-color: rgb(24, 24, 24);
+  border-style: solid;
+  border-color: rgb(118, 123, 179);
+  opacity: 0.9;
   background-size: 100%;
   width: 90%;
   padding-bottom: 6.5%;
@@ -33,7 +36,9 @@
   padding-right: 5%;
   padding-bottom: 10%;
   padding-top: 10%;
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(24, 24, 24);
+  border-style: solid;
+  border-color: rgb(118, 123, 179);
   opacity: 0.85;
   background-size: 100%;
   margin-right: 5%;
@@ -46,7 +51,9 @@
   padding-right: 5%;
   padding-bottom: 10%;
   padding-top: 4%;
-  background-color: rgb(2, 2, 172);
+  background-color: rgb(24, 24, 24);
+  border-style: solid;
+  border-color: rgb(118, 123, 179);
   opacity: 0.85;
   background-size: 100%;
   text-align: center;
@@ -60,4 +67,23 @@
   background-position: left, center, right;
   background-size: 33.33%;
   background-repeat: no-repeat, no-repeat, no-repeat;
+}
+.forFooter {
+  background-color: rgb(24, 24, 24);
+  padding-top: 2.2%;
+  padding-bottom: 2.2%;
+  padding-left: 1%;
+  border-style: solid;
+  border-color: rgb(118, 123, 179);
+}
+.footer img {
+  width: 4%;
+  height: 4%;
+  top: 2%;
+  left: 2%;
+  opacity: 0.5%;
+}
+.footer {
+  display: flex;
+  justify-content: left;
 }
