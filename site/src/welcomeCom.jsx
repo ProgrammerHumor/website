@@ -6,7 +6,7 @@ class welcome extends Component {
   };
   render() {
     return (
-      <div className="Welcome">
+      <div>
         <h1 className="ui massive inverted header">
           Welcome To Programing Humour!
         </h1>
