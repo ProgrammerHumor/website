@@ -70,6 +70,7 @@
   background-size: 33.33%;
   background-repeat: no-repeat, no-repeat, no-repeat;
   height: 100%;
+  padding-bottom: 2%;
 }
 .forFooter {
   background-color: rgb(24, 24, 24);
@@ -79,6 +80,7 @@
   border-style: solid;
   border-color: rgb(118, 123, 179);
   margin: auto;
+  margin-top: 1%;
 }
 .footer img {
   width: 4%;
