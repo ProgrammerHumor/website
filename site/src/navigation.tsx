@@ -55,8 +55,8 @@ class Navigation extends Component<any> {
     ];
     return (
       <div className="App">
-        <header className="App-header">
-          <div>
+        <header className="forNavBar">
+          <div className="forNavBar">
             <NavBar leftItems={leftItems} changeRoute={this.changeRoute} />
           </div>
         </header>
