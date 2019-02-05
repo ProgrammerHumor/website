@@ -27,40 +27,40 @@ const NavBarMobile = ({
   visible: boolean;
   changeRoute: Function;
 }) => (
-  <Sidebar.Pushable>
-    <Sidebar
-      as={Menu}
-      animation="overlay"
-      icon="labeled"
-      inverted
-      vertical
-      visible={visible}
-      direction="top"
-    >
-      <NavBarLeftMobile leftItems={leftItems} />
-    </Sidebar>
-    <Sidebar.Pusher
-      dimmed={visible}
-      onClick={onPusherClick}
-      style={{ minHeight: "100vh" }}
-    >
-      <Menu fixed="top" inverted>
-        <Menu.Item
-          onClick={() => {
-            changeRoute("/Home");
-          }}
-        >
-          <Image size="mini" src={logo} />
-        </Menu.Item>
-        <Menu.Item onClick={onToggle} position="right">
-          <Icon name="sidebar" />
-        </Menu.Item>
-        <NavBarRight rightItems={rightItems} />
-      </Menu>
-      {children}
-    </Sidebar.Pusher>
-  </Sidebar.Pushable>
-);
+    <Sidebar.Pushable>
+      <Sidebar
+        as={Menu}
+        animation="overlay"
+        icon="labeled"
+        inverted
+        vertical
+        visible={visible}
+        direction="top"
+      >
+        <NavBarLeftMobile leftItems={leftItems} />
+      </Sidebar>
+      <Sidebar.Pusher
+        dimmed={visible}
+        onClick={onPusherClick}
+        style={{ mineight: "100vh" }}
+      >
+        <Menu fixed="top" inverted>
+          <Menu.Item
+            onClick={() => {
+              changeRoute("/Home");
+            }}
+          >
+            <Image size="mini" src={logo} />
+          </Menu.Item>
+          <Menu.Item onClick={onToggle} position="right">
+            <Icon name="sidebar" />
+          </Menu.Item>
+          <NavBarRight rightItems={rightItems} />
+        </Menu>
+        {children}
+      </Sidebar.Pusher>
+    </Sidebar.Pushable>
+  );
 
 const NavBarDesktop = ({
   leftItems,
@@ -128,7 +128,7 @@ export default class NavBar extends Component<
     changeRoute: Function;
   },
   {}
-> {
+  > {
   state = {
     visible: false,
     direction: null

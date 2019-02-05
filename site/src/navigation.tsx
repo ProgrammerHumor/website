@@ -5,9 +5,7 @@ import Footer from "./footer";
 import HomePage from "./homePage";
 import { withRouter, Route, Redirect, Switch } from "react-router-dom";
 
-const Home = () => {
-  return <HomePage />;
-};
+const Home = () => <HomePage />;
 const AboutUs = () => <></>;
 const Hackathon = () => <></>;
 const Blog = () => <></>;
@@ -55,21 +53,20 @@ class Navigation extends Component<any> {
     ];
     return (
       <div className="App">
-        <header className="forNavBar">
-          <div className="forNavBar">
-            <NavBar leftItems={leftItems} changeRoute={this.changeRoute} />
-          </div>
-        </header>
-        <Switch>
-          <Route path="/Home" exact component={Home} />
-          <Route path="/AboutUs" component={AboutUs} />
-          <Route path="/Hackathon" component={Hackathon} />
-          <Route path="/Blog" component={Hackathon} />
-          <Route path="/Merch" component={Hackathon} />
-          <Route path="/" render={() => <Redirect to="/Home" />} />
-        </Switch>
-        <div className="forFooter">
-          <Footer />
+        <div className="forNavBar">
+          <NavBar leftItems={leftItems} changeRoute={this.changeRoute}>
+            <Switch>
+              <Route path="/Home" exact component={Home} />
+              <Route path="/AboutUs" component={AboutUs} />
+              <Route path="/Hackathon" component={Hackathon} />
+              <Route path="/Blog" component={Hackathon} />
+              <Route path="/Merch" component={Hackathon} />
+              <Route path="/" render={() => <Redirect to="/Home" />} />
+            </Switch>
+            <div className="forFooter">
+              <Footer />
+            </div>
+          </NavBar>
         </div>
       </div>
     );
