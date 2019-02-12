@@ -22,7 +22,7 @@ class homePage extends React.Component<homePageProps, homePageState> {
     return (
       <div>
         <Responsive {...Responsive.onlyComputer}>
-          <div className="pageBackground">
+          <div className="HomePageBackground">
             <div className="Welcome">
               <div className="WelcomeCom">
                 <WelcomeCom />
@@ -39,21 +39,20 @@ class homePage extends React.Component<homePageProps, homePageState> {
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
-          <div className="pageBackground">
-            <div className="Welcome">
-              <div className="WelcomeCom">
-                <WelcomeCom />
-              </div>
+          <div className="Welcome">
+            <div className="mobileWelcomeText">
+              <WelcomeCom />
             </div>
-            {/* <div className="mobileBottomHalfOfPage"> */}
-            <div className="mobileBottomHalfComL">
-              <RedditLink />
-            </div>
-            <div className="mobileBottomHalfComR">
-              <CurrentEvent />
-            </div>
-            {/* </div> */}
           </div>
+          {/* <div className="mobileBottomHalfOfPage"> */}
+          <div className="mobileBottomHalfComL">
+            <RedditLink />
+          </div>
+          <div className="mobileBottomHalfComR">
+            <CurrentEvent />
+          </div>
+          {/* </div> */}
+          <Responsive {...Responsive.onlyMobile} />
         </Responsive>
       </div>
     );

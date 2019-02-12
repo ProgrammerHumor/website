@@ -10,7 +10,7 @@ import {
   Responsive,
   Button
 } from "semantic-ui-react";
-
+import logo from "./logo.png";
 export interface footerComProps {}
 
 export interface footerComState {}
@@ -25,7 +25,9 @@ class footerCom extends React.Component<footerComProps, footerComState> {
             <Button icon color="black" size="large">
               <i className="reddit large icon" />
             </Button>
-            <img src={image} style={{ width: "15%", height: "4%" }} />
+            <Button icon color="black" size="large">
+              <i className="github large icon" />
+            </Button>
             <Button icon color="black" size="large">
               <i className="discord large icon" />
             </Button>
@@ -42,7 +44,9 @@ class footerCom extends React.Component<footerComProps, footerComState> {
             <Button icon color="black" size="large">
               <i className="github large icon" />
             </Button>
-            <img src={image} />
+            <Button circular size="medium" img color={"black"}>
+              <Image size="mini" src={logo} circular />
+            </Button>
             <Button small color="black">
               Merch
             </Button>

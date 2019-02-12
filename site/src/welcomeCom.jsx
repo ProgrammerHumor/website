@@ -10,7 +10,7 @@ class welcome extends Component {
         <h1 className="ui massive inverted header">
           Welcome To Programing Humour!
         </h1>
-        <h4 className="ui inverted header">{text}</h4>
+        <h4 className="ui inverted medium header">{text}</h4>
       </div>
     );
   }
