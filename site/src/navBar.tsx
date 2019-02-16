@@ -18,62 +18,73 @@ const NavBarMobile = ({
   rightItems,
   visible,
   changeRoute
-}:
-  {
-    children: ReactNode,
-    leftItems?: Array<object>,
-    rightItems?: Array<object>,
-    onPusherClick: Function,
-    onToggle: (event: React.MouseEvent<HTMLAnchorElement>) => void,
-    visible: boolean,
-    changeRoute: Function;
-  }) => (
-    <Sidebar.Pushable>
-      <Sidebar
-        as={Menu}
-        animation="overlay"
-        icon="labeled"
-        inverted
-        vertical
-        visible={visible}
-        direction="top"
-      >
-        <NavBarLeftMobile leftItems={leftItems} />
-      </Sidebar>
-      <Sidebar.Pusher dimmed={visible} onClick={onPusherClick} style={{ minHeight: "100vh" }}>
-        <Menu fixed="top" inverted>
-          <Menu.Item onClick={() => { changeRoute('/Home') }}>
-            <Image size="mini" src={logo} />
-          </Menu.Item>
-          <Menu.Item onClick={onToggle} position="right">
-            <Icon name="sidebar" />
-          </Menu.Item>
-          <NavBarRight rightItems={rightItems} />
-        </Menu>
-        {children}
-      </Sidebar.Pusher>
-    </Sidebar.Pushable>
-  );
+}: {
+  children: ReactNode;
+  leftItems?: Array<object>;
+  rightItems?: Array<object>;
+  onPusherClick: Function;
+  onToggle: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+  visible: boolean;
+  changeRoute: Function;
+}) => (
+  <Sidebar.Pushable>
+    <Sidebar
+      as={Menu}
+      animation="overlay"
+      icon="labeled"
+      inverted
+      vertical
+      visible={visible}
+      direction="top"
+    >
+      <NavBarLeftMobile leftItems={leftItems} />
+    </Sidebar>
+    <Sidebar.Pusher
+      dimmed={visible}
+      onClick={onPusherClick}
+      style={{ mineight: "100vh" }}
+    >
+      <Menu fixed="top" inverted>
+        <Menu.Item
+          onClick={() => {
+            changeRoute("/Home");
+          }}
+        >
+          <Image size="mini" src={logo} />
+        </Menu.Item>
+        <Menu.Item onClick={onToggle} position="right">
+          <Icon name="sidebar" />
+        </Menu.Item>
+        <NavBarRight rightItems={rightItems} />
+      </Menu>
+      {children}
+    </Sidebar.Pusher>
+  </Sidebar.Pushable>
+);
 
-
-const NavBarDesktop = (
-  { leftItems, rightItems, changeRoute }:
-    {
-      leftItems?: Array<object>,
-      rightItems?: Array<object>,
-      changeRoute: Function,
-    }
-) => {
+const NavBarDesktop = ({
+  leftItems,
+  rightItems,
+  changeRoute
+}: {
+  leftItems?: Array<object>;
+  rightItems?: Array<object>;
+  changeRoute: Function;
+}) => {
   // console.log(changeRoute);
   return (
     <Menu fixed="top" inverted>
-      <Menu.Item onClick={() => { changeRoute('/Home') }}>
+      <Menu.Item
+        onClick={() => {
+          changeRoute("/Home");
+        }}
+      >
         <Image size="mini" src={logo} />
       </Menu.Item>
       <NavBarLeftDesktop leftItems={leftItems} />
       <NavBarRight rightItems={rightItems} />
     </Menu>
-  )
+  );
 };
 
 const NavBarChildren = ({ children }: { children: ReactNode }) => (
@@ -83,68 +94,44 @@ const NavBarChildren = ({ children }: { children: ReactNode }) => (
 const NavBarRight = ({ rightItems }: { rightItems?: Array<object> }) => {
   let items;
   if (rightItems) {
-    items = rightItems.map((item: object) => (
-      <Menu.Item {...item} />
-    ));
-    return (
-      <Menu.Menu position="right">
-        {items}
-      </Menu.Menu>
-    )
+    items = rightItems.map((item: object) => <Menu.Item {...item} />);
+    return <Menu.Menu position="right">{items}</Menu.Menu>;
+  } else {
+    return <>{items}</>;
   }
-  else {
-    return (
-      <>
-        {items}
-      </>
-    );
-  }
-}
+};
 
 const NavBarLeftMobile = ({ leftItems }: { leftItems?: Array<object> }) => {
   let items;
   if (leftItems) {
     items = leftItems.map((item: object) => <Menu.Item {...item} />);
+  } else {
+    items = <Menu.Menu>{items}</Menu.Menu>;
   }
-  else {
-    items = (
-      <Menu.Menu>
-        {items}
-      </Menu.Menu>
-    )
-  }
-  return (
-    <>
-      {items}
-    </>
-  )
-}
+  return <>{items}</>;
+};
 
 const NavBarLeftDesktop = ({ leftItems }: { leftItems?: Array<object> }) => {
   let items;
   if (leftItems) {
-    items = leftItems.map((item: object) => (
-      <Menu.Item {...item} />
-    ));
+    items = leftItems.map((item: object) => <Menu.Item {...item} />);
+  } else {
+    items = <Menu.Menu>{items}</Menu.Menu>;
   }
-  else {
-    items = (
-      <Menu.Menu>
-        {items}
-      </Menu.Menu>
-    )
-  }
-  return (
-    <Menu.Menu>
-      {items}
-    </Menu.Menu>
-  )
-}
+  return <Menu.Menu>{items}</Menu.Menu>;
+};
 
-export default class NavBar extends Component<{ leftItems?: Array<object>, rightItems?: Array<object>, changeRoute: Function }, {}> {
+export default class NavBar extends Component<
+  {
+    leftItems?: Array<object>;
+    rightItems?: Array<object>;
+    changeRoute: Function;
+  },
+  {}
+> {
   state = {
     visible: false,
-    direction: null,
+    direction: null
   };
 
   handlePusher = () => {
@@ -156,7 +143,17 @@ export default class NavBar extends Component<{ leftItems?: Array<object>, right
   handleToggle = () => this.setState({ visible: !this.state.visible });
 
   render() {
-    const { children, leftItems, rightItems, changeRoute }: { children?: ReactNode, leftItems?: Array<object>, rightItems?: Array<object>, changeRoute: Function } = this.props;
+    const {
+      children,
+      leftItems,
+      rightItems,
+      changeRoute
+    }: {
+      children?: ReactNode;
+      leftItems?: Array<object>;
+      rightItems?: Array<object>;
+      changeRoute: Function;
+    } = this.props;
     const { visible } = this.state;
     return (
       <div>
@@ -173,7 +170,11 @@ export default class NavBar extends Component<{ leftItems?: Array<object>, right
           </NavBarMobile>
         </Responsive>
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
-          <NavBarDesktop leftItems={leftItems} rightItems={rightItems} changeRoute={changeRoute} />
+          <NavBarDesktop
+            leftItems={leftItems}
+            rightItems={rightItems}
+            changeRoute={changeRoute}
+          />
           <NavBarChildren>{children}</NavBarChildren>
         </Responsive>
       </div>
