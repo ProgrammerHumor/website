@@ -1,5 +1,8 @@
 import * as React from "react";
 import { Component } from "react";
+import "./WelcomeStyle.css";
+import "./BottomHalfOfPageStyle.css";
+import "./FooterStyle.css";
 import WelcomeCom from "./welcomeCom";
 import RedditLink from "./redditLink";
 import CurrentEvent from "./currentEvent";
@@ -13,11 +16,12 @@ import {
   Button
 } from "semantic-ui-react";
 
-export interface homePageProps {}
+interface homePageProps {}
 export interface homePageState {}
 
 class homePage extends React.Component<homePageProps, homePageState> {
   state = {};
+
   render() {
     return (
       <div>

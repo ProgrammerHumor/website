@@ -3,11 +3,12 @@ import "./App.css";
 import NavBar from "./navBar";
 import Footer from "./footer";
 import HomePage from "./homePage";
+import About from "./AboutUs";
 import { withRouter, Route, Redirect, Switch } from "react-router-dom";
 import { Responsive } from "semantic-ui-react";
 
 const Home = () => <HomePage />;
-const AboutUs = () => <></>;
+const AboutUs = () => <About />;
 const Hackathon = () => <></>;
 const Blog = () => <></>;
 const Merch = () => <></>;
@@ -68,7 +69,7 @@ class Navigation extends Component<any> {
             </NavBar>
           </div>
           <div className="forFooter">
-            <Footer />
+            <Footer changeRoute={this.changeRoute} />
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
@@ -82,10 +83,10 @@ class Navigation extends Component<any> {
                 <Route path="/Merch" component={Hackathon} />
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
+              <div className="forFooterBackground">
+                <Footer changeRoute={this.changeRoute} />
+              </div>
             </NavBar>
-          </div>
-          <div className="forFooter">
-            <Footer />
           </div>
         </Responsive>
       </div>

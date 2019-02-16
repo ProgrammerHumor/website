@@ -1,0 +1,47 @@
+.AboutUsWholePage {
+  width: 100% !important;
+  display: flex;
+  justify-content: left;
+}
+.forAdminProfileText {
+  text-align: left !important;
+}
+.forAdminProfileImg img {
+  margin-right: 0%;
+  width: 75%;
+  height: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: white;
+  border-style: solid;
+}
+.forAdminProfileTextArea {
+  border-color: white;
+  border-style: solid;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5%;
+}
+.forAdminProfileTitle {
+  margin-top: 3.5%;
+  text-align: left;
+}
+.forAdminProfileContiner {
+  display: flex;
+  justify-content: center;
+}
+.forAdminProfile {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.forAdminProfileIcons {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+}
+.forAdminProfileIcon {
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}

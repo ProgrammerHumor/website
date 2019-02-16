@@ -11,12 +11,25 @@ import {
   Button
 } from "semantic-ui-react";
 import logo from "./logo.png";
-export interface footerComProps {}
+
+interface footerComProps {
+  changeRoute: Function;
+}
 
 export interface footerComState {}
 
 class footerCom extends React.Component<footerComProps, footerComState> {
   state = {};
+
+  goHome = () => {
+    this.props.changeRoute("/Home");
+  };
+  goAboutUs = () => {
+    this.props.changeRoute("/AboutUs");
+  };
+  goHackathon = () => {
+    this.props.changeRoute("/Hackathon");
+  };
   render() {
     return (
       <div>
@@ -35,27 +48,65 @@ class footerCom extends React.Component<footerComProps, footerComState> {
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
           <div className="footer">
-            <Button icon color="black" size="large">
-              <i className="reddit large icon" />
-            </Button>
-            <Button icon color="black" size="large">
-              <i className="discord large icon" />
-            </Button>
-            <Button icon color="black" size="large">
-              <i className="github large icon" />
-            </Button>
-            <Button circular size="medium" img color={"black"}>
-              <Image size="mini" src={logo} circular />
-            </Button>
-            <Button small color="black">
-              Merch
-            </Button>
-            <Button small color="black">
-              Hackathon
-            </Button>
-            <Button small color="black">
-              About Us
-            </Button>
+            <Button.Group fluid widths="7" className="fiftyWidth">
+              <Button
+                icon
+                color="black"
+                size="massive"
+                className="footerButton"
+              >
+                <i className="reddit large icon" />
+              </Button>
+              <Button
+                icon
+                color="black"
+                size="massive"
+                className="footerButton"
+              >
+                <i className="discord large icon" />
+              </Button>
+              <Button
+                icon
+                color="black"
+                size="massive"
+                className="footerButton"
+              >
+                <i className="github large icon" />
+              </Button>
+              <Button
+                size="medium"
+                img
+                color={"black"}
+                className="footerButton"
+                onClick={this.goHome}
+              >
+                <Image size="mini" src={logo} circular />
+              </Button>
+              <Button
+                small
+                color="black"
+                className="footerButton"
+                onClick={this.goHome}
+              >
+                Merch
+              </Button>
+              <Button
+                small
+                color="black"
+                className="footerButton"
+                onClick={this.goHackathon}
+              >
+                Hackathon
+              </Button>
+              <Button
+                small
+                color="black"
+                className="footerButton"
+                onClick={this.goAboutUs}
+              >
+                About Us
+              </Button>
+            </Button.Group>
           </div>
         </Responsive>
       </div>

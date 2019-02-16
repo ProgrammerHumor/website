@@ -32,6 +32,7 @@ const NavBarMobile = ({
       as={Menu}
       animation="overlay"
       icon="labeled"
+      className="navBar"
       inverted
       vertical
       visible={visible}
@@ -44,7 +45,7 @@ const NavBarMobile = ({
       onClick={onPusherClick}
       style={{ mineight: "100vh" }}
     >
-      <Menu fixed="top" inverted>
+      <Menu fixed="top" className="navBar" inverted>
         <Menu.Item
           onClick={() => {
             changeRoute("/Home");
@@ -73,7 +74,7 @@ const NavBarDesktop = ({
 }) => {
   // console.log(changeRoute);
   return (
-    <Menu fixed="top" inverted>
+    <Menu fixed="top" inverted className="navBar">
       <Menu.Item
         onClick={() => {
           changeRoute("/Home");
@@ -88,7 +89,9 @@ const NavBarDesktop = ({
 };
 
 const NavBarChildren = ({ children }: { children: ReactNode }) => (
-  <Container style={{ marginTop: "5em" }}>{children}</Container>
+  <Container fluid style={{ marginTop: "5em" }}>
+    {children}
+  </Container>
 );
 
 const NavBarRight = ({ rightItems }: { rightItems?: Array<object> }) => {
