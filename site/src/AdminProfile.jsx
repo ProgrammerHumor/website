@@ -12,14 +12,42 @@ import {
 } from "semantic-ui-react";
 
 class AdminProfile extends Component {
-  state = {};
+  state = {
+    highlighted: false,
+    classNameForImg: "",
+    classNameForText: "forAdminProfileTitle forAdminProfileTextArea"
+  };
+
+  highlightBox = () => {
+    this.setState({
+      classNameForImg: "forHighlightingPerson",
+      classNameForText:
+        "forAdminProfileTitle forAdminProfileTextArea forHighlightingPerson"
+    });
+    console.log(this.state.highlighted);
+  };
+  unHighlightBox = () => {
+    this.setState({
+      classNameForImg: "",
+      classNameForText: "forAdminProfileTitle forAdminProfileTextArea"
+    });
+    console.log(this.state.highlighted);
+  };
   render() {
     return (
-      <div>
-        <div className="forAdminProfileImg">
-          <Image src={this.props.img} />
+      <div className="paddingForDiv">
+        <div
+          onMouseLeave={this.unHighlightBox}
+          onMouseOver={this.highlightBox}
+          className="forAdminProfileImg"
+        >
+          <Image className={this.state.classNameForImg} src={this.props.img} />
         </div>
-        <div className="forAdminProfileTitle forAdminProfileTextArea">
+        <div
+          onMouseLeave={this.unHighlightBox}
+          onMouseOver={this.highlightBox}
+          className={this.state.classNameForText}
+        >
           <Header inverted size="large">
             {this.props.name}
           </Header>

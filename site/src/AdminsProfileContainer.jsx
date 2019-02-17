@@ -8,6 +8,7 @@ class AdminsProflies extends Component {
   state = {
     profileRow1: [
       {
+        key: 0,
         title: "Celebrity",
         img: img3,
         name: "Andy Samberg",
@@ -16,6 +17,7 @@ class AdminsProflies extends Component {
         redditLink: "https://www.google.com/"
       },
       {
+        key: 1,
         title: "Celebrity",
         img: img3,
         name: "Andy Samberg",
@@ -24,6 +26,7 @@ class AdminsProflies extends Component {
         redditLink: "https://www.google.com/"
       },
       {
+        key: 2,
         title: "Celebrity",
         img: img3,
         name: "Andy Samberg",
@@ -32,6 +35,7 @@ class AdminsProflies extends Component {
         redditLink: "https://www.google.com/"
       },
       {
+        key: 3,
         title: "Celebrity",
         img: img3,
         name: "Andy Samberg",
@@ -40,6 +44,7 @@ class AdminsProflies extends Component {
         redditLink: "https://www.google.com/"
       },
       {
+        key: 4,
         title: "Celebrity",
         img: img3,
         name: "Andy Samberg",
