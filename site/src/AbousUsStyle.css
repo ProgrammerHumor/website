@@ -68,6 +68,11 @@
   color: red !important;
 }
 .forHighlightingPerson {
-  border-color: white;
-  border-style: solid;
+  /* border-color: white;
+  border-style: solid; */
+  /* box-shadow: 1px 1px 1px 1px grey; */
+  outline-color: white;
+  outline-style: solid;
+  margin-left: 9.9%;
+  margin-right: 9%;
 }

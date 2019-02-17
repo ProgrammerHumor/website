@@ -83,10 +83,10 @@ class Navigation extends Component<any> {
                 <Route path="/Merch" component={Hackathon} />
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
-              <div className="forFooterBackground">
-                <Footer changeRoute={this.changeRoute} />
-              </div>
             </NavBar>
+            <div className="forFooterBackground">
+              <Footer changeRoute={this.changeRoute} />
+            </div>
           </div>
         </Responsive>
       </div>

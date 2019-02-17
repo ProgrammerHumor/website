@@ -14,39 +14,31 @@ import {
 class AdminProfile extends Component {
   state = {
     highlighted: false,
-    classNameForImg: "",
-    classNameForText: "forAdminProfileTitle forAdminProfileTextArea"
+    classNameForDiv: "paddingForDiv"
   };
 
   highlightBox = () => {
     this.setState({
-      classNameForImg: "forHighlightingPerson",
-      classNameForText:
-        "forAdminProfileTitle forAdminProfileTextArea forHighlightingPerson"
+      classNameForDiv: "forHighlightingPerson"
     });
     console.log(this.state.highlighted);
   };
   unHighlightBox = () => {
     this.setState({
-      classNameForImg: "",
-      classNameForText: "forAdminProfileTitle forAdminProfileTextArea"
+      classNameForDiv: "paddingForDiv"
     });
     console.log(this.state.highlighted);
   };
   render() {
     return (
-      <div className="paddingForDiv">
-        <div
-          onMouseLeave={this.unHighlightBox}
-          onMouseOver={this.highlightBox}
-          className="forAdminProfileImg"
-        >
-          <Image className={this.state.classNameForImg} src={this.props.img} />
+      <div className={this.state.classNameForDiv}>
+        <div onMouseLeave={this.unHighlightBox} onMouseOver={this.highlightBox}>
+          <Image className="forHighlightingPersonImage" src={this.props.img} />
         </div>
         <div
           onMouseLeave={this.unHighlightBox}
           onMouseOver={this.highlightBox}
-          className={this.state.classNameForText}
+          className="forAdminProfileTitle forAdminProfileTextArea"
         >
           <Header inverted size="large">
             {this.props.name}
