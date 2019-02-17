@@ -8,15 +8,45 @@ class AdminsProflies extends Component {
   state = {
     profileRow1: [
       {
-        title: "Andy Samberg",
+        title: "Celebrity",
         img: img3,
-        text:
-          "Hi I am a famous movie star. I have nothing to do with this website, but I am hilarious"
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/"
       },
-      { title: "Henry Morris", img: img2, text: "hi" },
-      { title: "First Last", img: img1, text: "hi" },
-      { title: "title4", img: img1, text: "hi" },
-      { title: "title5", img: img1, text: "hi" }
+      {
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/"
+      },
+      {
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/"
+      },
+      {
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/"
+      },
+      {
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/"
+      }
     ]
   };
   render() {
@@ -24,7 +54,14 @@ class AdminsProflies extends Component {
       <div className="AboutUsWholePage">
         {this.state.profileRow1.map(pro => (
           <div className="forAdminProfile">
-            <AdminProfile title={pro.title} img={pro.img} text={pro.text} />
+            <AdminProfile
+              title={pro.title}
+              img={pro.img}
+              name={pro.name}
+              gitHubLink={pro.gitHubLink}
+              discordLink={pro.discordLink}
+              redditLink={pro.redditLink}
+            />
           </div>
         ))}
       </div>

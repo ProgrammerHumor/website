@@ -2,6 +2,7 @@
   width: 100% !important;
   display: flex;
   justify-content: left;
+  margin-bottom: 2%;
 }
 .forAdminProfileText {
   text-align: left !important;
@@ -24,8 +25,9 @@
   padding: 1.5%;
 }
 .forAdminProfileTitle {
-  margin-top: 3.5%;
-  text-align: left;
+  /* margin-top: 3.5%; */
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.5);
 }
 .forAdminProfileContiner {
   display: flex;
@@ -39,9 +41,26 @@
 .forAdminProfileIcons {
   display: flex;
   justify-content: center;
-  padding: 3%;
+  padding: 10%;
 }
 .forAdminProfileIcon {
-  margin-right: 0.5%;
-  margin-left: 0.5%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.forBackgroundOfAdminProfile {
+  background-color: lightgrey;
+}
+.forAboutUsBottomHalfOfPage {
+  /* border-color: white;
+  border-style: solid; */
+}
+.forAboutUsTitle {
+  font-size: 250% !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+.forAboutUsPara {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 2%;
+  color: red !important;
 }

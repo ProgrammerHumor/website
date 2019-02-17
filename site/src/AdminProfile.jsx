@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./AbousUsStyle.css";
-
 import {
   Container,
   Icon,
@@ -22,23 +21,47 @@ class AdminProfile extends Component {
         </div>
         <div className="forAdminProfileTitle forAdminProfileTextArea">
           <Header inverted size="large">
-            {this.props.title}
+            {this.props.name}
           </Header>
           <div>
-            <Header inverted>{this.props.text}</Header>
+            <Header color="grey">{this.props.title}</Header>
           </div>
           <div className="forAdminProfileIcons">
             <div className="forAdminProfileIcon">
-              <Icon
-                color="instagram"
-                className="inverted instagram large icon"
-              />
+              <Button
+                icon
+                circular
+                inverted
+                size="small"
+                target="_blank"
+                href={this.props.redditLink}
+              >
+                <Icon className="reddit large icon" />
+              </Button>
             </div>
             <div className="forAdminProfileIcon">
-              <Icon color="discord" className="inverted discord large icon" />
+              <Button
+                icon
+                circular
+                inverted
+                size="small"
+                target="_blank"
+                href={this.props.discordLink}
+              >
+                <Icon className="discord large icon" />
+              </Button>
             </div>
             <div className="forAdminProfileIcon">
-              <Icon color="github" className="inverted github large icon" />
+              <Button
+                icon
+                circular
+                inverted
+                size="small"
+                target="_blank"
+                href={this.props.gitHubLink}
+              >
+                <Icon className="github large icon" />
+              </Button>
             </div>
           </div>
         </div>
