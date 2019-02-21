@@ -38,8 +38,14 @@ class footerCom extends React.Component<footerComProps, footerComState> {
   goHackathon = () => {
     this.props.changeRoute("/Hackathon");
   };
-  goToSomething = () => {
-    console.log("Hi");
+  goToReddit = () => {
+    window.location.href = "https://www.reddit.com/r/ProgrammerHumor/";
+  };
+  goToDiscord = () => {
+    window.location.href = "https://discordapp.com/activity";
+  };
+  goToGithub = () => {
+    window.location.href = "https://github.com/";
   };
   forMouseOverDiscord = () => {
     this.setState({
@@ -114,7 +120,7 @@ class footerCom extends React.Component<footerComProps, footerComState> {
               <i
                 onMouseOver={this.forMouseOverReddit}
                 onMouseLeave={this.forLeaveOverReddit}
-                onClick={this.goToSomething}
+                onClick={this.goToReddit}
                 className={
                   this.state.iconStyleReddit + this.state.iconOverStyleReddit
                 }
@@ -124,7 +130,7 @@ class footerCom extends React.Component<footerComProps, footerComState> {
               <i
                 onMouseOver={this.forMouseOverDiscord}
                 onMouseLeave={this.forLeaveOverDiscord}
-                onClick={this.goToSomething}
+                onClick={this.goToDiscord}
                 className={
                   this.state.iconStyleDiscord + this.state.iconOverStyleDiscord
                 }
@@ -134,7 +140,7 @@ class footerCom extends React.Component<footerComProps, footerComState> {
               <i
                 onMouseOver={this.forMouseOverGithub}
                 onMouseLeave={this.forLeaveOverGithub}
-                onClick={this.goToSomething}
+                onClick={this.goToGithub}
                 className={
                   this.state.iconStyleGithub + this.state.iconOverStyleGithub
                 }
