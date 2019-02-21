@@ -21,9 +21,9 @@ export interface footerComState {}
 
 class footerCom extends React.Component<footerComProps, footerComState> {
   state = {
-    iconStyleDiscord: "discord huge icon",
-    iconStyleReddit: "reddit huge icon",
-    iconStyleGithub: "github huge icon",
+    iconStyleDiscord: "discord big icon",
+    iconStyleReddit: "reddit big icon",
+    iconStyleGithub: "github big icon",
     iconOverStyleDiscord: "",
     iconOverStyleReddit: "",
     iconOverStyleGithub: ""
@@ -109,11 +109,6 @@ class footerCom extends React.Component<footerComProps, footerComState> {
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
-          <div className="forFollowUsDiv">
-            <Header size="large" className="forFollowUsFont" color="grey">
-              By Programers, For Programers
-            </Header>
-          </div>
           <div className="footer">
             {/* <Button.Group className="fiftyWidth"> */}
             <div className="footerButton">
@@ -179,6 +174,11 @@ class footerCom extends React.Component<footerComProps, footerComState> {
                 About Us
               </Button> */}
             {/* </Button.Group> */}
+          </div>
+          <div className="forFollowUsDiv">
+            <Header size="medium" className="forFollowUsFont" color="grey">
+              By Programers, For Programers
+            </Header>
           </div>
         </Responsive>
       </div>
