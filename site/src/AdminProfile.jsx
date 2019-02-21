@@ -15,7 +15,8 @@ class AdminProfile extends Component {
   state = {
     highlighted: false,
     classNameForDiv: "paddingForDiv",
-    paraToDisplay: ""
+    paraToDisplay: "",
+    clickedIsTure: false
   };
 
   highlightBox = () => {
@@ -32,9 +33,17 @@ class AdminProfile extends Component {
     //console.log(this.state.highlighted);
   };
   whenClicked = () => {
-    this.setState({
-      paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd"
-    });
+    if (!this.state.clickedIsTure) {
+      this.setState({
+        paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
+        clickedIsTure: true
+      });
+    } else {
+      this.setState({
+        paraToDisplay: "",
+        clickedIsTure: false
+      });
+    }
   };
   render() {
     return (

@@ -21,9 +21,9 @@ export interface footerComState {}
 
 class footerCom extends React.Component<footerComProps, footerComState> {
   state = {
-    iconStyleDiscord: "discord big icon",
-    iconStyleReddit: "reddit big icon",
-    iconStyleGithub: "github big icon",
+    iconStyleDiscord: "discord inverted big icon",
+    iconStyleReddit: "reddit inverted big icon",
+    iconStyleGithub: "github inverted big icon",
     iconOverStyleDiscord: "",
     iconOverStyleReddit: "",
     iconOverStyleGithub: ""
