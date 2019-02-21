@@ -68,9 +68,7 @@
 .redditImage {
   max-width: 45%;
 }
-.fiftyWidth {
-  height: 5% !important;
-}
+
 .pageBackground {
   /* background-image: url(memeBrain.jpg), url(memeDodge.jpg), url(memeSweat.jpg);
   background-position: left, center, right;
@@ -82,17 +80,20 @@
   height: 100%;
   width: 100% !important;
   padding-top: 2%;
-  padding-bottom: 6.8%;
+  padding-bottom: 8.2%;
 }
 .MobilePageBackground {
   /* background-image: url(memeBrain.jpg), url(memeDodge.jpg), url(memeSweat.jpg);
   background-position: left, center, right;
   background-size: 33.33%;
   background-repeat: no-repeat, no-repeat, no-repeat; */
-  background-image: radial-gradient(white, rgb(118, 123, 179));
+  /* background-image: radial-gradient(white, rgb(118, 123, 179)); */
+  background-image: url("./prism.png");
+  background-repeat: repeat;
   height: 100%;
   width: 100% !important;
   padding-bottom: 2%;
+  padding-bottom: 15.5%;
 }
 
 /* .forFooter {

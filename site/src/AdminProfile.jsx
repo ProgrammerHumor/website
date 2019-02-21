@@ -14,37 +14,50 @@ import {
 class AdminProfile extends Component {
   state = {
     highlighted: false,
-    classNameForDiv: "paddingForDiv"
+    classNameForDiv: "paddingForDiv",
+    paraToDisplay: ""
   };
 
   highlightBox = () => {
     this.setState({
       classNameForDiv: "forHighlightingPerson"
     });
-    console.log(this.state.highlighted);
+    //console.log(this.state.highlighted);
   };
   unHighlightBox = () => {
     this.setState({
-      classNameForDiv: "paddingForDiv"
+      classNameForDiv: "paddingForDiv",
+      paraToDisplay: ""
     });
-    console.log(this.state.highlighted);
+    //console.log(this.state.highlighted);
+  };
+  whenClicked = () => {
+    this.setState({
+      paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd"
+    });
   };
   render() {
     return (
-      <div className={this.state.classNameForDiv}>
-        <div onMouseLeave={this.unHighlightBox} onMouseOver={this.highlightBox}>
+      <div
+        className={this.state.classNameForDiv}
+        onClick={this.whenClicked}
+        onMouseLeave={this.unHighlightBox}
+        onMouseOver={this.highlightBox}
+      >
+        <div>
           <Image className="forHighlightingPersonImage" src={this.props.img} />
         </div>
-        <div
-          onMouseLeave={this.unHighlightBox}
-          onMouseOver={this.highlightBox}
-          className="forAdminProfileTitle forAdminProfileTextArea"
-        >
+        <div className="forAdminProfileTitle forAdminProfileTextArea">
           <Header inverted size="large">
             {this.props.name}
           </Header>
           <div>
             <Header color="grey">{this.props.title}</Header>
+          </div>
+          <div>
+            <Header size="medium" inverted>
+              {this.state.paraToDisplay}
+            </Header>
           </div>
           <div className="forAdminProfileIcons">
             <div className="forAdminProfileIcon">

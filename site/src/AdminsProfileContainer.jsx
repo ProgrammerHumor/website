@@ -14,7 +14,9 @@ class AdminsProflies extends Component {
         name: "Andy Samberg",
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/"
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       },
       {
         key: 1,
@@ -23,7 +25,9 @@ class AdminsProflies extends Component {
         name: "Andy Samberg",
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/"
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       },
       {
         key: 2,
@@ -32,7 +36,9 @@ class AdminsProflies extends Component {
         name: "Andy Samberg",
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/"
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       },
       {
         key: 3,
@@ -41,7 +47,9 @@ class AdminsProflies extends Component {
         name: "Andy Samberg",
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/"
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       },
       {
         key: 4,
@@ -50,25 +58,100 @@ class AdminsProflies extends Component {
         name: "Andy Samberg",
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/"
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+      }
+    ],
+    profileRow2: [
+      {
+        key: 0,
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+      },
+      {
+        key: 1,
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+      },
+      {
+        key: 2,
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+      },
+      {
+        key: 3,
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+      },
+      {
+        key: 4,
+        title: "Celebrity",
+        img: img3,
+        name: "Andy Samberg",
+        discordLink: "https://www.google.com/",
+        gitHubLink: "https://www.google.com/",
+        redditLink: "https://www.google.com/",
+        paraAboutSelf:
+          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       }
     ]
   };
   render() {
     return (
-      <div className="AboutUsWholePage">
-        {this.state.profileRow1.map(pro => (
-          <div className="forAdminProfile">
-            <AdminProfile
-              title={pro.title}
-              img={pro.img}
-              name={pro.name}
-              gitHubLink={pro.gitHubLink}
-              discordLink={pro.discordLink}
-              redditLink={pro.redditLink}
-            />
-          </div>
-        ))}
+      <div>
+        <div className="AboutUsWholePage">
+          {this.state.profileRow1.map(pro => (
+            <div className="forAdminProfile">
+              <AdminProfile
+                title={pro.title}
+                img={pro.img}
+                name={pro.name}
+                gitHubLink={pro.gitHubLink}
+                discordLink={pro.discordLink}
+                redditLink={pro.redditLink}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="AboutUsWholePage">
+          {this.state.profileRow2.map(pro => (
+            <div className="forAdminProfile">
+              <AdminProfile
+                title={pro.title}
+                img={pro.img}
+                name={pro.name}
+                gitHubLink={pro.gitHubLink}
+                discordLink={pro.discordLink}
+                redditLink={pro.redditLink}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     );
   }

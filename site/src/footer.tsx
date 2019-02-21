@@ -8,7 +8,8 @@ import {
   Menu,
   Sidebar,
   Responsive,
-  Button
+  Button,
+  Header
 } from "semantic-ui-react";
 import logo from "./logo.png";
 
@@ -19,7 +20,14 @@ interface footerComProps {
 export interface footerComState {}
 
 class footerCom extends React.Component<footerComProps, footerComState> {
-  state = {};
+  state = {
+    iconStyleDiscord: "discord huge icon",
+    iconStyleReddit: "reddit huge icon",
+    iconStyleGithub: "github huge icon",
+    iconOverStyleDiscord: "",
+    iconOverStyleReddit: "",
+    iconOverStyleGithub: ""
+  };
 
   goHome = () => {
     this.props.changeRoute("/Home");
@@ -30,57 +38,115 @@ class footerCom extends React.Component<footerComProps, footerComState> {
   goHackathon = () => {
     this.props.changeRoute("/Hackathon");
   };
+  goToSomething = () => {
+    console.log("Hi");
+  };
+  forMouseOverDiscord = () => {
+    this.setState({
+      iconOverStyleDiscord: " blue"
+    });
+  };
+  forMouseOverGithub = () => {
+    this.setState({
+      iconOverStyleGithub: " blue"
+    });
+  };
+  forMouseOverReddit = () => {
+    this.setState({
+      iconOverStyleReddit: " blue"
+    });
+  };
+  forLeaveOverDiscord = () => {
+    this.setState({
+      iconOverStyleDiscord: ""
+    });
+  };
+  forLeaveOverGithub = () => {
+    this.setState({
+      iconOverStyleGithub: ""
+    });
+  };
+  forLeaveOverReddit = () => {
+    this.setState({
+      iconOverStyleReddit: ""
+    });
+  };
   render() {
     return (
       <div>
         <Responsive {...Responsive.onlyMobile}>
           <div className="mobileFooter">
-            <Button icon color="black" size="large">
+            <Button
+              href="https://www.google.ca"
+              icon
+              color="black"
+              size="large"
+            >
               <i className="reddit large icon" />
             </Button>
-            <Button icon color="black" size="large">
+            <Button
+              href="https://www.google.ca"
+              icon
+              color="black"
+              size="large"
+            >
               <i className="github large icon" />
             </Button>
-            <Button icon color="black" size="large">
+            <Button
+              href="https://www.google.ca"
+              icon
+              color="black"
+              size="large"
+            >
               <i className="discord large icon" />
             </Button>
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
+          <div className="forFollowUsDiv">
+            <Header size="large" className="forFollowUsFont" color="grey">
+              By Programers, For Programers
+            </Header>
+          </div>
           <div className="footer">
-            <Button.Group fluid widths="7" className="fiftyWidth">
-              <Button
-                icon
-                color="black"
-                size="massive"
-                className="footerButton"
-              >
-                <i className="reddit large icon" />
-              </Button>
-              <Button
-                icon
-                color="black"
-                size="massive"
-                className="footerButton"
-              >
-                <i className="discord large icon" />
-              </Button>
-              <Button
-                icon
-                color="black"
-                size="massive"
-                className="footerButton"
-              >
-                <i className="github large icon" />
-              </Button>
-              <Button
-                size="medium"
-                img
+            {/* <Button.Group className="fiftyWidth"> */}
+            <div className="footerButton">
+              <i
+                onMouseOver={this.forMouseOverReddit}
+                onMouseLeave={this.forLeaveOverReddit}
+                onClick={this.goToSomething}
+                className={
+                  this.state.iconStyleReddit + this.state.iconOverStyleReddit
+                }
+              />
+            </div>
+            <div className="footerButton">
+              <i
+                onMouseOver={this.forMouseOverDiscord}
+                onMouseLeave={this.forLeaveOverDiscord}
+                onClick={this.goToSomething}
+                className={
+                  this.state.iconStyleDiscord + this.state.iconOverStyleDiscord
+                }
+              />
+            </div>
+            <div className="footerButton">
+              <i
+                onMouseOver={this.forMouseOverGithub}
+                onMouseLeave={this.forLeaveOverGithub}
+                onClick={this.goToSomething}
+                className={
+                  this.state.iconStyleGithub + this.state.iconOverStyleGithub
+                }
+              />
+            </div>
+
+            {/* <Button
+                className="footerButtonForImage"
                 color={"black"}
-                className="footerButton"
                 onClick={this.goHome}
               >
-                <Image size="mini" src={logo} circular />
+                <Image className="footerImg" src={logo} />
               </Button>
               <Button
                 small
@@ -105,8 +171,8 @@ class footerCom extends React.Component<footerComProps, footerComState> {
                 onClick={this.goAboutUs}
               >
                 About Us
-              </Button>
-            </Button.Group>
+              </Button> */}
+            {/* </Button.Group> */}
           </div>
         </Responsive>
       </div>

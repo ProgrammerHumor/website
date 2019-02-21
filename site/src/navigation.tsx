@@ -67,9 +67,9 @@ class Navigation extends Component<any> {
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>
-          </div>
-          <div className="forFooter">
-            <Footer changeRoute={this.changeRoute} />
+            <div className="forFooterBackgroundMobile">
+              <Footer changeRoute={this.changeRoute} />
+            </div>
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
