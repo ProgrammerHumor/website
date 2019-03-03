@@ -16,7 +16,7 @@ class AboutUsWords extends Component {
     return (
       <div>
         <Responsive {...Responsive.onlyComputer}>
-          <div className="forAboutUsBottomHalfOfPage">
+          <div >
             <h1 className=" inverted ui header large forAboutUsTitle">
               For Programers, By Programers
             </h1>
@@ -31,11 +31,11 @@ class AboutUsWords extends Component {
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
-          <div className="forAboutUsBottomHalfOfPage">
-            <h1 className=" inverted ui header large forAboutUsTitle">
+          <div>
+            <h2 className=" inverted ui header small forAboutUsTitleMobile">
               For Programers, By Programers
-            </h1>
-            <div className="forAboutUsPara">
+            </h2>
+            <div className="forAboutUsParaMobile">
               <Header color="grey" size="medium">
                 This will be where you can say what the page is all about and
                 stuff or whatever this can be deleted its just my first idea.

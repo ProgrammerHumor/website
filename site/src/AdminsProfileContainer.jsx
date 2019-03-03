@@ -3,6 +3,7 @@ import AdminProfile from "./AdminProfile";
 import img1 from "./logo.png";
 import img2 from "./BackgroundPattern.png";
 import img3 from "./AndySamberg.jpg";
+import { Responsive } from "semantic-ui-react";
 
 class AdminsProflies extends Component {
   state = {
@@ -124,9 +125,40 @@ class AdminsProflies extends Component {
   render() {
     return (
       <div>
-        <div className="AboutUsWholePage">
+        <Responsive {...Responsive.onlyComputer}>
+          <div className="AboutUsWholePage">
+            {this.state.profileRow1.map(pro => (
+              <div className="forAdminProfile">
+                <AdminProfile
+                  title={pro.title}
+                  img={pro.img}
+                  name={pro.name}
+                  gitHubLink={pro.gitHubLink}
+                  discordLink={pro.discordLink}
+                  redditLink={pro.redditLink}
+                />
+              </div>
+            ))}
+          </div>
+          <div className="AboutUsWholePage">
+            {this.state.profileRow2.map(pro => (
+              <div className="forAdminProfile">
+                <AdminProfile
+                  title={pro.title}
+                  img={pro.img}
+                  name={pro.name}
+                  gitHubLink={pro.gitHubLink}
+                  discordLink={pro.discordLink}
+                  redditLink={pro.redditLink}
+                  isMobile={false}
+                />
+              </div>
+            ))}
+          </div>
+        </Responsive>
+        <Responsive {...Responsive.onlyMobile}>
           {this.state.profileRow1.map(pro => (
-            <div className="forAdminProfile">
+            <div className="mobileAdminContainer">
               <AdminProfile
                 title={pro.title}
                 img={pro.img}
@@ -134,13 +166,12 @@ class AdminsProflies extends Component {
                 gitHubLink={pro.gitHubLink}
                 discordLink={pro.discordLink}
                 redditLink={pro.redditLink}
+                isMobile={true}
               />
             </div>
           ))}
-        </div>
-        <div className="AboutUsWholePage">
           {this.state.profileRow2.map(pro => (
-            <div className="forAdminProfile">
+            <div className="mobileAdminContainer">
               <AdminProfile
                 title={pro.title}
                 img={pro.img}
@@ -148,10 +179,11 @@ class AdminsProflies extends Component {
                 gitHubLink={pro.gitHubLink}
                 discordLink={pro.discordLink}
                 redditLink={pro.redditLink}
+                isMobile={true}
               />
             </div>
           ))}
-        </div>
+        </Responsive>
       </div>
     );
   }

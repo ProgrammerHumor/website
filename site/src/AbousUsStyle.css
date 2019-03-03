@@ -9,6 +9,7 @@
 .paddingForDiv {
   margin-left: 10%;
   margin-right: 10%;
+  /* position: static; */
 }
 .forAdminProfileImg img {
   margin-right: 0%;
@@ -40,11 +41,12 @@
   display: flex;
   justify-content: center;
   flex: 1;
+  margin-bottom: 1%;
 }
 .forAdminProfileIcons {
   display: flex;
   justify-content: center;
-  padding: 10%;
+  padding: 6%;
 }
 .forAdminProfileIcon {
   margin-right: 5%;
@@ -62,7 +64,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 .forAboutUsTitleMobile {
-  font-size: 200% !important;
+  font-size: 220% !important;
   font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 .forAboutUsPara {
@@ -71,12 +73,40 @@
   margin-bottom: 2%;
   color: red !important;
 }
+.forAboutUsParaMobile {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2%;
+  color: red !important;
+}
 .forHighlightingPerson {
   /* border-color: white;
   border-style: solid; */
   /* box-shadow: 1px 1px 1px 1px grey; */
-  border-color: white;
-  border-style: solid;
-  margin-left: 9.9%;
-  margin-right: 9.9%;
+  /* margin-left: 10%;
+  margin-right: 10%; */
+  max-width: 16.5%;
+  max-height: 13.5%;
+  position: absolute;
+  /* border-color: white;
+  border-style: solid; */
+  /* border-top: white solid;
+  border-bottom: white solid;
+  border-left: white solid;
+  border-right: white solid; */
+  /* margin-left: 9.9%;
+  margin-right: 9.9%; */
+}
+.HighlightImage {
+  border-top: white solid;
+  border-left: white solid;
+  border-right: white solid;
+}
+.HighlightOtherHalfOfAdmindProfile {
+  border-bottom: white solid;
+  border-left: white solid;
+  border-right: white solid;
+}
+.mobileAdminContainer {
+  margin: 5%;
 }

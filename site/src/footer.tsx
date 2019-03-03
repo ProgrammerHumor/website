@@ -17,7 +17,7 @@ interface footerComProps {
   changeRoute: Function;
 }
 
-export interface footerComState {}
+export interface footerComState { }
 
 class footerCom extends React.Component<footerComProps, footerComState> {
   state = {
@@ -112,74 +112,43 @@ class footerCom extends React.Component<footerComProps, footerComState> {
           <div className="footer">
             {/* <Button.Group className="fiftyWidth"> */}
             <div className="footerButton">
-              <i
+              <Button
+                href="https://www.google.ca"
+                icon
+                color="black"
+                size="massive"
                 onMouseOver={this.forMouseOverReddit}
                 onMouseLeave={this.forLeaveOverReddit}
-                onClick={this.goToReddit}
-                className={
-                  this.state.iconStyleReddit + this.state.iconOverStyleReddit
-                }
-              />
-            </div>
-            <div className="footerButton">
-              <i
-                onMouseOver={this.forMouseOverDiscord}
-                onMouseLeave={this.forLeaveOverDiscord}
-                onClick={this.goToDiscord}
-                className={
-                  this.state.iconStyleDiscord + this.state.iconOverStyleDiscord
-                }
-              />
-            </div>
-            <div className="footerButton">
-              <i
+              >
+                <i className={"reddit large icon" + this.state.iconOverStyleReddit} />
+              </Button>
+              <Button
+                href="https://www.google.ca"
+                icon
+                color="black"
+                size="massive"
                 onMouseOver={this.forMouseOverGithub}
                 onMouseLeave={this.forLeaveOverGithub}
-                onClick={this.goToGithub}
-                className={
-                  this.state.iconStyleGithub + this.state.iconOverStyleGithub
-                }
-              />
+              >
+                <i className={"github large icon" + this.state.iconOverStyleGithub} />
+              </Button>
+              <Button
+                href="https://www.google.ca"
+                icon
+                color="black"
+                size="massive"
+                onMouseOver={this.forMouseOverDiscord}
+                onMouseLeave={this.forLeaveOverDiscord}
+              >
+                <i className={"discord large icon" + this.state.iconOverStyleDiscord} />
+              </Button>
             </div>
-
-            {/* <Button
-                className="footerButtonForImage"
-                color={"black"}
-                onClick={this.goHome}
-              >
-                <Image className="footerImg" src={logo} />
-              </Button>
-              <Button
-                small
-                color="black"
-                className="footerButton"
-                onClick={this.goHome}
-              >
-                Merch
-              </Button>
-              <Button
-                small
-                color="black"
-                className="footerButton"
-                onClick={this.goHackathon}
-              >
-                Hackathon
-              </Button>
-              <Button
-                small
-                color="black"
-                className="footerButton"
-                onClick={this.goAboutUs}
-              >
-                About Us
-              </Button> */}
-            {/* </Button.Group> */}
           </div>
-          <div className="forFollowUsDiv">
+          {/* <div className="forFollowUsDiv">
             <Header size="medium" className="forFollowUsFont" color="grey">
               By Programers, For Programers
             </Header>
-          </div>
+          </div> */}
         </Responsive>
       </div>
     );

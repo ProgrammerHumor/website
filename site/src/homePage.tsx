@@ -16,8 +16,8 @@ import {
   Button
 } from "semantic-ui-react";
 
-interface homePageProps {}
-export interface homePageState {}
+interface homePageProps { }
+export interface homePageState { }
 
 class homePage extends React.Component<homePageProps, homePageState> {
   state = {};
@@ -48,14 +48,14 @@ class homePage extends React.Component<homePageProps, homePageState> {
               <WelcomeCom />
             </div>
           </div>
-          {/* <div className="mobileBottomHalfOfPage"> */}
-          <div className="mobileBottomHalfComL">
-            <RedditLink />
+          <div className="forMarginMobile">
+            <div className="mobileBottomHalfComL">
+              <RedditLink />
+            </div>
+            <div className="mobileBottomHalfComR">
+              <CurrentEvent />
+            </div>
           </div>
-          <div className="mobileBottomHalfComR">
-            <CurrentEvent />
-          </div>
-          {/* </div> */}
           <Responsive {...Responsive.onlyMobile} />
         </Responsive>
       </div>

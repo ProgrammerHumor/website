@@ -16,47 +16,81 @@ class AdminProfile extends Component {
     highlighted: false,
     classNameForDiv: "paddingForDiv",
     paraToDisplay: "",
-    clickedIsTure: false
+    clickedIsTure: false,
+    highlightForImageBorder: "",
+    highlightForOtherHalfBorder: "forAdminProfileTitle forAdminProfileTextArea"
   };
 
   highlightBox = () => {
-    this.setState({
-      classNameForDiv: "forHighlightingPerson"
-    });
+    if (!this.props.isMobile) {
+      this.setState({
+        classNameForDiv: "forHighlightingPerson",
+        highlightForImageBorder: "HighlightImage",
+        highlightForOtherHalfBorder:
+          "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
+      });
+    }
     //console.log(this.state.highlighted);
   };
   unHighlightBox = () => {
-    this.setState({
-      classNameForDiv: "paddingForDiv",
-      paraToDisplay: ""
-    });
+    if (!this.props.isMobile) {
+      this.setState({
+        highlightForImageBorder: "",
+        highlightForOtherHalfBorder:
+          "forAdminProfileTitle forAdminProfileTextArea"
+      });
+    }
     //console.log(this.state.highlighted);
   };
   whenClicked = () => {
-    if (!this.state.clickedIsTure) {
-      this.setState({
-        paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
-        clickedIsTure: true
-      });
+    if (!this.props.isMobile) {
+      if (!this.state.clickedIsTure) {
+        this.setState({
+
+          paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
+          clickedIsTure: true
+        });
+      } else {
+        this.setState({
+          paraToDisplay: "",
+          clickedIsTure: false
+        });
+      }
     } else {
-      this.setState({
-        paraToDisplay: "",
-        clickedIsTure: false
-      });
+      if (!this.state.clickedIsTure) {
+        this.setState({
+          highlightForImageBorder: "HighlightImage",
+          highlightForOtherHalfBorder:
+            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile",
+          paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
+          clickedIsTure: true
+        });
+      } else {
+        this.setState({
+          highlightForImageBorder: "",
+          highlightForOtherHalfBorder:
+            "forAdminProfileTitle forAdminProfileTextArea",
+          paraToDisplay: "",
+          clickedIsTure: false
+        });
+      }
     }
   };
   render() {
     return (
       <div
-        className={this.state.classNameForDiv}
         onClick={this.whenClicked}
         onMouseLeave={this.unHighlightBox}
         onMouseOver={this.highlightBox}
+        className={this.state.classNameForDiv}
       >
         <div>
-          <Image className="forHighlightingPersonImage" src={this.props.img} />
+          <Image
+            className={this.state.highlightForImageBorder}
+            src={this.props.img}
+          />
         </div>
-        <div className="forAdminProfileTitle forAdminProfileTextArea">
+        <div className={this.state.highlightForOtherHalfBorder}>
           <Header inverted size="large">
             {this.props.name}
           </Header>

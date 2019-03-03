@@ -42,6 +42,8 @@
 .footerButton {
   margin-left: 1% !important;
   margin-right: 1% !important;
+  margin-top: auto;
+  margin-bottom: auto;
   /* border-style: solid !important;
   border-color: black !important; */
 }
@@ -71,4 +73,7 @@
 }
 .forFollowUsDiv {
   margin-top: 1%;
+}
+.forMarginMobile {
+  margin-bottom: 3%;
 }
