@@ -1,8 +1,11 @@
 import * as React from "react";
 import { Component } from "react";
-import WelcomeCom from "./welcomeCom";
-import RedditLink from "./redditLink";
-import CurrentEvent from "./currentEvent";
+import "./Welcome/WelcomeStyle.css";
+import "./BottomHalfOfPageStyle.css";
+import "../../Footer/FooterStyle.css";
+import WelcomeCom from "./Welcome/welcomeCom";
+import RedditLink from "./RedLink/redditLink";
+import CurrentEvent from "./CurrEvent/currentEvent";
 import {
   Container,
   Icon,
@@ -13,11 +16,12 @@ import {
   Button
 } from "semantic-ui-react";
 
-export interface homePageProps {}
-export interface homePageState {}
+interface homePageProps { }
+export interface homePageState { }
 
 class homePage extends React.Component<homePageProps, homePageState> {
   state = {};
+
   render() {
     return (
       <div>
@@ -44,14 +48,14 @@ class homePage extends React.Component<homePageProps, homePageState> {
               <WelcomeCom />
             </div>
           </div>
-          {/* <div className="mobileBottomHalfOfPage"> */}
-          <div className="mobileBottomHalfComL">
-            <RedditLink />
+          <div className="forMarginMobile">
+            <div className="mobileBottomHalfComL">
+              <RedditLink />
+            </div>
+            <div className="mobileBottomHalfComR">
+              <CurrentEvent />
+            </div>
           </div>
-          <div className="mobileBottomHalfComR">
-            <CurrentEvent />
-          </div>
-          {/* </div> */}
           <Responsive {...Responsive.onlyMobile} />
         </Responsive>
       </div>
