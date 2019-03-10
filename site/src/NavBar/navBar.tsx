@@ -45,15 +45,25 @@ const NavBarMobile = ({
           >
             <Dropdown.Menu>
               <Dropdown.Item onClick={() => {
-                changeRoute("/Hackathon/Overengineering");
+                changeRoute("/Hackathon/Overview");
               }}>
-                <strong>Overengineer</strong>
+                Overview
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => {
+                changeRoute("/Hackathon/Theme");
+              }}>
+                Theme
               </Dropdown.Item>
               <Dropdown.Item onClick={() => {
                 changeRoute("/Hackathon/Sponsors");
               }}>
                 Sponsors
-          </Dropdown.Item>
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => {
+                changeRoute("/Hackathon/Prizes");
+              }}>
+                Prizes
+              </Dropdown.Item>
               <Dropdown.Item onClick={() => {
                 changeRoute("/Hackathon/FAQ");
               }}>
@@ -113,14 +123,24 @@ const NavBarDesktop = ({
       >
         <Dropdown.Menu>
           <Dropdown.Item onClick={() => {
-            changeRoute("/Hackathon/Overengineering");
+            changeRoute("/Hackathon/Overview");
           }}>
-            <strong>Overengineer</strong>
+            Overview
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => {
+            changeRoute("/Hackathon/Theme");
+          }}>
+            Theme
           </Dropdown.Item>
           <Dropdown.Item onClick={() => {
             changeRoute("/Hackathon/Sponsors");
           }}>
             Sponsors
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => {
+            changeRoute("/Hackathon/Prizes");
+          }}>
+            Prizes
           </Dropdown.Item>
           <Dropdown.Item onClick={() => {
             changeRoute("/Hackathon/FAQ");
