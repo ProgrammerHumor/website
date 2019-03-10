@@ -75,7 +75,7 @@
   background-size: 33.33%;
   background-repeat: no-repeat, no-repeat, no-repeat; */
   /* background-image: radial-gradient(white, rgb(118, 123, 179)); */
-  background-image: url("./prism.png");
+  background-image: url("./images/prism.png");
   background-repeat: repeat;
   height: 100%;
   width: 100% !important;
@@ -88,7 +88,7 @@
   background-size: 33.33%;
   background-repeat: no-repeat, no-repeat, no-repeat; */
   /* background-image: radial-gradient(white, rgb(118, 123, 179)); */
-  background-image: url("./prism.png");
+  background-image: url("./images/prism.png");
   background-repeat: repeat;
   height: 100%;
   width: 100% !important;

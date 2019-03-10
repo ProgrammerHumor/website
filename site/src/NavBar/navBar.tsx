@@ -6,9 +6,9 @@ import {
   Menu,
   Sidebar,
   Responsive,
-  Button
+  Dropdown
 } from "semantic-ui-react";
-import logo from "./logo.png";
+import logo from "../images/logo.png";
 
 const NavBarMobile = ({
   children,
@@ -27,41 +27,66 @@ const NavBarMobile = ({
   visible: boolean;
   changeRoute: Function;
 }) => (
-  <Sidebar.Pushable>
-    <Sidebar
-      as={Menu}
-      animation="overlay"
-      icon="labeled"
-      className="navBar"
-      inverted
-      vertical
-      visible={visible}
-      direction="top"
-    >
-      <NavBarLeftMobile leftItems={leftItems} />
-    </Sidebar>
-    <Sidebar.Pusher
-      dimmed={visible}
-      onClick={onPusherClick}
-      style={{ mineight: "100vh" }}
-    >
-      <Menu fixed="top" className="navBar" inverted>
-        <Menu.Item
-          onClick={() => {
-            changeRoute("/Home");
-          }}
-        >
-          <Image size="mini" src={logo} />
+    <Sidebar.Pushable>
+      <Sidebar
+        as={Menu}
+        animation="overlay"
+        icon="labeled"
+        className="navBar"
+        inverted
+        vertical
+        visible={visible}
+        direction="top"
+      >
+        <Menu.Item>
+          <Dropdown
+            item text="Hackathon"
+            direction="left"
+          >
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => {
+                changeRoute("/Hackathon/Overengineering");
+              }}>
+                <strong>Overengineer</strong>
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => {
+                changeRoute("/Hackathon/Sponsors");
+              }}>
+                Sponsors
+          </Dropdown.Item>
+              <Dropdown.Item onClick={() => {
+                changeRoute("/Hackathon/FAQ");
+              }}>
+                FAQ
+          </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Menu.Item>
-        <Menu.Item onClick={onToggle} position="right">
-          <Icon name="sidebar" />
-        </Menu.Item>
-        <NavBarRight rightItems={rightItems} />
-      </Menu>
-      {children}
-    </Sidebar.Pusher>
-  </Sidebar.Pushable>
-);
+        <NavBarLeftMobile leftItems={leftItems} />
+      </Sidebar>
+      <Sidebar.Pusher
+        dimmed={visible}
+        onClick={onPusherClick}
+        style={{ mineight: "100vh" }}
+      >
+        <Menu fixed="top" className="navBar" inverted>
+          <Menu.Item
+            onClick={() => {
+              changeRoute("/Home");
+            }}
+          >
+            <Image size="mini" src={logo} />
+            &nbsp;&nbsp;ProgrammerHumor
+          </Menu.Item>
+          <Menu.Item onClick={onToggle} position="right">
+            <Icon name="sidebar" />
+          </Menu.Item>
+          <NavBarRight rightItems={rightItems} />
+        </Menu>
+        {children}
+      </Sidebar.Pusher>
+    </Sidebar.Pushable>
+  );
 
 const NavBarDesktop = ({
   leftItems,
@@ -81,10 +106,32 @@ const NavBarDesktop = ({
         }}
       >
         <Image size="mini" src={logo} />
+        &nbsp;&nbsp;ProgrammerHumor
       </Menu.Item>
+      <Dropdown
+        item text="Hackathon"
+      >
+        <Dropdown.Menu>
+          <Dropdown.Item onClick={() => {
+            changeRoute("/Hackathon/Overengineering");
+          }}>
+            <strong>Overengineer</strong>
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => {
+            changeRoute("/Hackathon/Sponsors");
+          }}>
+            Sponsors
+          </Dropdown.Item>
+          <Dropdown.Item onClick={() => {
+            changeRoute("/Hackathon/FAQ");
+          }}>
+            FAQ
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
       <NavBarLeftDesktop leftItems={leftItems} />
       <NavBarRight rightItems={rightItems} />
-    </Menu>
+    </Menu >
   );
 };
 
@@ -131,7 +178,7 @@ export default class NavBar extends Component<
     changeRoute: Function;
   },
   {}
-> {
+  > {
   state = {
     visible: false,
     direction: null

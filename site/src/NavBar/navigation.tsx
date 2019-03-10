@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import "./App.css";
+import "../App.css";
 import NavBar from "./navBar";
-import Footer from "./footer";
-import HomePage from "./homePage";
-import About from "./AboutUs";
+import Footer from "../Footer/footer";
+import HomePage from "../Pages/HomePage/homePage";
+import About from "../Pages/AboutUs/AboutUs";
+import HackathonPage from '../Pages/Hackathon/Hackathon'
 import { withRouter, Route, Redirect, Switch } from "react-router-dom";
 import { Responsive } from "semantic-ui-react";
 
 const Home = () => <HomePage />;
 const AboutUs = () => <About />;
-const Hackathon = () => <></>;
+const Hackathon = () => <HackathonPage />;
 const Blog = () => <></>;
-const Merch = () => <></>;
 
 class Navigation extends Component<any> {
   changeRoute = (route: string) => {
@@ -20,6 +20,14 @@ class Navigation extends Component<any> {
   };
   render() {
     const leftItems = [
+      // {
+      //   onClick: () => {
+      //     this.changeRoute("/Hackathon");
+      //   },
+      //   as: "a",
+      //   content: "Hackathon",
+      //   key: "Hackathon"
+      // },
       {
         onClick: () => {
           this.changeRoute("/AboutUs");
@@ -30,28 +38,12 @@ class Navigation extends Component<any> {
       },
       {
         onClick: () => {
-          this.changeRoute("/Hackathon");
-        },
-        as: "a",
-        content: "Hackathon",
-        key: "Hackathon"
-      },
-      {
-        onClick: () => {
           this.changeRoute("/Blog");
         },
         as: "a",
         content: "Blog",
         key: "Blog"
       },
-      {
-        onClick: () => {
-          this.changeRoute("/Merch");
-        },
-        as: "a",
-        content: "Merch",
-        key: "Merch"
-      }
     ];
     return (
       <div className="App">
@@ -62,8 +54,7 @@ class Navigation extends Component<any> {
                 <Route path="/Home" exact component={Home} />
                 <Route path="/AboutUs" component={AboutUs} />
                 <Route path="/Hackathon" component={Hackathon} />
-                <Route path="/Blog" component={Hackathon} />
-                <Route path="/Merch" component={Hackathon} />
+                <Route path="/Blog" component={Blog} />
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>
@@ -79,8 +70,7 @@ class Navigation extends Component<any> {
                 <Route path="/Home" exact component={Home} />
                 <Route path="/AboutUs" component={AboutUs} />
                 <Route path="/Hackathon" component={Hackathon} />
-                <Route path="/Blog" component={Hackathon} />
-                <Route path="/Merch" component={Hackathon} />
+                <Route path="/Blog" component={Blog} />
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>

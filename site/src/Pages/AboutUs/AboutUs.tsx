@@ -1,12 +1,12 @@
 import * as React from "react";
 import { Component } from "react";
-import AdminsProfiles from "./AdminsProfileContainer";
+import AdminsProfiles from "./AdminProfile/AdminsProfileContainer";
 import AboutUsWord from "./AboutUsWords";
 import "./AbousUsStyle.css";
 
-interface AboutUsProps {}
+interface AboutUsProps { }
 
-export interface AboutUsState {}
+export interface AboutUsState { }
 
 class AboutUs extends React.Component<AboutUsProps, AboutUsState> {
   state = {};

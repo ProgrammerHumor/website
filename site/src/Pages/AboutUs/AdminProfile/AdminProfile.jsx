@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./AbousUsStyle.css";
+import "../AbousUsStyle.css";
 import {
   Container,
   Icon,

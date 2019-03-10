@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { text } from "./paraForCurrentEvent.json";
+
 class currentEvent extends Component {
   state = {};
   render() {
