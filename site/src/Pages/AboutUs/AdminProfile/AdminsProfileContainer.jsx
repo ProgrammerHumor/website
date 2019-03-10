@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import AdminProfile from "./AdminProfile";
-import img1 from "./logo.png";
-import img2 from "./BackgroundPattern.png";
-import img3 from "./AndySamberg.jpg";
+// import img1 from "./logo.png";
+// import img2 from "./BackgroundPattern.png";
+import img3 from "../../../images/AndySamberg.jpg";
 import { Responsive } from "semantic-ui-react";
 
 class AdminsProflies extends Component {

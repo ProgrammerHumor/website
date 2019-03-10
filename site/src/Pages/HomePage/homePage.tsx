@@ -1,11 +1,11 @@
 import * as React from "react";
 import { Component } from "react";
-import "./WelcomeStyle.css";
+import "./Welcome/WelcomeStyle.css";
 import "./BottomHalfOfPageStyle.css";
-import "./FooterStyle.css";
-import WelcomeCom from "./welcomeCom";
-import RedditLink from "./redditLink";
-import CurrentEvent from "./currentEvent";
+import "../../Footer/FooterStyle.css";
+import WelcomeCom from "./Welcome/welcomeCom";
+import RedditLink from "./RedLink/redditLink";
+import CurrentEvent from "./CurrEvent/currentEvent";
 import {
   Container,
   Icon,
