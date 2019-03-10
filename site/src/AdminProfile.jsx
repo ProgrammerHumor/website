@@ -34,11 +34,21 @@ class AdminProfile extends Component {
   };
   unHighlightBox = () => {
     if (!this.props.isMobile) {
-      this.setState({
-        highlightForImageBorder: "",
-        highlightForOtherHalfBorder:
-          "forAdminProfileTitle forAdminProfileTextArea"
-      });
+      if (!this.state.clickedIsTure) {
+        this.setState({
+          classNameForDiv: "paddingForDiv",
+          highlightForImageBorder: "",
+          highlightForOtherHalfBorder:
+            "forAdminProfileTitle forAdminProfileTextArea"
+        });
+      } else {
+        this.setState({
+          highlightForImageBorder: "",
+          highlightForOtherHalfBorder:
+            "forAdminProfileTitle forAdminProfileTextArea"
+        });
+      }
+      console.log(this.state.highlightForOtherHalfBorder);
     }
     //console.log(this.state.highlighted);
   };
