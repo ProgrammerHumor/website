@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Steamy';
-  src: url('./Steamy.otf');
+  font-family: "Steamy";
+  src: url("./Steamy.otf");
 }
 .overeng {
-  font-family: 'Steamy', Fallback, sans-serif !important;
+  font-family: "Steamy", Fallback, sans-serif !important;
   font-size: 10vw !important;
   color: gold !important;
   margin-top: 0% !important;
@@ -14,7 +14,7 @@
   margin-top: 6.5% !important;
   color: white !important;
   font-size: 7vh !important;
-  text-align: left;
+  text-align: center;
 }
 
 .themeBox {
@@ -39,7 +39,7 @@
   border-radius: 25px;
   opacity: 0.9;
   width: 90%;
-  padding-bottom: 6.5%;
+  padding-bottom: 5%;
   padding-top: 1%;
   /* margin-bottom: 5%; */
   margin-right: auto;
@@ -57,7 +57,7 @@
 
 .humDesc {
   font-size: 2vw !important;
-  color:white !important;
+  color: white !important;
   /* z-index: 2; */
 }
 
@@ -70,11 +70,28 @@
 }
 
 .themeDesc {
-  color:white !important;
+  color: white !important;
   font-size: 30px !important;
   /* margin-bottom: 20px !important; */
 }
 
 .prizeDesc {
   color: white;
+}
+
+.signUpButton {
+  width: 90%;
+  margin: auto;
+  margin-top: 5%;
+  box-shadow: 10px 10px 5px rgb(20, 20, 20);
+}
+.countDownTitle {
+  margin: 2%;
+}
+.humHackDiv {
+  margin: 1%;
+}
+
+.bold {
+  font-weight: 900;
 }
