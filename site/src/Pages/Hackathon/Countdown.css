@@ -1,5 +1,5 @@
 .Countdown{
-  margin: 30px auto;
+  margin: 10vh auto;
   /* padding-bottom: 20px; */
 }
 
@@ -9,18 +9,18 @@
 
 .Countdown-col-element{
   display: inline-block;
-  margin: 0px 20px;
+  margin: 0vh 2vh;
   display: flex;
   flex-direction: column;
 }
 
 .Countdown-col-element strong{
-  font-size: 50px;
+  font-size: 5vw;
   color: white;
 }
 
 .Countdown-col-element span{
-  margin-top: 10px;
-  font-size: 20px;
+  margin-top: 5vh;
+  font-size: 2vw;
   color: white;
 }

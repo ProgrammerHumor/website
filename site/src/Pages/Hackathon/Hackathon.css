@@ -11,10 +11,18 @@
   -webkit-text-stroke-color: goldenrod;
 }
 .theme {
-  margin-bottom: 0% !important;
+  margin-top: 6.5% !important;
   color: white !important;
-  font-size: 2.5vw !important;
+  font-size: 7vh !important;
+  text-align: left;
 }
+
+.themeBox {
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+}
+
 .title {
   height: 500px;
 }
@@ -33,7 +41,7 @@
   width: 90%;
   padding-bottom: 6.5%;
   padding-top: 1%;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
   margin-right: auto;
   margin-left: auto;
   margin-top: 0%;
@@ -64,4 +72,9 @@
 .themeDesc {
   color:white !important;
   font-size: 30px !important;
+  /* margin-bottom: 20px !important; */
+}
+
+.prizeDesc {
+  color: white;
 }

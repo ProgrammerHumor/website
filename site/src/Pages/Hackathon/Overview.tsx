@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import { Container, Header, Button } from "semantic-ui-react";
 import Countdown from './Countdown';
 
-export default class Theme extends Component<any> {
+export default class Overview extends Component<any> {
   render() {
     console.log(new Date);
     return (
-      <div className="intro">
+      <div id="Overview" className="intro">
         {/* <canvas id="humBack" className="humBack"></canvas> */}
         <Header className="humHack">HumorHack</Header>
         <Button color="red" >Sign Up!!!</Button>

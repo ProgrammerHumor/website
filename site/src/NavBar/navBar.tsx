@@ -1,4 +1,5 @@
 import React, { Component, ReactNode } from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 import {
   Container,
   Icon,
@@ -44,31 +45,21 @@ const NavBarMobile = ({
             direction="left"
           >
             <Dropdown.Menu>
-              <Dropdown.Item onClick={() => {
-                changeRoute("/Hackathon/Overview");
-              }}>
+              <Dropdown.Item as={Link} to="/Hackathon#Overview">
                 Overview
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => {
-                changeRoute("/Hackathon/Theme");
-              }}>
+              <Dropdown.Item as={Link} to="/Hackathon#Theme">
                 Theme
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => {
-                changeRoute("/Hackathon/Sponsors");
-              }}>
+              <Dropdown.Item as={Link} to="/Hackathon#Sponsors">
                 Sponsors
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => {
-                changeRoute("/Hackathon/Prizes");
-              }}>
+              <Dropdown.Item as={Link} to="/Hackathon#Prizes">
                 Prizes
               </Dropdown.Item>
-              <Dropdown.Item onClick={() => {
-                changeRoute("/Hackathon/FAQ");
-              }}>
+              <Dropdown.Item as={Link} to="/Hackathon#FAQ">
                 FAQ
-          </Dropdown.Item>
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Menu.Item>
@@ -122,29 +113,19 @@ const NavBarDesktop = ({
         item text="Hackathon"
       >
         <Dropdown.Menu>
-          <Dropdown.Item onClick={() => {
-            changeRoute("/Hackathon/Overview");
-          }}>
+          <Dropdown.Item as={Link} to="/Hackathon#Overview">
             Overview
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => {
-            changeRoute("/Hackathon/Theme");
-          }}>
+          <Dropdown.Item as={Link} to="/Hackathon#Theme">
             Theme
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => {
-            changeRoute("/Hackathon/Sponsors");
-          }}>
+          <Dropdown.Item as={Link} to="/Hackathon#Sponsors">
             Sponsors
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => {
-            changeRoute("/Hackathon/Prizes");
-          }}>
+          <Dropdown.Item as={Link} to="/Hackathon#Prizes">
             Prizes
           </Dropdown.Item>
-          <Dropdown.Item onClick={() => {
-            changeRoute("/Hackathon/FAQ");
-          }}>
+          <Dropdown.Item as={Link} to="/Hackathon#FAQ">
             FAQ
           </Dropdown.Item>
         </Dropdown.Menu>
