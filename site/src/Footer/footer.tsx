@@ -14,7 +14,6 @@ import {
 import logo from "./logo.png";
 
 interface footerComProps {
-  changeRoute: Function;
 }
 
 export interface footerComState { }
@@ -29,15 +28,6 @@ class footerCom extends React.Component<footerComProps, footerComState> {
     iconOverStyleGithub: ""
   };
 
-  goHome = () => {
-    this.props.changeRoute("/Home");
-  };
-  goAboutUs = () => {
-    this.props.changeRoute("/AboutUs");
-  };
-  goHackathon = () => {
-    this.props.changeRoute("/Hackathon");
-  };
   goToReddit = () => {
     window.location.href = "https://www.reddit.com/r/ProgrammerHumor/";
   };

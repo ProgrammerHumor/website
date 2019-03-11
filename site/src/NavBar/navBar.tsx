@@ -18,7 +18,6 @@ const NavBarMobile = ({
   onToggle,
   rightItems,
   visible,
-  changeRoute
 }: {
   children: ReactNode;
   leftItems?: Array<object>;
@@ -26,8 +25,8 @@ const NavBarMobile = ({
   onPusherClick: Function;
   onToggle: (event: React.MouseEvent<HTMLAnchorElement>) => void;
   visible: boolean;
-  changeRoute: Function;
 }) => (
+
     <Sidebar.Pushable>
       <Sidebar
         as={Menu}
@@ -71,10 +70,7 @@ const NavBarMobile = ({
         style={{ mineight: "100vh" }}
       >
         <Menu fixed="top" className="navBar" inverted>
-          <Menu.Item
-            onClick={() => {
-              changeRoute("/Home");
-            }}
+          <Menu.Item as={Link} to="/Home"
           >
             <Image size="mini" src={logo} />
             &nbsp;&nbsp;ProgrammerHumor
@@ -92,19 +88,15 @@ const NavBarMobile = ({
 const NavBarDesktop = ({
   leftItems,
   rightItems,
-  changeRoute
 }: {
   leftItems?: Array<object>;
   rightItems?: Array<object>;
-  changeRoute: Function;
 }) => {
   // console.log(changeRoute);
   return (
     <Menu fixed="top" inverted className="navBar">
       <Menu.Item
-        onClick={() => {
-          changeRoute("/Home");
-        }}
+        as={Link} to="/Home"
       >
         <Image size="mini" src={logo} />
         &nbsp;&nbsp;ProgrammerHumor
@@ -176,7 +168,6 @@ export default class NavBar extends Component<
   {
     leftItems?: Array<object>;
     rightItems?: Array<object>;
-    changeRoute: Function;
   },
   {}
   > {
@@ -198,12 +189,10 @@ export default class NavBar extends Component<
       children,
       leftItems,
       rightItems,
-      changeRoute
     }: {
       children?: ReactNode;
       leftItems?: Array<object>;
       rightItems?: Array<object>;
-      changeRoute: Function;
     } = this.props;
     const { visible } = this.state;
     return (
@@ -215,7 +204,6 @@ export default class NavBar extends Component<
             onToggle={this.handleToggle}
             rightItems={rightItems}
             visible={visible}
-            changeRoute={changeRoute}
           >
             <NavBarChildren>{children}</NavBarChildren>
           </NavBarMobile>
@@ -224,7 +212,6 @@ export default class NavBar extends Component<
           <NavBarDesktop
             leftItems={leftItems}
             rightItems={rightItems}
-            changeRoute={changeRoute}
           />
           <NavBarChildren>{children}</NavBarChildren>
         </Responsive>

@@ -5,7 +5,7 @@ import Footer from "../Footer/footer";
 import HomePage from "../Pages/HomePage/homePage";
 import About from "../Pages/AboutUs/AboutUs";
 import HackathonPage from '../Pages/Hackathon/Hackathon'
-import { withRouter, Route, Redirect, Switch } from "react-router-dom";
+import { Link, Route, Redirect, Switch } from "react-router-dom";
 import { Responsive } from "semantic-ui-react";
 
 const Home = () => <HomePage />;
@@ -14,10 +14,10 @@ const Hackathon = () => <HackathonPage />;
 const Blog = () => <></>;
 
 class Navigation extends Component<any> {
-  changeRoute = (route: string) => {
-    const { history }: any = this.props;
-    history.push(route);
-  };
+  // changeRoute = (route: string) => {
+  //   const { history }: any = this.props;
+  //   history.push(route);
+  // };
   render() {
     const leftItems = [
       // {
@@ -29,18 +29,20 @@ class Navigation extends Component<any> {
       //   key: "Hackathon"
       // },
       {
-        onClick: () => {
-          this.changeRoute("/AboutUs");
-        },
-        as: "a",
+        // onClick: () => {
+        //   this.changeRoute("/AboutUs");
+        // },
+        as: Link,
+        to: "/AboutUs",
         content: "AboutUs",
         key: "AboutUs"
       },
       {
-        onClick: () => {
-          this.changeRoute("/Blog");
-        },
-        as: "a",
+        // onClick: () => {
+        //   this.changeRoute("/Blog");
+        // },
+        as: Link,
+        to: "/Blog",
         content: "Blog",
         key: "Blog"
       },
@@ -49,7 +51,7 @@ class Navigation extends Component<any> {
       <div className="App">
         <Responsive {...Responsive.onlyMobile}>
           <div className="MobilePageBackground">
-            <NavBar leftItems={leftItems} changeRoute={this.changeRoute}>
+            <NavBar leftItems={leftItems}>
               <Switch>
                 <Route path="/Home" exact component={Home} />
                 <Route path="/AboutUs" component={AboutUs} />
@@ -59,13 +61,13 @@ class Navigation extends Component<any> {
               </Switch>
             </NavBar>
             <div className="forFooterBackgroundMobile">
-              <Footer changeRoute={this.changeRoute} />
+              <Footer />
             </div>
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
           <div className="pageBackground">
-            <NavBar leftItems={leftItems} changeRoute={this.changeRoute}>
+            <NavBar leftItems={leftItems}>
               <Switch>
                 <Route path="/Home" exact component={Home} />
                 <Route path="/AboutUs" component={AboutUs} />
@@ -75,7 +77,7 @@ class Navigation extends Component<any> {
               </Switch>
             </NavBar>
             <div className="forFooterBackground">
-              <Footer changeRoute={this.changeRoute} />
+              <Footer />
             </div>
           </div>
         </Responsive>
@@ -84,4 +86,4 @@ class Navigation extends Component<any> {
   }
 }
 
-export default withRouter(Navigation);
+export default Navigation;
