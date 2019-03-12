@@ -69,13 +69,20 @@
   max-width: 45%;
 }
 
+.hundredPercent {
+  width: 100%;
+  height: 100%;
+}
 .pageBackground {
   /* background-image: url(memeBrain.jpg), url(memeDodge.jpg), url(memeSweat.jpg);
   background-position: left, center, right;
   background-size: 33.33%;
   background-repeat: no-repeat, no-repeat, no-repeat; */
   /* background-image: radial-gradient(white, rgb(118, 123, 179)); */
-  background-image: url("./images/prism.png");
+
+  /* background-image: url("./images/prism.png"); */
+
+  background: canvas(backgroundCanvas);
   background-repeat: repeat;
   height: 100%;
   width: 100% !important;
