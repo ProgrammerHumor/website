@@ -23,12 +23,21 @@ class AdminProfile extends Component {
 
   highlightBox = () => {
     if (!this.props.isMobile) {
-      this.setState({
-        classNameForDiv: "forHighlightingPerson",
-        highlightForImageBorder: "HighlightImage",
-        highlightForOtherHalfBorder:
-          "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
-      });
+      if (!this.props.checkPara(this.props.row1)) {
+        this.setState({
+          classNameForDiv: "paddingForDiv",
+          highlightForImageBorder: "HighlightImage",
+          highlightForOtherHalfBorder:
+            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
+        })
+      } else {
+        this.setState({
+          classNameForDiv: "forHighlightingPerson",
+          highlightForImageBorder: "HighlightImage",
+          highlightForOtherHalfBorder:
+            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
+        });
+      }
     }
     //console.log(this.state.highlighted);
   };
@@ -48,7 +57,7 @@ class AdminProfile extends Component {
             "forAdminProfileTitle forAdminProfileTextArea"
         });
       }
-      console.log(this.state.highlightForOtherHalfBorder);
+      //console.log(this.state.highlightForOtherHalfBorder);
     }
     //console.log(this.state.highlighted);
   };
@@ -56,15 +65,16 @@ class AdminProfile extends Component {
     if (!this.props.isMobile) {
       if (!this.state.clickedIsTure) {
         this.setState({
-
           paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
           clickedIsTure: true
         });
+        this.props.displayPara(true);
       } else {
         this.setState({
           paraToDisplay: "",
           clickedIsTure: false
         });
+        this.props.displayPara(false);
       }
     } else {
       if (!this.state.clickedIsTure) {

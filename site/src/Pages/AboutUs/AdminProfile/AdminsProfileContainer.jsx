@@ -120,8 +120,53 @@ class AdminsProflies extends Component {
         paraAboutSelf:
           "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       }
-    ]
+    ],
+    numberOfDisplayedParaRow1: 0,
+    numberOfDisplayedParaRow2: 0
   };
+  displayParaRow1 = (bool) => {
+    console.log("display1");
+    if (bool) {
+      this.setState({
+        numberOfDisplayedParaRow1: this.state.numberOfDisplayedParaRow1 + 1
+      });
+      console.log(this.state.numberOfDisplayedParaRow1 + " row1");
+    } else {
+      this.setState({
+        numberOfDisplayedParaRow1: this.state.numberOfDisplayedParaRow1 - 1
+      });
+      console.log(this.state.numberOfDisplayedParaRow1 + " row1");
+    }
+  };
+  displayParaRow2 = (bool) => {
+    console.log("display2");
+    if (bool) {
+      this.setState({
+        numberOfDisplayedParaRow2: this.state.numberOfDisplayedParaRow2 + 1
+      });
+      console.log(this.state.numberOfDisplayedParaRow2 + " row2");
+    } else {
+      this.setState({
+        numberOfDisplayedParaRow2: this.state.numberOfDisplayedParaRow2 - 1
+      });
+      console.log(this.state.numberOfDisplayedParaRow2 + " row2");
+    }
+  };
+  checkRows = (Row1) => {
+    if (Row1) {
+      if (this.state.numberOfDisplayedParaRow1 == 4) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      if (this.state.numberOfDisplayedParaRow2 == 4) {
+        return false;
+      } else {
+        return true;
+      }
+    }
+  }
   render() {
     return (
       <div>
@@ -136,6 +181,10 @@ class AdminsProflies extends Component {
                   gitHubLink={pro.gitHubLink}
                   discordLink={pro.discordLink}
                   redditLink={pro.redditLink}
+                  isMobile={false}
+                  displayPara={this.displayParaRow1}
+                  checkPara={this.checkRows}
+                  row1={true}
                 />
               </div>
             ))}
@@ -151,6 +200,9 @@ class AdminsProflies extends Component {
                   discordLink={pro.discordLink}
                   redditLink={pro.redditLink}
                   isMobile={false}
+                  displayPara={this.displayParaRow2}
+                  checkPara={this.checkRows}
+                  row1={false}
                 />
               </div>
             ))}
