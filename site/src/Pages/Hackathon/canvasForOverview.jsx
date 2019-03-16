@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class canvasForOverview extends Component {
+class CanvasForOverview extends Component {
     state = {}
     componentDidMount() {
         this.updateCanvas();
@@ -8,12 +8,13 @@ class canvasForOverview extends Component {
     updateCanvas() {
         console.log("update canvas");
         const ctx = this.refs.canvas.getContext('2d');
-        ctx.fillRect(0, 0, 100, 100);
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
     }
     render() {
         return (
-            <canvas ref="canvas" width={300} height={300} />
+            <canvas ref="canvas" width={window.innerWidth} height={764} />
         );
     }
 }
-export default canvasForOverview;
+export default CanvasForOverview;

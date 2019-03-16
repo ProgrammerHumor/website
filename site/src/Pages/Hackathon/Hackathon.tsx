@@ -13,7 +13,7 @@ export default class HackathonPage extends Component<any>  {
   render() {
     return (
       <div>
-        <div>
+        <div className="divForOverview">
           <CanvasForOverview />
         </div>
         <Overview />
