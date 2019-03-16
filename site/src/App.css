@@ -70,8 +70,8 @@
 }
 
 .hundredPercent {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 30%; */
 }
 .pageBackground {
   /* background-image: url(memeBrain.jpg), url(memeDodge.jpg), url(memeSweat.jpg);
@@ -80,10 +80,17 @@
   background-repeat: no-repeat, no-repeat, no-repeat; */
   /* background-image: radial-gradient(white, rgb(118, 123, 179)); */
 
-  /* background-image: url("./images/prism.png"); */
-
-  background: canvas(backgroundCanvas);
-  background-repeat: repeat;
+  background-image: url("./images/prism.png");
+  /* background: canvas(backgroundCanvas); */
+  /* background-repeat: repeat; */
+  height: 100%;
+  width: 100% !important;
+  padding-top: 2%;
+  padding-bottom: 6.6%;
+}
+.hackathonBackgroundPC {
+  background-image: url("./images/prism.png");
+  /* background-repeat: repeat; */
   height: 100%;
   width: 100% !important;
   padding-top: 2%;
@@ -96,7 +103,17 @@
   background-repeat: no-repeat, no-repeat, no-repeat; */
   /* background-image: radial-gradient(white, rgb(118, 123, 179)); */
   background-image: url("./images/prism.png");
-  background-repeat: repeat;
+
+  /* background: canvas(backgroundCanvas); */
+  /* background-repeat: repeat; */
+  height: 100%;
+  width: 100% !important;
+  padding-bottom: 2%;
+  padding-bottom: 15.5%;
+}
+.hackathonBackgroundMobile {
+  background-image: url("./images/prism.png");
+  /* background-repeat: repeat; */
   height: 100%;
   width: 100% !important;
   padding-bottom: 2%;
@@ -182,3 +199,9 @@
   background-size: 100%;
   text-align: center;
 } */
+.overviewDiv {
+  z-index: -1;
+  image-rendering: canvas(backgroundCanvas);
+  height: 100%;
+  width: 100% !important;
+}

@@ -18,6 +18,7 @@ class Navigation extends Component<any> {
   //   const { history }: any = this.props;
   //   history.push(route);
   // };
+
   render() {
     const leftItems = [
       // {
@@ -50,7 +51,7 @@ class Navigation extends Component<any> {
     return (
       <div className="App">
         <Responsive {...Responsive.onlyMobile}>
-          <div className="MobilePageBackground">
+          <div className={"MobilePageBackground"}>
             <NavBar leftItems={leftItems}>
               <Switch>
                 <Route path="/Home" exact component={Home} />
