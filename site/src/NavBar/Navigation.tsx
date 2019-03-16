@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "../App.css";
-import NavBar from "./navBar";
+import NavBar from "./NavBar";
 import Footer from "../Footer/footer";
 import HomePage from "../Pages/HomePage/homePage";
 import About from "../Pages/AboutUs/AboutUs";
@@ -13,35 +13,17 @@ const AboutUs = () => <About />;
 const Hackathon = () => <HackathonPage />;
 const Blog = () => <></>;
 
-class Navigation extends Component<any> {
-  // changeRoute = (route: string) => {
-  //   const { history }: any = this.props;
-  //   history.push(route);
-  // };
+class Navigation extends Component {
 
   render() {
     const leftItems = [
-      // {
-      //   onClick: () => {
-      //     this.changeRoute("/Hackathon");
-      //   },
-      //   as: "a",
-      //   content: "Hackathon",
-      //   key: "Hackathon"
-      // },
       {
-        // onClick: () => {
-        //   this.changeRoute("/AboutUs");
-        // },
         as: Link,
         to: "/AboutUs",
         content: "AboutUs",
         key: "AboutUs"
       },
       {
-        // onClick: () => {
-        //   this.changeRoute("/Blog");
-        // },
         as: Link,
         to: "/Blog",
         content: "Blog",
