@@ -7,7 +7,6 @@ import FAQ from './FAQ';
 import Rules from './Rules';
 import CanvasForOverview from './CanvasForOverview';
 import './Hackathon.css'
-import { Container } from "semantic-ui-react";
 
 export default class HackathonPage extends Component {
   render = () => (

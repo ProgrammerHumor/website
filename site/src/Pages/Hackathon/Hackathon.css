@@ -33,15 +33,15 @@
 }
 
 .intro {
-  background-color: rgb(24, 24, 24);
-  border-style: solid;
-  border-color: rgb(118, 123, 179);
+  /* background-color: rgb(24, 24, 24); */
+  /* border-style: solid; */
+  /* border-color: rgb(118, 123, 179); */
   border-radius: 25px;
   opacity: 0.9;
   width: 90%;
   padding-bottom: 5%;
   padding-top: 1%;
-  /* margin-bottom: 5%; */
+  margin-bottom: 5%;
   margin-right: auto;
   margin-left: auto;
   margin-top: 0%;
