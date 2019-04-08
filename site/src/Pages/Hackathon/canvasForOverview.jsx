@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Responsive } from "semantic-ui-react";
 class CanvasForOverview extends Component {
     state = {}
     componentDidMount() {
@@ -13,7 +14,9 @@ class CanvasForOverview extends Component {
     }
     render() {
         return (
-            <canvas ref="canvas" width={window.innerWidth} height={764} />
+            <Responsive>
+                <canvas ref="canvas" width={window.innerWidth} height={764} />
+            </Responsive>
         );
     }
 }
