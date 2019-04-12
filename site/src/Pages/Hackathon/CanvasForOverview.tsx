@@ -3,6 +3,25 @@ class CanvasForOverview extends Component {
   refs!: { canvas: any }
   state = {}
   componentDidMount() {
+    // history.replaceState(null, '', ' ')
+    let anchorlinks = document.querySelectorAll('a[href^="/Hackathon#"]');
+
+    for (let item of anchorlinks) { // relitere 
+      item.addEventListener('click', (e) => {
+        let hashval = item.getAttribute('href');
+        if (hashval) {
+          let target = document.querySelector(hashval.replace('/Hackathon', ''));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            })
+            history.pushState(null, '', hashval)
+            e.preventDefault()
+          }
+        }
+      })
+    }
     this.updateCanvas();
     console.log("com did mount");
   }

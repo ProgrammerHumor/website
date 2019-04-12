@@ -44,19 +44,19 @@ const NavBarMobile = ({
             direction="left"
           >
             <Dropdown.Menu>
-              <Dropdown.Item as={Link} to="/Hackathon#Overview">
+              <Dropdown.Item as={Link} smooth to="/Hackathon#Overview">
                 Overview
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/Hackathon#Theme">
+              <Dropdown.Item as={Link} smooth to="/Hackathon#Theme">
                 Theme
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/Hackathon#Sponsors">
+              <Dropdown.Item as={Link} smooth to="/Hackathon#Sponsors">
                 Sponsors
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/Hackathon#Prizes">
+              <Dropdown.Item as={Link} smooth to="/Hackathon#Prizes">
                 Prizes
               </Dropdown.Item>
-              <Dropdown.Item as={Link} to="/Hackathon#FAQ">
+              <Dropdown.Item as={Link} smooth to="/Hackathon#FAQ">
                 FAQ
               </Dropdown.Item>
             </Dropdown.Menu>
@@ -105,19 +105,19 @@ const NavBarDesktop = ({
         item text="Hackathon"
       >
         <Dropdown.Menu>
-          <Dropdown.Item as={Link} to="/Hackathon#Overview">
+          <Dropdown.Item as={Link} smooth to="/Hackathon#Overview">
             Overview
           </Dropdown.Item>
-          <Dropdown.Item as={Link} to="/Hackathon#Theme">
+          <Dropdown.Item as={Link} smooth to="/Hackathon#Theme">
             Theme
           </Dropdown.Item>
-          <Dropdown.Item as={Link} to="/Hackathon#Sponsors">
+          <Dropdown.Item as={Link} smooth to="/Hackathon#Sponsors">
             Sponsors
           </Dropdown.Item>
-          <Dropdown.Item as={Link} to="/Hackathon#Prizes">
+          <Dropdown.Item as={Link} smooth to="/Hackathon#Prizes">
             Prizes
           </Dropdown.Item>
-          <Dropdown.Item as={Link} to="/Hackathon#FAQ">
+          <Dropdown.Item as={Link} smooth to="/Hackathon#FAQ">
             FAQ
           </Dropdown.Item>
         </Dropdown.Menu>
