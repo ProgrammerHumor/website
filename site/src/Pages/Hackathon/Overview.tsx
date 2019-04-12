@@ -22,6 +22,7 @@ export default class Overview extends Component {
           <h2 className="bold">Sign Up</h2>
         </Button>
       </div>
+      <Button className="scrollDown" href="/Hackathon#Theme" circular icon="chevron down" />
     </div>
   );
 }
