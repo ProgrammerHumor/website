@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import anime from 'animejs';
 import { Container, Header, Button } from "semantic-ui-react";
 import Countdown from "./Countdown";
+import { HashLink as Link } from "react-router-hash-link";
 
 export default class Overview extends Component {
   render = () => (
@@ -22,7 +23,7 @@ export default class Overview extends Component {
           <h2 className="bold">Sign Up</h2>
         </Button>
       </div>
-      <Button className="scrollDown" href="/Hackathon#Theme" circular icon="chevron down" />
+      <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" href="/Hackathon#Theme" circular icon="chevron down" />
     </div>
   );
 }
