@@ -21,7 +21,39 @@
   margin-right: auto;
   margin-left: auto;
   width: 90%;
-  height: 100vh;
+
+  /* height: 100vh; */
+  /* display: flex; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: relative; */
+}
+.scrollDown {
+  visibility: hidden;
+}
+@media (min-width: 768px) {
+  .themeBox {
+    height: 100vh;
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: relative;
+  }
+
+  /* .pusher {
+    width: 0px !important;
+  } */
+
+  .scrollDown {
+    visibility: visible; 
+    position: absolute;
+    bottom: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 48.5%;
+  }
 }
 
 .title {
@@ -105,10 +137,6 @@
 .canvasForOverview {
   width: 100%;
   height: 100%;
-}
-
-.scrollDown {
-  margin-top: 5% !important;
 }
 
 /* .anchor {
