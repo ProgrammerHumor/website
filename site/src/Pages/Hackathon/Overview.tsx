@@ -23,7 +23,7 @@ export default class Overview extends Component {
           <h2 className="bold">Sign Up</h2>
         </Button>
       </div>
-      <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" href="/Hackathon#Theme" circular icon="chevron down" />
+      <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" circular icon="chevron down" />
     </div>
   );
 }

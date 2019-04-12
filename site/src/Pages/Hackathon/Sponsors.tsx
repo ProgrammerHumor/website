@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Header, Grid, Image } from "semantic-ui-react";
+import { Button, Header, Grid, Image } from "semantic-ui-react";
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Theme extends Component {
   render = () => (
@@ -23,6 +24,7 @@ export default class Theme extends Component {
           </Grid.Column>
         </Grid.Row>
       </Grid>
+      <Button as={Link} smooth to="/Hackathon#Prizes" className="scrollDown" circular icon="chevron down" />
     </div>
   );
 }

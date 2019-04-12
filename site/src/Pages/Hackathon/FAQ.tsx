@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Header, Grid, Image } from "semantic-ui-react";
+import { Header, Grid, Button } from "semantic-ui-react";
+import { HashLink as Link } from 'react-router-hash-link';
 
 export default class FAQ extends Component {
   render = () => (
@@ -35,6 +36,7 @@ export default class FAQ extends Component {
           </Grid.Column>
         </Grid.Row>
       </Grid>
+      <Button as={Link} smooth to="/Hackathon#Overview" className="scrollDown" circular icon="chevron up" />
     </div>
   );
 }
