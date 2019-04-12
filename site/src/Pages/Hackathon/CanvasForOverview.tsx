@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 class CanvasForOverview extends Component {
   refs!: { canvas: any }
-  state = {}
+  state = {
+    LoopRuning: true,
+  }
   componentDidMount() {
+    this.setState({
+      LoopRuning: true,
+    })
+    this.updateCanvas();
+    console.log("com did mount");
+  }
+  componentWillUnmount() {
+    this.setState({
+      LoopRuning: false,
+    })
     this.updateCanvas();
     console.log("com did mount");
   }
@@ -37,7 +49,7 @@ class CanvasForOverview extends Component {
 
     let center: number[] = [];
     center[0] = 0.5 * this.refs.canvas.width;
-    center[1] = 0.2 * this.refs.canvas.height;
+    center[1] = 0.5 * this.refs.canvas.height;
     let tick: number;
     let pipeProps: Float32Array;
 
@@ -52,32 +64,37 @@ class CanvasForOverview extends Component {
     }
 
     const initPipe = (i: number) => {
-      let x, y, direction, speed, life, ttl, width, hue;
+      try {
+        let x, y, direction, speed, life, ttl, width, hue;
+        x = rand(this.refs.canvas.width);
+        y = center[1];
+        direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
+        speed = baseSpeed + rand(rangeSpeed);
+        life = 0;
+        ttl = baseTTL + rand(rangeTTL);
+        width = baseWidth + rand(rangeWidth);
+        hue = baseHue + rand(rangeHue);
 
-      x = rand(this.refs.canvas.width);
-      y = center[1];
-      direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
-      speed = baseSpeed + rand(rangeSpeed);
-      life = 0;
-      ttl = baseTTL + rand(rangeTTL);
-      width = baseWidth + rand(rangeWidth);
-      hue = baseHue + rand(rangeHue);
+        pipeProps.set([x, y, direction, speed, life, ttl, width, hue], i);
+      }
+      catch (error) {
+        console.log("in it pipes error");
+      }
 
-      pipeProps.set([x, y, direction, speed, life, ttl, width, hue], i);
     }
 
     const updatePipes = () => {
+      console.log("updatePipes");
       tick++;
-
       let i;
-
       for (i = 0; i < pipePropsLength; i += pipePropCount) {
         updatePipe(i);
       }
     }
 
     const updatePipe = (i: number) => {
-      let i2 = 1 + i, i3 = 2 + i, i4 = 3 + i, i5 = 4 + i, i6 = 5 + i, i7 = 6 + i, i8 = 7 + i;
+      console.log("updatePipes with I");
+      let i2 = 1 + i, i3 = 2 + i, i4 = 3 + i, i5 = 4 + i, i6 = 1 + i, i7 = 6 + i, i8 = 7 + i;
       let x, y, direction, speed, life, ttl, width, hue, turnChance, turnBias;
 
       x = pipeProps[i];
@@ -118,16 +135,23 @@ class CanvasForOverview extends Component {
     }
 
     const checkBounds = (x: number, y: number) => {
-      if (x > this.refs.canvas.width) x = 0;
-      if (x < 0) x = this.refs.canvas.width;
-      if (y > this.refs.canvas.height) y = 0;
-      if (y < 0) y = this.refs.canvas.height;
+      try {
+        if (x > this.refs.canvas.width) x = 0;
+        if (x < 0) x = this.refs.canvas.width;
+        if (y > this.refs.canvas.height) y = 0;
+        if (y < 0) y = this.refs.canvas.height;
+      }
+      catch (error) {
+        console.log("caught check bounds error");
+      }
+
     }
 
     const draw = () => {
-      updatePipes();
-
-      window.requestAnimationFrame(draw);
+      if (this.state.LoopRuning) {
+        updatePipes();
+        window.requestAnimationFrame(draw);
+      }
     }
     initPipes();
     draw();

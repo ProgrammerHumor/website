@@ -6,7 +6,7 @@ import Prizes from './Prizes';
 import FAQ from './FAQ';
 import Rules from './Rules';
 import CanvasForOverview from './CanvasForOverview';
-import './Hackathon.css'
+import './Hackathon.css';
 
 export default class HackathonPage extends Component {
   render = () => (
