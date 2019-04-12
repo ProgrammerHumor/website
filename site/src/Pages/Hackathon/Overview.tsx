@@ -6,7 +6,13 @@ import { HashLink as Link } from "react-router-hash-link";
 
 export default class Overview extends Component {
   render = () => (
-    <div id="Overview" className="intro">
+    <div className="intro">
+      <a id="Overview" style={{
+        display: 'block',
+        position: 'relative',
+        marginTop: '5px',
+        visibility: 'hidden'
+      }}></a>
       {/* <canvas id="humBack" className="humBack"></canvas> */}
       <div className="humHackDiv">
         <Header className="humHack">HumorHack</Header>
@@ -24,6 +30,6 @@ export default class Overview extends Component {
         </Button>
       </div>
       <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" circular icon="chevron down" />
-    </div>
+    </div >
   );
 }

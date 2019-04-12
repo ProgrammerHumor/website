@@ -40,13 +40,13 @@
   border-radius: 25px;
   opacity: 0.9;
   width: 90%;
-  padding-bottom: 5%;
+  /* padding-bottom: 5%; */
   padding-top: 1%;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
   margin-right: auto;
   margin-left: auto;
-  margin-top: 0%;
-  height: 100vh;
+  /* margin-top: 0%; */
+  height: 91.3vh;
 }
 
 .humHack {
@@ -110,6 +110,13 @@
 .scrollDown {
   margin-top: 5% !important;
 }
+
+/* .anchor {
+  display: block;
+  position: relative;
+  margin-top: 5px;
+  visibility: hidden;
+} */
 /* 
 html {
   scroll-behavior: smooth;
