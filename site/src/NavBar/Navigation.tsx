@@ -23,12 +23,6 @@ class Navigation extends Component {
         content: "AboutUs",
         key: "AboutUs"
       },
-      {
-        as: Link,
-        to: "/Blog",
-        content: "Blog",
-        key: "Blog"
-      },
     ];
     return (
       <div className="App">
