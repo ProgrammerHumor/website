@@ -3,26 +3,19 @@ import "../App.css";
 import NavBar from "./NavBar";
 import Footer from "../Footer/footer";
 import HomePage from "../Pages/HomePage/homePage";
-import About from "../Pages/AboutUs/AboutUs";
 import HackathonPage from '../Pages/Hackathon/Hackathon'
 import { Link, Route, Redirect, Switch } from "react-router-dom";
 import { Responsive } from "semantic-ui-react";
 
 const Home = () => <HomePage />;
-const AboutUs = () => <About />;
 const Hackathon = () => <HackathonPage />;
 const Blog = () => <></>;
 
 class Navigation extends Component {
 
+  
   render() {
-    const leftItems = [
-      {
-        as: Link,
-        to: "/AboutUs",
-        content: "AboutUs",
-        key: "AboutUs"
-      },
+    const leftItems: object[] | never[] | undefined = [
     ];
     return (
       <div className="App">
@@ -31,7 +24,6 @@ class Navigation extends Component {
             <NavBar leftItems={leftItems}>
               <Switch>
                 <Route path="/Home" exact component={Home} />
-                <Route path="/AboutUs" component={AboutUs} />
                 <Route path="/Hackathon" component={Hackathon} />
                 <Route path="/Blog" component={Blog} />
                 <Route path="/" render={() => <Redirect to="/Home" />} />
@@ -47,7 +39,6 @@ class Navigation extends Component {
             <NavBar leftItems={leftItems}>
               <Switch>
                 <Route path="/Home" exact component={Home} />
-                <Route path="/AboutUs" component={AboutUs} />
                 <Route path="/Hackathon" component={Hackathon} />
                 <Route path="/Blog" component={Blog} />
                 <Route path="/" render={() => <Redirect to="/Home" />} />

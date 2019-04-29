@@ -1,161 +1,215 @@
 import React, { Component } from 'react';
+
+
+class Line {
+  parent: any;
+  vx: number;
+  width: number;
+  x: number;
+  y: number;
+  vy: any;
+  dist: any;
+  minDist: number;
+  maxDist: number;
+  ctx: any;
+  canvas: any;
+  w: any;
+  h: any;
+  getColor: any;
+  lines: any;
+  frame: any;
+  constructor(parent: any, canvas: any, getColor: any, lines: any, frame: any) {
+    this.x = parent.x | 0;
+    this.y = parent.y | 0;
+    this.width = parent.width / 1.25;
+    const speed = 1;
+    this.canvas = canvas;
+    this.w = canvas.width;
+    this.h = canvas.height;
+    this.ctx = canvas.getContext('2d');
+    this.getColor = getColor;
+    this.lines = lines;
+    this.frame = frame;
+    const dirs = [
+      // straight x, y velocity
+         [ 0, 1 ],
+         [ 1, 0 ],
+         [ 0, -1 ],
+         [ -1, 0 ],
+      // diagonals, 0.7 = sin(PI/4) = cos(PI/4)
+         [ .7, .7 ],
+         [ .7, -.7 ],
+         [ -.7, .7 ],
+         [ -.7, -.7]
+       ];
+       this.minDist = 20;
+       this.maxDist = 100;
+    do {
+      
+      const dir = dirs[ ( Math.random() * dirs.length ) |0 ];
+      this.vx = dir[ 0 ];
+      this.vy = dir[ 1 ];
+      
+    } while ( 
+      ( this.vx === -parent.vx && this.vy === -parent.vy ) || ( this.vx === parent.vx && this.vy === parent.vy) );
+    
+    this.vx *= speed;
+    this.vy *= speed;
+    
+    this.dist = ( Math.random() * ( this.maxDist - this.minDist ) + this.minDist );
+  }
+  
+  step() {
+    let dead = false;
+  
+    let prevX = this.x,
+        prevY = this.y;
+    
+    this.x += this.vx;
+    this.y += this.vy;
+    
+    --this.dist;
+    
+    // kill if out of screen
+    if( this.x < 0 || this.x > this.w || this.y < 0 || this.y > this.h )
+      dead = true;
+    
+    // make children :D
+    if( this.dist <= 0 && this.width > 1 ) {
+      
+      // keep yo self, sometimes
+      this.dist = Math.random() * ( this.maxDist - this.minDist ) + this.minDist;
+      
+      const maxLines = 100;
+
+      // add 2 children
+      if( this.lines.length < maxLines ) this.lines.push( new Line( this, this.canvas, this.getColor, this.lines, this.frame ) );
+      if( this.lines.length < maxLines && Math.random() < .5 ) this.lines.push( new Line( this, this.canvas, this.getColor , this.lines, this.frame) );
+      
+      // kill the poor thing
+      if( Math.random() < .2 ) dead = true;
+    }
+    
+    this.ctx.strokeStyle = this.ctx.shadowColor = this.getColor( this.x, this.w, this.frame );
+    this.ctx.beginPath();
+    this.ctx.lineWidth = this.width;
+    this.ctx.moveTo( this.x, this.y );
+    this.ctx.lineTo( prevX, prevY );
+    this.ctx.stroke();
+    
+    if( dead ) return true
+  }
+}
+
 class CanvasForOverview extends Component {
   refs!: { canvas: any }
-  state = {
-    LoopRuning: true,
+  frame: number;
+  ctx: any;
+  lines: any;
+  h: any;
+  w: any;
+  timeSinceLast: any;
+  initialWidth: number;
+  LoopRuning: boolean;
+  starter: any;
+  constructor(props: any){
+    super(props);
+    this.LoopRuning = true;
+    this.frame = 0;
+    this.lines = [];
+        
+    
+    this.timeSinceLast = 0;
+    this.initialWidth = 10;
+
+
   }
   componentDidMount() {
-    this.setState({
-      LoopRuning: true,
-    })
-    this.updateCanvas();
-    console.log("com did mount");
+    this.init();
+    this.anim();
   }
-  componentWillUnmount() {
-    this.setState({
-      LoopRuning: false,
-    })
-    this.updateCanvas();
-    console.log("com did mount");
-  }
-  updateCanvas() {
-    console.log("update canvas");
-    const ctx = this.refs.canvas.getContext('2d');
-    ctx.fillStyle = "black";
-    ctx.fillRect(0, 0, this.refs.canvas.width, this.refs.canvas.height)
-    const { PI, cos, sin, abs, sqrt, pow, round, random, atan2 } = Math;
-    const HALF_PI = 0.5 * PI;
-    const TAU = 2 * PI;
-    const TO_RAD = PI / 180;
-    const rand = (n: number) => n * random();
-    const fadeInOut = (t: number, m: number) => {
-      let hm = 0.5 * m;
-      return abs((t + hm) % m - hm) / (hm);
+  init() {
+    this.ctx = this.refs.canvas.getContext('2d');
+    this.w = this.refs.canvas.width;
+    this.h = this.refs.canvas.height;
+
+    this.starter = { // starting parent line, just a pseudo line
+      
+      x: this.w / 2,
+      y: this.h / 2,
+      vx: 0,
+      vy: 0,
+      width: this.initialWidth
     };
-    const pipeCount = 30;
-    const pipePropCount = 8;
-    const pipePropsLength = pipeCount * pipePropCount;
-    const turnCount = 8;
-    const turnAmount = (360 / turnCount) * TO_RAD;
-    const turnChanceRange = 58;
-    const baseSpeed = 0.5;
-    const rangeSpeed = 1;
-    const baseTTL = 100;
-    const rangeTTL = 300;
-    const baseWidth = 2;
-    const rangeWidth = 4;
-    const baseHue = 180;
-    const rangeHue = 60;
+    
+    const initialLines = 4;
+        
 
-    let center: number[] = [];
-    center[0] = 0.5 * this.refs.canvas.width;
-    center[1] = 0.5 * this.refs.canvas.height;
-    let tick: number;
-    let pipeProps: Float32Array;
+    this.lines.length = 0;
+  
+    for( var i = 0; i < initialLines; ++i )
+      this.lines.push( new Line( this.starter, this.refs.canvas, this.getColor, this.lines, this.frame ) );
 
-    const initPipes = () => {
-      pipeProps = new Float32Array(pipePropsLength);
-
-      let i;
-
-      for (i = 0; i < pipePropsLength; i += pipePropCount) {
-        initPipe(i);
-      }
-    }
-
-    const initPipe = (i: number) => {
-      try {
-        let x, y, direction, speed, life, ttl, width, hue;
-        x = rand(this.refs.canvas.width);
-        y = center[1];
-        direction = (round(rand(1)) ? HALF_PI : TAU - HALF_PI);
-        speed = baseSpeed + rand(rangeSpeed);
-        life = 0;
-        ttl = baseTTL + rand(rangeTTL);
-        width = baseWidth + rand(rangeWidth);
-        hue = baseHue + rand(rangeHue);
-
-        pipeProps.set([x, y, direction, speed, life, ttl, width, hue], i);
-      }
-      catch (error) {
-        console.log("in it pipes error");
-      }
-
-    }
-
-    const updatePipes = () => {
-      console.log("updatePipes");
-      tick++;
-      let i;
-      for (i = 0; i < pipePropsLength; i += pipePropCount) {
-        updatePipe(i);
-      }
-    }
-
-    const updatePipe = (i: number) => {
-      console.log("updatePipes with I");
-      let i2 = 1 + i, i3 = 2 + i, i4 = 3 + i, i5 = 4 + i, i6 = 1 + i, i7 = 6 + i, i8 = 7 + i;
-      let x, y, direction, speed, life, ttl, width, hue, turnChance, turnBias;
-
-      x = pipeProps[i];
-      y = pipeProps[i2];
-      direction = pipeProps[i3];
-      speed = pipeProps[i4];
-      life = pipeProps[i5];
-      ttl = pipeProps[i6]
-      width = pipeProps[i7];
-      hue = pipeProps[i8];
-
-      drawPipe(x, y, life, ttl, width, hue);
-
-      life++;
-      x += cos(direction) * speed;
-      y += sin(direction) * speed;
-      turnChance = !(tick % round(rand(turnChanceRange))) && (!(round(x) % 6) || !(round(y) % 6));
-      turnBias = round(rand(1)) ? -1 : 1;
-      direction += turnChance ? turnAmount * turnBias : 0;
-
-      pipeProps[i] = x;
-      pipeProps[i2] = y;
-      pipeProps[i3] = direction;
-      pipeProps[i5] = life;
-
-      checkBounds(x, y);
-      life > ttl && initPipe(i);
-    }
-
-    const drawPipe = (x: number, y: number, life: number, ttl: number, width: number, hue: number) => {
-      ctx.save();
-      ctx.strokeStyle = `hsla(${hue},75%,50%,${fadeInOut(life, ttl) * 0.125})`;
-      ctx.beginPath();
-      ctx.arc(x, y, width, 0, TAU);
-      ctx.stroke();
-      ctx.closePath();
-      ctx.restore();
-    }
-
-    const checkBounds = (x: number, y: number) => {
-      try {
-        if (x > this.refs.canvas.width) x = 0;
-        if (x < 0) x = this.refs.canvas.width;
-        if (y > this.refs.canvas.height) y = 0;
-        if (y < 0) y = this.refs.canvas.height;
-      }
-      catch (error) {
-        console.log("caught check bounds error");
-      }
-
-    }
-
-    const draw = () => {
-      if (this.state.LoopRuning) {
-        updatePipes();
-        window.requestAnimationFrame(draw);
-      }
-    }
-    initPipes();
-    draw();
+    this.ctx.fillStyle = '#222';
+    this.ctx.fillRect( 0, 0, this.w, this.h );
+    
+    // if you want a cookie ;)
+    // this.ctx.lineCap = 'round';
   }
+
+  componentWillUnmount = () => {
+    this.LoopRuning = false;
+    console.log(this.LoopRuning);
+  }
+
+  anim = () => {
+  
+    console.log(this.LoopRuning)
+    if (this.LoopRuning){
+      window.requestAnimationFrame( this.anim );
+      ++this.frame;
+      
+      this.ctx.shadowBlur = 0;
+      this.ctx.fillStyle = 'rgba(0,0,0,.02)';
+      this.ctx.fillRect( 0, 0, this.w, this.h );
+      this.ctx.shadowBlur = .5;
+      
+      for( var i = 0; i < this.lines.length; ++i ) 
+        
+        if( this.lines[ i ].step() ) { // if true it's dead
+          
+          this.lines.splice( i, 1 );
+          --i;
+          
+        }
+      
+      // spawn new
+      
+      ++this.timeSinceLast
+      
+      const maxLines = 100;
+      if( this.lines.length < maxLines && this.timeSinceLast > 10 && Math.random() < .5 ) {
+        
+        this.timeSinceLast = 0;
+        
+        this.lines.push( new Line( this.starter, this.refs.canvas, this.getColor, this.lines, this.frame ) );
+        
+        // cover the middle;
+        this.ctx.fillStyle = this.ctx.shadowColor = this.getColor( this.starter.x, this.w, this.frame);
+        this.ctx.beginPath();
+        this.ctx.arc( this.starter.x, this.starter.y, this.initialWidth, 0, Math.PI * 2 );
+        this.ctx.fill();
+      }
+    }
+  }
+
+  getColor( x: any, w: any, frame: any ) {
+  
+    return 'hsl( hue, 80%, 50% )'.replace(
+      'hue', x / w * 360 + frame
+    );
+  }
+
   render() {
     return (
       <canvas ref="canvas" width={window.innerWidth} height={window.innerHeight} />
