@@ -9,8 +9,8 @@ export default class Overview extends Component {
     <div className="intro">
       <a id="Overview" style={{
         display: 'block',
-        position: 'relative',
-        marginTop: '5px',
+        position: 'absolute',
+        top: '0',
         visibility: 'hidden'
       }}></a>
       {/* <canvas id="humBack" className="humBack"></canvas> */}

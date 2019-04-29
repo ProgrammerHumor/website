@@ -15,13 +15,11 @@ class Navigation extends Component {
 
   
   render() {
-    const leftItems: object[] | never[] | undefined = [
-    ];
     return (
       <div className="App">
         <Responsive {...Responsive.onlyMobile}>
           <div className={"MobilePageBackground"}>
-            <NavBar leftItems={leftItems}>
+            <NavBar>
               <Switch>
                 <Route path="/Home" exact component={Home} />
                 <Route path="/Hackathon" component={Hackathon} />
@@ -36,7 +34,7 @@ class Navigation extends Component {
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
           <div className="pageBackground">
-            <NavBar leftItems={leftItems}>
+            <NavBar>
               <Switch>
                 <Route path="/Home" exact component={Home} />
                 <Route path="/Hackathon" component={Hackathon} />
