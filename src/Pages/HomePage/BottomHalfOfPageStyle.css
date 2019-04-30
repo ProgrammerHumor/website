@@ -5,6 +5,7 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .bottomHalfComL {
   display: flex;
   flex: 1;
@@ -22,6 +23,7 @@
   margin-right: 5%;
   text-align: center;
 }
+
 .bottomHalfComR {
   display: flex;
   flex: 1;
@@ -39,14 +41,17 @@
   text-align: center;
   margin-left: 5%;
 }
+
 .forFooterButtonsWithIcons {
   padding: 40%;
 }
+
 .mobileBottomHalfOfPage {
   align-content: center;
   width: 90%;
   margin: auto;
 }
+
 .mobileBottomHalfComL {
   margin-right: 5%;
   margin-left: 5%;
@@ -63,6 +68,7 @@
   background-size: 100%;
   margin-right: 5%;
 }
+
 .mobileBottomHalfComR {
   margin-right: 5%;
   margin-left: 5%;
@@ -78,11 +84,13 @@
   background-size: 100%;
   text-align: center;
 }
+
 .mobileBottomHalfOfPage {
   align-content: center;
   width: 90%;
   margin: auto;
 }
+
 .forCurrentEvent {
   text-align: center;
 }
