@@ -8,7 +8,7 @@ class welcome extends Component {
     return (
       <div>
         <h1 className="ui massive inverted header">
-          Welcome To Programing Humour!
+          Welcome To ProgrammerHumor!
         </h1>
         <h4 className="ui inverted medium header">{text}</h4>
       </div>
