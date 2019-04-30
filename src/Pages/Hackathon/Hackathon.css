@@ -57,9 +57,9 @@
 
 .humHack {
   font-size: 15vw !important;
-  color: black !important;
-  -webkit-text-stroke-width: 0.1vw;
-  -webkit-text-stroke-color: white;
+  color: white !important;
+
+
   /* z-index: 2; */
 }
 
@@ -73,9 +73,9 @@
 
   .humHack {
     font-size: 10vw !important;
-    color: black !important;
-    -webkit-text-stroke-width: 0.1vw;
-    -webkit-text-stroke-color: white;
+    color: white !important;
+
+
     /* z-index: 2; */
   }
   
