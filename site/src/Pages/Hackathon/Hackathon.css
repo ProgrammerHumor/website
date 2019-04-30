@@ -18,27 +18,79 @@
 }
 
 .themeBox {
-  margin-right: auto;
-  margin-left: auto;
-  width: 90%;
-
-  /* height: 100vh; */
+  height: 100vh;
   /* display: flex; */
-  /* display: flex;
+  display: flex;
   justify-content: center;
   align-items: center; 
-  position: relative; */
+  position: relative;
 }
+
+.intro {
+  height: 100vh;
+  /* display: flex; */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  position: relative;
+}
+
+
+.date {
+  color: violet !important;
+  font-size: 5vw !important;
+}
+
 .scrollDown {
   visibility: hidden;
 }
+
+@media (max-width: 768px) {
+.countdownNum {
+  font-size: 9vw !important;
+}
+
+.countdownDisc {
+  margin-top: 20% !important;
+  font-size: 5vw !important;
+}
+
+.humHack {
+  font-size: 15vw !important;
+  color: black !important;
+  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-color: white;
+  /* z-index: 2; */
+}
+
+.humDesc {
+  font-size: 5vw !important;
+  color: white !important;
+  /* z-index: 2; */
+}
+}
 @media (min-width: 768px) {
-  .themeBox {
+
+  .humHack {
+    font-size: 10vw !important;
+    color: black !important;
+    -webkit-text-stroke-width: 0.1vw;
+    -webkit-text-stroke-color: white;
+    /* z-index: 2; */
+  }
+  
+  .humDesc {
+    font-size: 3vw !important;
+    color: white !important;
+    /* z-index: 2; */
+  }
+
+  .intro {
     height: 100vh;
     /* display: flex; */
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: flex-start; 
     position: relative;
   }
 
@@ -53,46 +105,16 @@
     margin-left: auto;
     margin-right: auto;
     left: 48.5%;
+    
+  }
+  .date {
+    color: violet !important;
+    font-size: 2vw !important;
   }
 }
 
 .title {
   height: 500px;
-}
-
-.date {
-  color: violet !important;
-  font-size: 2vw !important;
-}
-
-.intro {
-  /* background-color: rgb(24, 24, 24); */
-  /* border-style: solid; */
-  /* border-color: rgb(118, 123, 179); */
-  border-radius: 25px;
-  opacity: 0.9;
-  width: 90%;
-  /* padding-bottom: 5%; */
-  padding-top: 1%;
-  /* margin-bottom: 5%; */
-  margin-right: auto;
-  margin-left: auto;
-  /* margin-top: 0%; */
-  height: 91.3vh;
-}
-
-.humHack {
-  font-size: 10vw !important;
-  color: black !important;
-  -webkit-text-stroke-width: 0.1vw;
-  -webkit-text-stroke-color: white;
-  /* z-index: 2; */
-}
-
-.humDesc {
-  font-size: 2vw !important;
-  color: white !important;
-  /* z-index: 2; */
 }
 
 .humBack {
@@ -114,16 +136,7 @@
 }
 
 .signUpButton {
-  width: 90%;
-  margin: auto;
-  margin-top: 5%;
   box-shadow: 10px 10px 5px rgb(20, 20, 20);
-}
-.countDownTitle {
-  margin: 2%;
-}
-.humHackDiv {
-  margin: 1%;
 }
 
 .bold {
@@ -133,6 +146,7 @@
 .divForOverview {
   position: absolute;
   top: 0;
+  left: 0;
 }
 .canvasForOverview {
   width: 100%;

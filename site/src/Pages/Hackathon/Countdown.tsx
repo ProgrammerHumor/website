@@ -82,30 +82,30 @@ class Countdown extends Component<{ date: Date }, { days: number, hours: number,
       <div className="Countdown">
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(days.toString())}</strong>
-            <span>{days === 1 ? 'Day' : 'Days'}</span>
+            <strong className="countdownNum">{this.addLeadingZeros(days.toString())}</strong>
+            <span className="countdownDisc">{days === 1 ? 'Day' : 'Days'}</span>
           </span>
         </span>
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(hours.toString())}</strong>
-            <span>Hours</span>
+            <strong className="countdownNum">{this.addLeadingZeros(hours.toString())}</strong>
+            <span className="countdownDisc">Hours</span>
           </span>
         </span>
 
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(min.toString())}</strong>
-            <span>Min</span>
+            <strong className="countdownNum">{this.addLeadingZeros(min.toString())}</strong>
+            <span className="countdownDisc">Min</span>
           </span>
         </span>
 
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(sec.toString())}</strong>
-            <span>Sec</span>
+            <strong className="countdownNum">{this.addLeadingZeros(sec.toString())}</strong>
+            <span className="countdownDisc">Sec</span>
           </span>
         </span>
       </div>
