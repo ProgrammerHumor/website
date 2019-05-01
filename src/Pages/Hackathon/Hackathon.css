@@ -18,12 +18,14 @@
   text-align: center;
 }
 
-.themeBox {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+@media (min-width: 768px) {
+  .themeBox {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
 }
 
 .intro {

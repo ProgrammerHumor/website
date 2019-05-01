@@ -50,21 +50,6 @@
   background-color: rgba(20, 20, 20, 0.5) !important;
 }
 
-.forNavBar {
-  width: 100% !important;
-  border-style: solid;
-}
-
-@media (max-width: 768px) {
-  .forNavBar {
-    margin-bottom: 100vw;
-  }
-}
-
-.forFooterButtonsWithIcons {
-  padding: 40%;
-}
-
 .overviewDiv {
   z-index: -1;
   image-rendering: canvas(backgroundCanvas);
