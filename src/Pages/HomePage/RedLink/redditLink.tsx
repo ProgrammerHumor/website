@@ -6,25 +6,21 @@ class linkForReddit extends Component {
     return (
       <div>
         <h1 className="ui massive inverted header">
-          Aren't you just a reddit page?
+          Aren't you just a subreddit?
         </h1>
         <h4 className="ui medium inverted header"> {text} </h4>
         <a
           className="ui small blue header"
-          onClick={this.handleClick}
           style={{ cursor: "pointer" }}
           target="_blank"
           href="https://www.reddit.com/r/ProgrammerHumor/"
         >
-          But here is a link to our reddit page.
+          But come check us out here!
         </a>
         {/* <img src={redditImage} /> */}
       </div>
     );
   }
-  handleClick = () => {
-    console.log("Hello World");
-  };
 }
 
 export default linkForReddit;

@@ -11,7 +11,7 @@ export default class FAQ extends Component {
           <Grid.Row>
             <Grid.Column>
               <Header size="medium" inverted>What is a hackathon?</Header>
-              <div className="prizeDesc">Hackathon is an event, typically lasting several days, in which numerous people meet to engage in collaborative computer programming.</div>
+              <div className="prizeDesc">A Hackathon is an event, typically lasting several days, in which numerous people meet to engage in collaborative computer programming.</div>
             </Grid.Column>
             <Grid.Column>
               <Header size="medium" inverted>How can one register?</Header>
@@ -29,11 +29,11 @@ export default class FAQ extends Component {
             </Grid.Column>
             <Grid.Column>
               <Header size="medium" inverted>How can teams be formed?</Header>
-              <div className="prizeDesc">You may invite your friends, but you also have a high chance of finding people on our reddit or discord. You can also go solo, but you will be good as long as your team.length &lt;= 4 evals to true.</div>
+              <div className="prizeDesc">You may invite your friends, but you also have a high chance of finding people on our Reddit or Discord. You can also go solo, but as long as team.length &lt;= 4 evals to true.</div>
             </Grid.Column>
             <Grid.Column>
               <Header size="medium" inverted>Where can one ask for additional info?</Header>
-              <div className="prizeDesc">You can ask either on subreddit - with Hackathon tag or on our discord, discord would probably be better place since mods tend to spend time there.</div>
+              <div className="prizeDesc">You can ask either on subreddit - with the Hackathon flair or on our Discord. We recommend joining the Discord since there would be a more active mod presence.</div>
             </Grid.Column>
           </Grid.Row>
         </Grid>

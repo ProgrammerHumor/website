@@ -42,11 +42,16 @@
   padding-bottom: 15.5%;
 }
 
+.ui.active.visible.item.dropdown {
+  margin-bottom: 50vw;
+}
+
 .navBar {
   background-color: rgba(20, 20, 20, 0.5) !important;
 }
 
 .forNavBar {
+  margin-bottom: 100vw;
   width: 100% !important;
   border-style: solid;
 }

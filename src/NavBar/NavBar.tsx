@@ -92,7 +92,6 @@ const NavBarDesktop = ({
   leftItems?: Array<object>;
   rightItems?: Array<object>;
 }) => {
-  // console.log(changeRoute);
   return (
     <Menu fixed="top" inverted className="navBar">
       <Menu.Item
