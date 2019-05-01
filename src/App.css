@@ -51,9 +51,14 @@
 }
 
 .forNavBar {
-  margin-bottom: 100vw;
   width: 100% !important;
   border-style: solid;
+}
+
+@media (max-width: 768px) {
+  .forNavBar {
+    margin-bottom: 100vw;
+  }
 }
 
 .forFooterButtonsWithIcons {
