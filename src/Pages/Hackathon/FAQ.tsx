@@ -6,7 +6,7 @@ export default class FAQ extends Component {
   render = () => (
     <div id="FAQ" className="themeBox">
       <div>
-        <Header className="theme">Frequantly asked questions:</Header>
+        <Header className="theme">Frequently Asked Questions:</Header>
         <Grid stackable columns="equal" divided>
           <Grid.Row>
             <Grid.Column>

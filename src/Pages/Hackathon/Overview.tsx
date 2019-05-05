@@ -14,7 +14,6 @@ export default class Overview extends Component {
         visibility: 'hidden'
       }}></a>
     <div className="intro">
-      {/* <canvas id="humBack" className="humBack"></canvas> */}
       <div>
         <Header className="humHack">HumorHack</Header>
         <Grid stackable columns="equal" divided>
