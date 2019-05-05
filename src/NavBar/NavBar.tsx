@@ -9,6 +9,7 @@ import {
   Responsive,
   Dropdown
 } from "semantic-ui-react";
+import './NavBar.css'
 import logo from "../images/logo.png";
 
 const NavBarMobile = ({
@@ -42,6 +43,7 @@ const NavBarMobile = ({
           <Dropdown
             item text="Hackathon"
             direction="left"
+            className="dropDown"
           >
             <Dropdown.Menu>
               <Dropdown.Item as={Link} smooth to="/Hackathon#Overview">
