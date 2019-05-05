@@ -25,10 +25,10 @@ export default class Overview extends Component {
               </Header>
             </Segment>
             <Segment basic>
-              <Countdown date={new Date("2019-05-01T00:00:00")} />
+              <Countdown date={new Date("2019-07-01T00:00:00")} />
             </Segment>
             <Segment basic>
-              <Header className="date">May 1st to May 30th</Header>
+              <Header className="date">July 1st to July 30th</Header>
             </Segment>
             <Segment basic>
             <div className="signUpButton">
