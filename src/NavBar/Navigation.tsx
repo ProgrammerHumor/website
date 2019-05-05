@@ -4,7 +4,7 @@ import NavBar from "./NavBar";
 import Footer from "../Footer/footer";
 import HomePage from "../Pages/HomePage/homePage";
 import HackathonPage from '../Pages/Hackathon/Hackathon'
-import { Link, Route, Redirect, Switch } from "react-router-dom";
+import { Route, Redirect, Switch } from "react-router-dom";
 import { Responsive } from "semantic-ui-react";
 
 const Home = () => <HomePage />;

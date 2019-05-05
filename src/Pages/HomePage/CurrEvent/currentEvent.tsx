@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom'
 import { text } from "./paraForCurrentEvent.json";
 
 class currentEvent extends Component {
@@ -8,13 +9,12 @@ class currentEvent extends Component {
       <div className="forCurrentEvent">
         <h1 className="ui inverted header">Current Event</h1>
         <h4 className="ui inverted medium header">{text}</h4>
-        <a
+        <Link
           className="ui medium blue header"
-          target="_blank"
-          href="https://www.reddit.com/r/ProgrammerHumor/"
+          to="/Hackathon"
         >
           Learn More Here!
-        </a>
+        </Link>
       </div>
     );
   }
