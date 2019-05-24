@@ -15,7 +15,7 @@ export default class Overview extends Component {
       }}></a>
     <div className="intro">
       <div>
-        <Header className="humHack">HumorHack</Header>
+        <Header className="humHack">Hackathon</Header>
         <Grid stackable columns="equal" divided>
         <Grid.Row stretched>
           <Grid.Column>
