@@ -28,7 +28,7 @@ export default class Overview extends Component {
               <Countdown date={new Date("2019-08-01T00:00:00")} />
             </Segment>
             <Segment basic>
-              <Header className="date">July 1st to July 30th</Header>
+              <Header className="date">August 1st to August 30th</Header>
             </Segment>
             <Segment basic>
             <div className="signUpButton">
