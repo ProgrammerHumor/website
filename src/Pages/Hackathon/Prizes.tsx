@@ -11,15 +11,15 @@ export default class Prizes extends Component {
           <Grid.Row>
             <Grid.Column>
               <Header size="medium" inverted>1st place</Header>
-              <div className="prizeDesc"></div>
+              <div className="prizeDesc">TBD</div>
             </Grid.Column>
             <Grid.Column>
               <Header size="medium" inverted>2nd place</Header>
-              <div className="prizeDesc"></div>
+              <div className="prizeDesc">TBD</div>
             </Grid.Column>
             <Grid.Column>
               <Header size="medium" inverted>3rd place</Header>
-              <div className="prizeDesc"></div>
+              <div className="prizeDesc">TBD</div>
             </Grid.Column>
           </Grid.Row>
         </Grid>
