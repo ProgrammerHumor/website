@@ -10,14 +10,12 @@ export default class Theme extends Component {
         <Header className="overeng">Overengineering</Header>
         <Header className="themeDesc">
           Come up with programs that make trivial actions complicated!
-      </Header>
-      <div className="prizeDesc">
-        Our subreddit has had a far-reaching history of making simple applications impossible to use. In our first Hackathon, you'll join that legacy by creating a program in any language of your choice which is as tedious to use as possible. Command line applications, GUIs, websites or anything else under the sun is permitted. We want creativity.~
-        ~
-        If you'd like some examples of what to make, go to our subreddit and see posts labeled "Bad UI". 
-      </div>
-      
-          
+        </Header>
+        <div className="prizeDesc">
+          Our subreddit has had a far-reaching history of making simple applications impossible to use. In our first Hackathon, you'll join that legacy by creating a program in any language of your choice which is as tedious to use as possible. Command line applications, GUIs, websites or anything else under the sun is permitted. We want creativity.~
+          ~
+          If you'd like some examples of what to make, go to our subreddit and see posts labeled "Bad UI". 
+        </div>
         <Button as={Link} smooth to="/Hackathon#Sponsors" className="scrollDown" circular icon="chevron down" />
       </div>
     </div>
