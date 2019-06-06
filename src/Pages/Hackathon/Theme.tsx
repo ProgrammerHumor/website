@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { Button, Header } from "semantic-ui-react";
+import { Button, Header, Image } from "semantic-ui-react";
 import { HashLink as Link } from 'react-router-hash-link';
+import overeng from "../../images/Overeng.png";
 
 export default class Theme extends Component {
   render = () => (
     <div id="Theme" className="themeBox">
       <div>
         <Header className="theme">Theme</Header>
-        <Header className="overeng">Overengineering</Header>
+        <Image src={overeng}/>
         <Header className="themeDesc">
           Come up with programs that make trivial actions complicated!
         </Header>
