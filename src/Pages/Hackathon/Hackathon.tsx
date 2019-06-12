@@ -6,6 +6,7 @@ import Prizes from './Prizes';
 import FAQ from './FAQ';
 import Rules from './Rules';
 import CanvasForOverview from './CanvasForOverview';
+import Judges from './Judges';
 import './Hackathon.css';
 
 export default class HackathonPage extends Component {
@@ -18,6 +19,7 @@ export default class HackathonPage extends Component {
       <Theme />
       <Sponsors />
       <Prizes />
+      <Judges/>
       <Rules />
       <FAQ />
     </div>

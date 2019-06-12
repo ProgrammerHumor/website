@@ -40,7 +40,7 @@ export default class Overview extends Component {
           </Grid.Column>
           </Grid.Row>
         </Grid>
-        <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" circular icon="chevron down" />
+        <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown2" circular icon="chevron down" />
       </div>
       </div>
     </div >

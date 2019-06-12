@@ -92,6 +92,16 @@
   .scrollDown {
     visibility: visible;
     position: absolute;
+    bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 48.5%;
+
+  }
+
+  .scrollDown2 {
+    visibility: visible;
+    position: absolute;
     bottom: 15%;
     margin-left: auto;
     margin-right: auto;
