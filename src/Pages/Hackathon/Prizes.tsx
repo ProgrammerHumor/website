@@ -23,7 +23,7 @@ export default class Prizes extends Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <Button as={Link} smooth to="/Hackathon#Rules" className="scrollDown" circular icon="chevron down" />
+        <Button as={Link} smooth to="/Hackathon#Judges" className="scrollDown" circular icon="chevron down" />
       </div>
     </div>
   );
