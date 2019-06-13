@@ -8,7 +8,7 @@ export default class Judges extends Component {
     <div id="Judges" className="themeBox">
       <div>
         <Header className="theme">Judges:</Header>
-        <AdminsProfiles/>
+        {/* <AdminsProfiles/> */}
         <Button as={Link} smooth to="/Hackathon#Rules" className="scrollDown" circular icon="chevron down" />
       </div>
     </div>
