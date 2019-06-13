@@ -9,6 +9,8 @@ export default class Theme extends Component {
         <Header className="theme">Sponsors</Header>
         <Grid verticalAlign="middle" stackable columns="equal" divided>
           <Grid.Row>
+            <Image src={jetbrains-greyscale}/>
+            <div className="prizeDesc">Jetbrains</div>
           </Grid.Row>
         </Grid>
         <Button as={Link} smooth to="/Hackathon#Prizes" className="scrollDown" circular icon="chevron down" />
