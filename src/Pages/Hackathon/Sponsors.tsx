@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Header, Grid, Image } from "semantic-ui-react";
 import { HashLink as Link } from 'react-router-hash-link';
+import jetbrains-greyscale from "../../images/jetbrains-greyscale.png";
 
 export default class Theme extends Component {
   render = () => (
