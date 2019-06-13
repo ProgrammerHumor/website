@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Header, Grid, Image } from "semantic-ui-react";
 import { HashLink as Link } from 'react-router-hash-link';
-import jetbrains-grayscale from "../../images/jetbrains-grayscale.png";
+import jetbrains from "../../images/jetbrains-grayscale.png";
 
 export default class Theme extends Component {
   render = () => (
@@ -10,8 +10,10 @@ export default class Theme extends Component {
         <Header className="theme">Sponsors</Header>
         <Grid verticalAlign="middle" stackable columns="equal" divided>
           <Grid.Row>
-            <Image src={jetbrains-grayscale}/>
-            <div className="prizeDesc">Jetbrains</div>
+          <Grid.Column>
+            <Header size="medium" inverted>Jetbrains</Header>
+            <Image src={jetbrains} size="medium" centered/>
+            </Grid.Column>
           </Grid.Row>
         </Grid>
         <Button as={Link} smooth to="/Hackathon#Prizes" className="scrollDown" circular icon="chevron down" />
