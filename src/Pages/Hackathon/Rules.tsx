@@ -12,6 +12,9 @@ export default class Rules extends Component {
             <Grid.Column>
               <Header size="medium" inverted>Be civilized and respectful</Header>
               <div className="prizeDesc">Please be nice to each other. This is mainly for fun and there is no reason to bring any hate into the Hackathon. As always, remember the human.</div>
+              <Button style={{
+                marginTop: "2vh",
+                }} as="a" href="code-of-conduct.html">Code Of Conduct</Button>
             </Grid.Column>
             <Grid.Column>
               <Header size="medium" inverted>Maximum team of 4</Header>
