@@ -1,0 +1,29 @@
+.Welcome {
+  font-size: 40px !important;
+}
+
+.card {
+  background-color: #222 !important;
+  box-shadow: 0 9px 30px 0 rgba(27, 27, 27, 0.29) !important;
+  border-radius: 5px !important;
+}
+
+.cardText {
+  color: white !important; 
+}
+
+#cardHeader {
+  font-size: 28px;
+  margin: 5px;
+}
+
+#cardDescription {
+  margin: auto;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.cardGroup {
+  margin-top: 200px !important;
+  margin-bottom: 300px !important;
+}

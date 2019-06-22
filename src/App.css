@@ -10,45 +10,21 @@
   max-width: 45%;
 }
 
-.pageBackground {
+#pageBackground {
   background-image: url("./images/prism.png");
   height: 100%;
   width: 100% !important;
   padding-top: 2%;
-  padding-bottom: 6.6%;
 }
 
-.hackathonBackgroundPC {
-  background-image: url("./images/prism.png");
-  height: 100%;
-  width: 100% !important;
-  padding-top: 2%;
-  padding-bottom: 6.6%;
+.desktopPageBackground {
+  padding-bottom: 5.3%;
 }
 
-.MobilePageBackground {
-  background-image: url("./images/prism.png");
-  height: 100%;
-  width: 100% !important;
-  padding-bottom: 2%;
-  padding-bottom: 15.5%;
-}
-
-.hackathonBackgroundMobile {
-  background-image: url("./images/prism.png");
-  height: 100%;
-  width: 100% !important;
-  padding-bottom: 2%;
+.mobilePageBackground {
   padding-bottom: 15.5%;
 }
 
 .navBar {
   background-color: rgba(20, 20, 20, 0.5) !important;
-}
-
-.overviewDiv {
-  z-index: -1;
-  image-rendering: canvas(backgroundCanvas);
-  height: 100%;
-  width: 100% !important;
 }
