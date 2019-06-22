@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./WelcomeStyle.css";
-import "./BottomHalfOfPageStyle.css";
 import "../../Footer/FooterStyle.css";
 import coding from '../../images/coding.svg'
 import {
