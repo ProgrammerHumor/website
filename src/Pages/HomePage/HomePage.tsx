@@ -27,11 +27,11 @@ class HomePage extends React.Component<{}, {}> {
   render() {
     this.waitForElement();
     return (
-      <div>
+      <div className="welcContainer">
         <Header className="welcome" inverted size="huge">Welcome to ProgrammerHumor!</Header>
         <Header className="description" inverted>The funniest developer community out there.</Header>
         <Button as={Link} to="Hackathon" className="goToHackathonButton" color="violet" size="huge">Visit Our Hackathon!</Button>
-        <Image centered src={coding}></Image>
+        <Image size="big" centered src={coding}></Image>
       </div>
     );
   }

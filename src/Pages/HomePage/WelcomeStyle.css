@@ -8,10 +8,14 @@
 
 .goToHackathonButton {
   background-color: #5d5f82 !important;
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
+  margin-top: 3vh !important;
+  margin-bottom: 6vh !important;
   padding-top:20px !important;
   padding-bottom:20px !important;
   padding-right:55px !important;
   padding-left:55px !important;
+}
+
+.welcContainer {
+  height: 82.5vh;
 }
