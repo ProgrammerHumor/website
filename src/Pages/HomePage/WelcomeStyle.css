@@ -1,29 +1,17 @@
-.Welcome {
+.welcome {
   font-size: 40px !important;
 }
 
-.card {
-  background-color: #222 !important;
-  box-shadow: 0 9px 30px 0 rgba(27, 27, 27, 0.29) !important;
-  border-radius: 5px !important;
+.description {
+  color: #ccc !important;
 }
 
-.cardText {
-  color: white !important; 
-}
-
-#cardHeader {
-  font-size: 28px;
-  margin: 5px;
-}
-
-#cardDescription {
-  margin: auto;
-  font-size: 15px;
-  vertical-align: middle;
-}
-
-.cardGroup {
-  margin-top: 200px !important;
-  margin-bottom: 300px !important;
+.goToHackathonButton {
+  background-color: #5d5f82 !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  padding-top:20px !important;
+  padding-bottom:20px !important;
+  padding-right:55px !important;
+  padding-left:55px !important;
 }
