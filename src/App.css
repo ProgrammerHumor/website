@@ -13,7 +13,7 @@
 #pageBackground {
   background-image: url("./images/prism.png");
   height: 100%;
-  width: 100% !important;
+  width: 100%;
   padding-top: 2%;
 }
 
