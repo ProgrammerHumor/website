@@ -1,22 +1,24 @@
 .forFooterBackground {
   background-color: rgba(20, 20, 20, 0.5) !important;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   padding-top: 1%;
   padding-bottom: 1%;
   margin: auto;
+  bottom: 0;
 }
 
 .forFooterBackgroundMobile {
   background-color: rgba(20, 20, 20, 0.5) !important;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   padding-top: 1%;
   padding-bottom: 1%;
   margin-top: 5%;
   margin: auto;
+  bottom: 0;
 }
 
 .forFooterWidth {
