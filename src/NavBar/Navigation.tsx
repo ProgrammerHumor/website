@@ -12,7 +12,7 @@ const Hackathon = () => <HackathonPage />;
 
 class Navigation extends Component {
 
-  
+
   render() {
     return (
       <div className="App">
@@ -25,10 +25,10 @@ class Navigation extends Component {
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>
-            </div>
           </div>
-         <div className="forFooterBackgroundMobile">
-         <Footer />
+          <div className="forFooterBackgroundMobile">
+            <Footer />
+          </div>
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
           <div id="pageBackground" className="desktopPageBackground">
@@ -39,12 +39,12 @@ class Navigation extends Component {
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>
-            </div>
           </div>
-         <div className="forFooterBackground">
-         <Footer />
+          <div className="forFooterBackground">
+            <Footer />
+          </div>
         </Responsive>
-      </div>
+      </div >
     );
   }
 }
