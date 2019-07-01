@@ -25,10 +25,10 @@ class Navigation extends Component {
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>
-            <div className="forFooterBackgroundMobile">
-              <Footer />
             </div>
           </div>
+         <div className="forFooterBackgroundMobile">
+         <Footer />
         </Responsive>
         <Responsive {...Responsive.onlyComputer}>
           <div id="pageBackground" className="desktopPageBackground">
@@ -39,10 +39,10 @@ class Navigation extends Component {
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>
-            <div className="forFooterBackground">
-              <Footer />
             </div>
           </div>
+         <div className="forFooterBackground">
+         <Footer />
         </Responsive>
       </div>
     );
