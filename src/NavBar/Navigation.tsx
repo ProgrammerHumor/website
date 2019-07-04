@@ -28,9 +28,6 @@ class Navigation extends Component {
               </Switch>
             </NavBar>
           </div>
-          <div className="forFooterBackgroundMobile">
-            <Footer />
-          </div>
         </div>
       );
     } else {
@@ -44,9 +41,6 @@ class Navigation extends Component {
                 <Route path="/" render={() => <Redirect to="/Home" />} />
               </Switch>
             </NavBar>
-          </div>
-          <div className="forFooterBackground">
-            <Footer />
           </div>
         </div>
       );

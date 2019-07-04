@@ -11,7 +11,12 @@ import Footer from './Footer/footer';
 class App extends Component {
   render = () => (
     <Router>
-      <Navigation />
+      <div>
+        <Navigation />
+        <div className="forFooterBackgroundMobile">
+          <Footer />
+        </div>
+      </div>
     </Router>
   );
 }

@@ -7,7 +7,7 @@ import {
 
 class footerCom extends React.Component {
   render() {
-    if (document.body.clientWidth <= 700) {
+    if (document.body.clientWidth >= 700) {
       return (
         <div className="footer">
           <div className="footerButton">
