@@ -17,5 +17,9 @@
 }
 
 .welcContainer {
+  min-height: calc(100vh);
+}
+
+.welcContainer_content {
   height: fit-content;
 }
