@@ -7,84 +7,83 @@ import {
 
 class footerCom extends React.Component {
   render() {
-    return (
-      <div>
-        <Responsive {...Responsive.onlyMobile}>
-          <div className="mobileFooter">
+    if (document.body.clientWidth <= 700) {
+      return (
+        <div className="footer">
+          <div className="footerButton">
             <Button
               href="https://github.com/ProgrammerHumor"
               icon
               color="black"
-              size="large"
+              size="massive"
             >
-              <Icon name="github"/>
+              <Icon name="github" />
             </Button>
             <Button
               href="https://www.reddit.com/r/ProgrammerHumor"
               icon
               color="black"
-              size="large"
+              size="massive"
             >
-              <Icon name="reddit"/>
+              <Icon name="reddit" />
             </Button>
             <Button
               href="https://discord.gg/7cbeUvC"
               icon
               color="black"
-              size="large"
+              size="massive"
             >
-              <Icon name="discord"/>
+              <Icon name="discord" />
             </Button>
             <Button
               href="https://www.twitch.com"
               icon
               color="black"
-              size="large"
+              size="massive"
             >
-              <Icon name="twitch"/>
+              <Icon name="twitch" />
             </Button>
           </div>
-        </Responsive>
-        <Responsive {...Responsive.onlyComputer}>
-          <div className="footer">
-            <div className="footerButton">
-              <Button
-                href="https://github.com/ProgrammerHumor"
-                icon
-                color="black"
-                size="massive"
-              >
-                <Icon name="github"/>
-              </Button>
-              <Button
-                href="https://www.reddit.com/r/ProgrammerHumor"
-                icon
-                color="black"
-                size="massive"
-              >
-                <Icon name="reddit"/>
-              </Button>
-              <Button
-                href="https://discord.gg/7cbeUvC"
-                icon
-                color="black"
-                size="massive"
-              >
-                <Icon name="discord"/>
-              </Button>
-              <Button
-              href="https://www.twitch.com"
-              icon
-              color="black"
-              size="massive"
-              >
-                <Icon name="twitch"/>
-              </Button>
-            </div>
-          </div>
-        </Responsive>
-      </div>
-    );
+        </div>
+      );
+    } else {
+      return (
+        <div className="mobileFooter">
+          <Button
+            href="https://github.com/ProgrammerHumor"
+            icon
+            color="black"
+            size="large"
+          >
+            <Icon name="github" />
+          </Button>
+          <Button
+            href="https://www.reddit.com/r/ProgrammerHumor"
+            icon
+            color="black"
+            size="large"
+          >
+            <Icon name="reddit" />
+          </Button>
+          <Button
+            href="https://discord.gg/7cbeUvC"
+            icon
+            color="black"
+            size="large"
+          >
+            <Icon name="discord" />
+          </Button>
+          <Button
+            href="https://www.twitch.com"
+            icon
+            color="black"
+            size="large"
+          >
+            <Icon name="twitch" />
+          </Button>
+        </div>
+      );
+    }
   }
 }
 

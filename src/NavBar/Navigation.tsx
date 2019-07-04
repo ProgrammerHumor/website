@@ -14,9 +14,11 @@ class Navigation extends Component {
 
 
   render() {
-    return (
-      <div className="App">
-        <Responsive {...Responsive.onlyMobile}>
+    console.log(document.body.clientWidth);
+    if (document.body.clientWidth <= 700) {
+      return (
+        <div className="App">
+
           <div id="pageBackground" className="mobilePageBackground">
             <NavBar>
               <Switch>
@@ -29,8 +31,11 @@ class Navigation extends Component {
           <div className="forFooterBackgroundMobile">
             <Footer />
           </div>
-        </Responsive>
-        <Responsive {...Responsive.onlyComputer}>
+        </div>
+      );
+    } else {
+      return (
+        <div className='App'>
           <div id="pageBackground" className="desktopPageBackground">
             <NavBar>
               <Switch>
@@ -43,9 +48,9 @@ class Navigation extends Component {
           <div className="forFooterBackground">
             <Footer />
           </div>
-        </Responsive>
-      </div >
-    );
+        </div>
+      );
+    }
   }
 }
 

@@ -101,7 +101,7 @@ const NavBarDesktop = ({
   rightItems?: Array<object>;
 }) => {
   return (
-    <Menu fixed="top" inverted className="navBar">
+    <Menu inverted className="navBar">
       <Menu.Item
         as={Link} to="/Home"
       >
