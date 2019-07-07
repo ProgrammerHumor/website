@@ -212,7 +212,9 @@ class CanvasForOverview extends Component {
 
   render() {
     return (
-      <canvas ref="canvas" width={window.innerWidth} height={window.innerHeight} />
+      <div className="divForOverview">
+        <canvas ref="canvas" width={window.innerWidth} height={window.innerHeight} />
+      </div>
     );
   }
 }

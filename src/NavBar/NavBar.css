@@ -3,3 +3,9 @@
     margin-bottom: 100vh;
   }
 }
+
+.navBar {
+  background-color: rgba(20, 20, 20, 0.5) !important;
+  position: relative;
+  z-index: 1;
+}
