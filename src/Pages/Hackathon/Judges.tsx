@@ -7,7 +7,7 @@ export default class Judges extends Component {
   render = () => (
     <div id="Judges">
       <div>
-        <Header className="theme">Judges:</Header>
+        <Header className="theme">Our Team:</Header>
         <AdminsProfiles/>
       </div>
     </div>

@@ -21,87 +21,9 @@ class AdminProfile extends Component {
     highlightForOtherHalfBorder: "forAdminProfileTitle forAdminProfileTextArea"
   };
 
-  highlightBox = () => {
-    if (!this.props.isMobile) {
-      if (!this.props.checkPara(this.props.row1)) {
-        this.setState({
-          classNameForDiv: "paddingForDiv",
-          highlightForImageBorder: "HighlightImage",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
-        })
-      } else {
-        this.setState({
-          classNameForDiv: "forHighlightingPerson",
-          highlightForImageBorder: "HighlightImage",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
-        });
-      }
-    }
-    //console.log(this.state.highlighted);
-  };
-  unHighlightBox = () => {
-    if (!this.props.isMobile) {
-      if (!this.state.clickedIsTure) {
-        this.setState({
-          classNameForDiv: "paddingForDiv",
-          highlightForImageBorder: "",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea"
-        });
-      } else {
-        this.setState({
-          highlightForImageBorder: "",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea"
-        });
-      }
-      //console.log(this.state.highlightForOtherHalfBorder);
-    }
-    //console.log(this.state.highlighted);
-  };
-  whenClicked = () => {
-    if (!this.props.isMobile) {
-      if (!this.state.clickedIsTure) {
-        this.setState({
-          paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
-          clickedIsTure: true
-        });
-        this.props.displayPara(true);
-      } else {
-        this.setState({
-          paraToDisplay: "",
-          clickedIsTure: false
-        });
-        this.props.displayPara(false);
-      }
-    } else {
-      if (!this.state.clickedIsTure) {
-        this.setState({
-          highlightForImageBorder: "HighlightImage",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile",
-          paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
-          clickedIsTure: true
-        });
-      } else {
-        this.setState({
-          highlightForImageBorder: "",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea",
-          paraToDisplay: "",
-          clickedIsTure: false
-        });
-      }
-    }
-  };
   render() {
     return (
       <div
-        onClick={this.whenClicked}
-        onMouseLeave={this.unHighlightBox}
-        onMouseOver={this.highlightBox}
         className={this.state.classNameForDiv}
       >
         <div>
@@ -123,7 +45,7 @@ class AdminProfile extends Component {
             </Header>
           </div>
           <div className="forAdminProfileIcons">
-            <div className="forAdminProfileIcon">
+            {this.props.redditLink && <div className="forAdminProfileIcon">
               <Button
                 icon
                 circular
@@ -134,8 +56,8 @@ class AdminProfile extends Component {
               >
                 <Icon className="reddit large icon" />
               </Button>
-            </div>
-            <div className="forAdminProfileIcon">
+            </div>}
+            {this.props.discordLink && <div className="forAdminProfileIcon">
               <Button
                 icon
                 circular
@@ -146,8 +68,8 @@ class AdminProfile extends Component {
               >
                 <Icon className="discord large icon" />
               </Button>
-            </div>
-            <div className="forAdminProfileIcon">
+            </div>}
+            {this.props.gitHubLink && <div className="forAdminProfileIcon">
               <Button
                 icon
                 circular
@@ -158,7 +80,19 @@ class AdminProfile extends Component {
               >
                 <Icon className="github large icon" />
               </Button>
-            </div>
+            </div>}
+            {this.props.twitterLink && <div className="forAdminProfileIcon">
+              <Button
+                icon
+                circular
+                inverted
+                size="small"
+                target="_blank"
+                href={this.props.twitterLink}
+              >
+                <Icon className="twitter large icon" />
+              </Button>
+            </div>}
           </div>
         </div>
       </div>
