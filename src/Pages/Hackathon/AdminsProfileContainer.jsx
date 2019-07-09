@@ -3,8 +3,9 @@ import AdminProfile from "./AdminProfile";
 // import img1 from "./logo.png";
 // import img2 from "./BackgroundPattern.png";
 import gator from "../../images/people/gator.jpg";
-import delite from "../../images/people/delite.jpg"
-import jman from "../../images/people/jman.png"
+import delite from "../../images/people/delite.jpg";
+import jman from "../../images/people/jman.png";
+import pixxl from "../../images/people/pixxl.png";
 import img3 from "../../images/AndySamberg.jpg";
 import { Responsive } from "semantic-ui-react";
 
@@ -43,23 +44,19 @@ class AdminsProflies extends Component {
       },
       {
         key: 4,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
+        title: "Judge",
+        img: pixxl,
+        name: "PixxlMan",
         gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
+        redditLink: "https://reddit.com/user/PixxlMan",
       }
     ],
     profileRow2: [
       {
         key: 0,
-        title: "Celebrity",
+        title: "Judge",
         img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
+        name: "DeJay",
       },
       {
         key: 1,
