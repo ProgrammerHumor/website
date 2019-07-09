@@ -8,7 +8,7 @@ export default class Judges extends Component {
     <div id="Judges">
       <div>
         <Header className="theme">Our Team:</Header>
-        <AdminsProfiles/>
+        <AdminsProfiles />
       </div>
     </div>
   );

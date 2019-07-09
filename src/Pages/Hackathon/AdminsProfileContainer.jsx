@@ -4,6 +4,7 @@ import AdminProfile from "./AdminProfile";
 // import img2 from "./BackgroundPattern.png";
 import gator from "../../images/people/gator.jpg";
 import delite from "../../images/people/delite.jpg"
+import jman from "../../images/people/jman.png"
 import img3 from "../../images/AndySamberg.jpg";
 import { Responsive } from "semantic-ui-react";
 
@@ -21,9 +22,8 @@ class AdminsProflies extends Component {
       {
         key: 1,
         title: "Judge and Organizer",
-        img: img3,
+        img: jman,
         name: "Jman005",
-        discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
         redditLink: "https://www.google.com/",
       },
