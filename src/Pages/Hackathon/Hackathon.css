@@ -1,6 +1,6 @@
 .theme {
   color: white !important;
-  font-size: 65px !important;
+  font-size: 55px !important;
   text-align: center;
   margin-top: 10px;
 }
@@ -92,7 +92,7 @@
 .prizeDesc {
   width: 50%;
   margin: auto;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
   color: white;
   font-size: 17.5px;
 }
