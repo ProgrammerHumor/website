@@ -6,6 +6,7 @@ import gator from "../../images/people/gator.jpg";
 import delite from "../../images/people/delite.jpg";
 import jman from "../../images/people/jman.png";
 import pixxl from "../../images/people/pixxl.png";
+import dejay from "../../images/people/dejay.png"
 import img3 from "../../images/AndySamberg.jpg";
 import { Responsive } from "semantic-ui-react";
 
@@ -55,7 +56,7 @@ class AdminsProflies extends Component {
       {
         key: 0,
         title: "Judge",
-        img: img3,
+        img: dejay,
         name: "DeJay",
       },
       {

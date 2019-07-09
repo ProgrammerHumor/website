@@ -21,7 +21,7 @@
 
 
 .date {
-  color: violet !important;
+  color: blueviolet !important;
   font-size: 5vw !important;
 }
 
@@ -42,7 +42,7 @@
 
   .humDesc {
     font-size: 5vw !important;
-    color: white !important;
+    color: greenyellow !important;
   }
 }
 
@@ -55,7 +55,7 @@
 
   .humDesc {
     font-size: 3vw !important;
-    color: white !important;
+    color: greenyellow !important;
   }
 
   .intro {
@@ -71,7 +71,6 @@
   }
 
   .date {
-    color: violet !important;
     font-size: 2vw !important;
   }
 }
