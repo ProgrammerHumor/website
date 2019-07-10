@@ -20,14 +20,16 @@ class AdminsProflies extends Component {
         name: "Gator",
         gitHubLink: "https://github.com/A1igator",
         redditLink: "https://www.reddit.com/user/xxaligatorxx",
+        discordLink: "https://discordapp.com/users/247019307253366784"
       },
       {
         key: 1,
         title: "Judge and Organizer",
         img: jman,
         name: "Jman005",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
+        gitHubLink: "https://github.com/jman005",
+        redditLink: "https://www.reddit.com/user/jman005",
+        discordLink: "https://discordapp.com/users/188089222958153728"
       },
       {
         key: 2,
@@ -36,12 +38,15 @@ class AdminsProflies extends Component {
         name: "Steve",
         twitterLink: "https://twitter.com/countingsort",
         redditLink: "https://www.reddit.com/user/SteveCCL",
+        discordLink: "https://discordapp.com/users/249963729242947584"
       },
       {
         key: 3,
         title: "Judge",
         img: delite,
         name: "Delite",
+        redditLink: "https://reddit.com/user/deliteplays",
+        discordLink: "https://discordapp.com/users/142242854167642122"
       },
       {
         key: 4,
@@ -50,6 +55,7 @@ class AdminsProflies extends Component {
         name: "PixxlMan",
         gitHubLink: "https://www.google.com/",
         redditLink: "https://reddit.com/user/PixxlMan",
+        discordLink: "https://discordapp.com/users/273465815112613891"
       }
     ],
     profileRow2: [
@@ -58,6 +64,8 @@ class AdminsProflies extends Component {
         title: "Judge",
         img: dejay,
         name: "DeJay",
+        redditLink: "https://reddit.com/user/iArentdeJay",
+        discordLink: "https://discordapp.com/users/194861788926443520"
       },
       {
         key: 1,
@@ -129,13 +137,13 @@ class AdminsProflies extends Component {
   };
   checkRows = (Row1) => {
     if (Row1) {
-      if (this.state.numberOfDisplayedParaRow1 == 4) {
+      if (this.state.numberOfDisplayedParaRow1 === 4) {
         return false;
       } else {
         return true;
       }
     } else {
-      if (this.state.numberOfDisplayedParaRow2 == 4) {
+      if (this.state.numberOfDisplayedParaRow2 === 4) {
         return false;
       } else {
         return true;

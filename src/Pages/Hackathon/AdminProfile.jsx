@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import "./AbousUsStyle.css";
 import {
-  Container,
   Icon,
   Image,
-  Menu,
-  Sidebar,
-  Responsive,
   Button,
   Header
 } from "semantic-ui-react";
