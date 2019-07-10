@@ -1,0 +1,82 @@
+.welcome {
+  font-size: 40px !important;
+}
+
+.description {
+  color: #ccc !important;
+}
+
+.goToHackathonButton {
+  background-color: #5d5f82 !important;
+  margin-top: 3vh !important;
+  margin-bottom: 6vh !important;
+  padding-top:20px !important;
+  padding-bottom:20px !important;
+  padding-right:55px !important;
+  padding-left:55px !important;
+}
+
+.welcContainer {
+  /* max-height: calc(100vh -50em); */
+}
+
+.welcContainer_content {
+  height: fit-content;
+  h1 {
+    color: white;
+    font-size: 4vw;
+  }
+  h3 {
+    color: white;
+    font-size: 1.5vw;
+    margin-bottom: 3em;
+  }
+  img {
+    height: 50vh;
+    max-width: 90vw;
+    margin: 5em 0;
+  }
+}
+
+@media only screen and (max-width: 700px) { 
+  .welcContainer_content {
+    h1 {
+      color: white;
+      font-size: 4vw;
+    }
+    h3 {
+      color: white;
+      font-size: 1.5vw;
+      margin-bottom: 3em;
+    }
+    img {
+      height: 50vh;
+      max-width: 90vw;
+      margin: 5em 0;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1020px) { 
+  .welcContainer {
+    height: 90vh;
+  }
+}
+
+@media only screen and (min-width: 1025px) { 
+  .welcContainer {
+    height: fit-content;
+  }
+}
+
+.welcContainer_button {
+  height: 5vw;
+  width: 25vw;
+  background-color: #5d5f82;
+  margin: auto;
+  color: white;
+  font-size: 2vw;
+  line-height: 5vw;
+  border-radius: 10px;
+}

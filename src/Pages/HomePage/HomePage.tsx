@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./WelcomeStyle.css";
+import "./WelcomeStyle.scss";
 import "../../Footer/FooterStyle.css";
 import coding from '../../images/coding.svg'
 import {
@@ -28,10 +28,14 @@ class HomePage extends React.Component<{}, {}> {
     return (
       <div className="welcContainer">
         <div className='welcContainer_content'>
-          <Header className="welcome" inverted size="huge">Welcome to ProgrammerHumor!</Header>
+          {/* <Header className="welcome" inverted size="huge">Welcome to ProgrammerHumor!</Header>
           <Header className="description" inverted>The funniest developer community out there.</Header>
           <Button as={Link} to="Hackathon" className="goToHackathonButton" color="violet" size="huge">Visit Our Hackathon!</Button>
-          <Image size="big" centered src={coding}></Image>
+          <Image size="big" centered src={coding}></Image> */}
+          <h1>Welcome to ProgrammerHumor!</h1>
+          <h3>The funniest developer community out there.</h3>
+          <div className='welcContainer_button'>Visit Our Hackathon!</div>
+          <img src={coding} />
         </div>
       </div>
     );
