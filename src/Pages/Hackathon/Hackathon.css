@@ -18,16 +18,12 @@
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  .themeBox {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-right: 5%;
-    margin-left: 5%;
-  }
+#Theme {
+  background-color: rgb(37, 37, 37);
+}
+
+#Sponsors {
+  background-color: rgb(27, 27, 27);  
 }
 
 .intro {
@@ -42,10 +38,6 @@
 .date {
   color: violet !important;
   font-size: 5vw !important;
-}
-
-.scrollDown {
-  visibility: hidden;
 }
 
 @media (max-width: 768px) {
@@ -89,16 +81,6 @@
     position: relative;
   }
 
-  .scrollDown {
-    visibility: visible;
-    position: absolute;
-    bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 48.5%;
-
-  }
-
   .scrollDown2 {
     visibility: visible;
     position: absolute;
@@ -130,6 +112,9 @@
 }
 
 .prizeDesc {
+  width: 50%;
+  margin: auto;
+  padding-bottom: 50px;
   color: white;
 }
 

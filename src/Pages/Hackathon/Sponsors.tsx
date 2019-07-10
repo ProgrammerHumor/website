@@ -5,18 +5,27 @@ import jetbrains from "../../images/jetbrains-grayscale.png";
 
 export default class Theme extends Component {
   render = () => (
-    <div id="Sponsors" className="themeBox">
+    <div id="Sponsors">
       <div>
-        <Header className="theme">Sponsors</Header>
         <Grid verticalAlign="middle" stackable columns="equal" divided>
           <Grid.Row>
-          <Grid.Column>
-            <Header size="medium" inverted>Jetbrains</Header>
-            <Image src={jetbrains} size="medium" centered/>
+            <Grid.Column>
+              <Image src={jetbrains} size="medium" centered/>
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={jetbrains} size="medium" centered/>
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={jetbrains} size="medium" centered/>
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={jetbrains} size="medium" centered/>
+            </Grid.Column>
+            <Grid.Column>
+              <Image src={jetbrains} size="medium" centered/>
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <Button as={Link} smooth to="/Hackathon#Prizes" className="scrollDown" circular icon="chevron down" />
       </div>
     </div>
   );

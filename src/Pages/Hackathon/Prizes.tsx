@@ -4,7 +4,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Prizes extends Component {
   render = () => (
-    <div id="Prizes" className="themeBox">
+    <div id="Prizes">
       <div>
         <Header className="theme">Prizes:</Header>
         <Grid stackable columns="equal" divided>
@@ -23,7 +23,6 @@ export default class Prizes extends Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <Button as={Link} smooth to="/Hackathon#Judges" className="scrollDown" circular icon="chevron down" />
       </div>
     </div>
   );

@@ -26,9 +26,7 @@ export default class HackathonPage extends Component {
     this.waitForElement();
     return (
       <div>
-        <div className="divForOverview">
-          <CanvasForOverview />
-        </div>
+        <CanvasForOverview />
         <Overview />
         <Theme />
         <Sponsors />
