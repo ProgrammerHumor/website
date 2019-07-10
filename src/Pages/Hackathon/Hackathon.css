@@ -19,6 +19,17 @@
   align-items: center;
 }
 
+#FAQ {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.dropDown {
+  color: white;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid
+}
 
 .date {
   color: blueviolet !important;
