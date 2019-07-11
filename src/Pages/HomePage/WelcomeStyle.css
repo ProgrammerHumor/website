@@ -16,22 +16,10 @@
   padding-left:55px !important;
 }
 
-.welcContainer {
-  /* max-height: calc(100vh -50em); */
-}
-
 .welcContainer_content {
   height: fit-content;
 }
 
-@media only screen and (min-width: 1020px) { 
-  .welcContainer {
-    height: 90vh;
-  }
-}
-
-@media only screen and (min-width: 1025px) { 
-  .welcContainer {
-    height: fit-content;
-  }
+.welcContainer {
+  height: 90vh;
 }

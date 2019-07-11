@@ -15,7 +15,7 @@ class AdminsProflies extends Component {
     profileRow1: [
       {
         key: 0,
-        title: "Streamer and Organizer",
+        title: "Streamer, Organizer and Website Developer",
         img: gator,
         name: "Gator",
         gitHubLink: "https://github.com/A1igator",
@@ -42,7 +42,7 @@ class AdminsProflies extends Component {
       },
       {
         key: 3,
-        title: "Judge",
+        title: "Judge and Website Developer",
         img: delite,
         name: "Delite",
         redditLink: "https://reddit.com/user/deliteplays",

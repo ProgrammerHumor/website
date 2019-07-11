@@ -5,7 +5,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 export default class FAQ extends Component {
   render = () => (
     <div id="FAQ">
-        <Header className="theme">Frequently Asked Questions:</Header>
+        <Header className="theme">Frequently Asked Questions</Header>
         <Dropdown className="dropDown" fluid multiple text="What is a hackathon?">
           <DropdownMenu>
             <Message>It's an event where teams compete by coding! You're given a theme to program something based on, and must complete your project within a given timeframe. After the due date, judges will vote for their favorite entry, and prizes will be distributed to the winners.</Message>            
@@ -31,35 +31,6 @@ export default class FAQ extends Component {
             <Message>You can ask either on the subreddit with the Hackathon flair, or on the <a href="https://discord.gg/7cbeUvC">Discord Server</a>. We recommend joining Discord since you would be more likely to get assistance quickly there.</Message>            
           </DropdownMenu>
         </Dropdown>
-        {/* <Grid stackable columns="equal" divided>
-          <Grid.Row>
-            <Grid.Column>
-              <Header size="medium" inverted></Header>
-            </Grid.Column>
-            <Grid.Column>
-              <Header size="medium" inverted></Header>
-              <div className="prizeDesc"><Link to="/register">Click here</Link></div>
-            </Grid.Column>
-            <Grid.Column>
-              <Header size="medium" inverted></Header>
-              <div className="prizeDesc"></div>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column>
-              <Header size="medium" inverted></Header>
-              <div className="prizeDesc"> </div>
-            </Grid.Column>
-            <Grid.Column>
-              <Header size="medium" inverted></Header>
-              <div className="prizeDesc"></div>
-            </Grid.Column>
-            <Grid.Column>
-              <Header size="medium" inverted></Header>
-              <div className="prizeDesc"></div>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid> */}
     </div>
   );
 }

@@ -19,9 +19,36 @@
   align-items: center;
 }
 
+.prizeBox {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 140px;
+  margin-bottom: 150px;
+}
+
+#firstPlace {
+  background-color: #4f5c75;
+}
+
+#secondPlace {
+  background-color: #424d61;
+}
+
+#thirdPlace {
+  background-color: #333b4a;
+}
+
 #FAQ {
   margin-left: 200px;
   margin-right: 200px;
+  margin-bottom: 150px;
+}
+
+#Rules {
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 150px;
 }
 
 .dropDown {
