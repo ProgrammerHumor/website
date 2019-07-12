@@ -59,7 +59,7 @@
 }
 
 .date {
-  color: blueviolet !important;
+  color: greenyellow !important;
   font-size: 5vw !important;
 }
 
@@ -79,7 +79,7 @@
   }
 
   .humDesc {
-    font-size: 5vw !important;
+    font-size: 25px !important;
     color: greenyellow !important;
   }
 }
@@ -92,7 +92,7 @@
   }
 
   .humDesc {
-    font-size: 3vw !important;
+    font-size: 75px !important;
     color: greenyellow !important;
   }
 
@@ -105,11 +105,11 @@
   }
 
   .scrollDown {
-    margin-top: 10vh !important;
+    margin-top: 10px !important;
   }
 
   .date {
-    font-size: 2vw !important;
+    font-size: 45px !important;
   }
 }
 
@@ -136,6 +136,7 @@
 }
 
 .signUpButton {
+  margin-top: 100px;
   box-shadow: 10px 10px 5px rgb(20, 20, 20);
 }
 

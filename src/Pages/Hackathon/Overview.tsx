@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import anime from 'animejs';
-import { Container, Header, Button, Grid, Segment } from "semantic-ui-react";
+import { Icon, Header, Button, Grid, Segment } from "semantic-ui-react";
 import Countdown from "./Countdown";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -15,7 +15,6 @@ export default class Overview extends Component {
       }}></a>
     <div className="intro">
       <div>
-        <Header className="humHack">Hackathon</Header>
         <Grid stackable columns="equal" divided>
         <Grid.Row stretched>
           <Grid.Column>
@@ -31,9 +30,36 @@ export default class Overview extends Component {
               <Header className="date">August 1st to August 30th</Header>
             </Segment>
             <Segment basic>
+            <Header inverted>Use one of the buttons below for updates!</Header>
+            <div className="footerButton">
+            <Button
+              href="https://discord.gg/7cbeUvC"
+              icon
+              color="red"
+              size="massive"
+            >
+              <Icon name="discord" />
+            </Button>
+            <Button
+            href="https://www.reddit.com/r/ProgrammerHumor"
+            icon
+            color="red"
+            size="massive"
+          >
+            <Icon name="reddit" />
+          </Button>
+          <Button
+            href="https://www.reddit.com/r/ProgrammerHumor"
+            icon
+            color="red"
+            size="massive"
+          >
+            <Icon name="mail" />
+          </Button>
+            </div>
             <div className="signUpButton">
               <Button size="huge" fluid color="vk">
-                <h2 className="bold">Sign Up</h2>
+                <h2 className="bold">Sponsor The Event</h2>
               </Button>
             </div>
             </Segment>
