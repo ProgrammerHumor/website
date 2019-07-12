@@ -1,8 +1,12 @@
 .theme {
   color: white !important;
-  font-size: 55px !important;
+  font-size: 35px !important;
   text-align: center;
   margin-top: 10px;
+}
+
+.scrollDown {
+  z-index: 500;
 }
 
 #Sponsors {
@@ -60,7 +64,7 @@
 
 .date {
   color: greenyellow !important;
-  font-size: 5vw !important;
+  font-size: 25px !important;
 }
 
 @media (max-width: 768px) {
@@ -69,8 +73,13 @@
   }
 
   .countdownDisc {
-    margin-top: 20% !important;
-    font-size: 5vw !important;
+    margin-top: 6px !important;
+    font-size: 20px !important;
+  }
+
+  .segment {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .humHack {
@@ -82,14 +91,37 @@
     font-size: 25px !important;
     color: greenyellow !important;
   }
+  .signUpButton {
+    margin-top: 10px;
+    box-shadow: 10px 10px 5px rgb(20, 20, 20);
+  }
+  .prizeDesc {
+    /* width: 50%; */
+    margin: auto;
+    /* padding-bottom: 150px; */
+    color: white;
+    font-size: 17.5px;
+  }
+  .themeDesc {
+    color: white !important;
+    font-size: 20px !important;
+  }
+  #Sponsors {
+    background-color: rgb(27, 27, 27);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    margin-top:50px;
+  }
+  .prizeBox {
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 140px;
+    margin-bottom: 0;
+  }
 }
 
 @media (min-width: 768px) {
-
-  .humHack {
-    font-size: 10vw !important;
-    color: white !important;
-  }
 
   .humDesc {
     font-size: 75px !important;
@@ -111,20 +143,10 @@
   .date {
     font-size: 45px !important;
   }
-}
 
-.title {
-  height: 500px;
-}
-
-.humBack {
-  position: absolute;
-  display: block;
-}
-
-.themeDesc {
-  color: white !important;
-  font-size: 30px !important;
+.signUpButton {
+  margin-top: 100px;
+  box-shadow: 10px 10px 5px rgb(20, 20, 20);
 }
 
 .prizeDesc {
@@ -134,10 +156,19 @@
   color: white;
   font-size: 17.5px;
 }
+.themeDesc {
+  color: white !important;
+  font-size: 30px !important;
+}
+}
 
-.signUpButton {
-  margin-top: 100px;
-  box-shadow: 10px 10px 5px rgb(20, 20, 20);
+.title {
+  height: 500px;
+}
+
+.humBack {
+  position: absolute;
+  display: block;
 }
 
 .bold {
