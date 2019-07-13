@@ -128,7 +128,11 @@
   #FAQ {
     margin-left: 0;
     margin-right: 0;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+  }
+  .dropText {
+    white-space: normal !important;
+    width: 92vw;
   }
 }
 
@@ -155,22 +159,22 @@
     font-size: 45px !important;
   }
 
-.signUpButton {
-  margin-top: 100px;
-  box-shadow: 10px 10px 5px rgb(20, 20, 20);
-}
+  .signUpButton {
+    margin-top: 100px;
+    box-shadow: 10px 10px 5px rgb(20, 20, 20);
+  }
 
-.prizeDesc {
-  width: 50%;
-  margin: auto;
-  padding-bottom: 150px;
-  color: white;
-  font-size: 17.5px;
-}
-.themeDesc {
-  color: white !important;
-  font-size: 30px !important;
-}
+  .prizeDesc {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 150px;
+    color: white;
+    font-size: 17.5px;
+  }
+  .themeDesc {
+    color: white !important;
+    font-size: 30px !important;
+  }
 }
 
 .title {
