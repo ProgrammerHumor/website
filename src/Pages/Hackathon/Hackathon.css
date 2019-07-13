@@ -1,8 +1,12 @@
 .theme {
   color: white !important;
-  font-size: 55px !important;
+  font-size: 35px !important;
   text-align: center;
   margin-top: 10px;
+}
+
+.scrollDown {
+  z-index: 500;
 }
 
 #Sponsors {
@@ -19,10 +23,57 @@
   align-items: center;
 }
 
+.prizeBox {
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 200px;
+  margin-bottom: 150px;
+}
+
+#firstPlace {
+  background-color: #4f5c75;
+}
+
+#secondPlace {
+  background-color: #424d61;
+}
+
+#thirdPlace {
+  background-color: #333b4a;
+}
+
+#FAQ {
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 150px;
+}
+
+#Rules {
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 150px;
+}
+
+.dropDown {
+    color: white;
+    border: 2px solid #3a3a3a;
+    border-radius: 3px;
+}
+
+.ui.fluid.dropdown {
+    margin-bottom: 5px;
+}
+
+.ui.fluid.dropdown>.dropdown.icon {
+    position: relative;
+    top: 8px;
+    color: #888;
+}
 
 .date {
-  color: blueviolet !important;
-  font-size: 5vw !important;
+  color: greenyellow !important;
+  font-size: 25px !important;
 }
 
 @media (max-width: 768px) {
@@ -31,30 +82,72 @@
   }
 
   .countdownDisc {
-    margin-top: 20% !important;
-    font-size: 5vw !important;
+    margin-top: 6px !important;
+    font-size: 20px !important;
   }
 
-  .humHack {
-    font-size: 15vw !important;
-    color: white !important;
+  .segment {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   .humDesc {
-    font-size: 5vw !important;
+    font-size: 25px !important;
     color: greenyellow !important;
+  }
+  .signUpButton {
+    margin-top: 10px;
+    box-shadow: 10px 10px 5px rgb(20, 20, 20);
+  }
+  .prizeDesc {
+    /* width: 50%; */
+    margin: auto;
+    /* padding-bottom: 150px; */
+    color: white;
+    font-size: 17.5px;
+  }
+  .themeDesc {
+    color: white !important;
+    font-size: 20px !important;
+  }
+  #Sponsors {
+    background-color: rgb(27, 27, 27);
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 50px;
+    margin-top:50px;
+  }
+  .prizeBox {
+    margin-left: 20px;
+    margin-right: 20px;
+    /* height: 200px; */
+    margin-bottom: 0;
+  }
+  #Rules {
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  #FAQ {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 100px;
+  }
+  .dropText {
+    white-space: normal !important;
+    width: 92vw;
+  }
+  .scrollDown {
+    margin-top: 100px !important;
   }
 }
 
 @media (min-width: 768px) {
 
-  .humHack {
-    font-size: 10vw !important;
-    color: white !important;
-  }
-
   .humDesc {
-    font-size: 3vw !important;
+    font-size: 4.5vw !important;
+    margin-bottom: 10vh !important;
     color: greenyellow !important;
   }
 
@@ -67,11 +160,36 @@
   }
 
   .scrollDown {
-    margin-top: 10vh !important;
+    position: absolute;
+    bottom: 10px;
+    /* margin-top: 10px !important; */
+  }
+
+  #mobileDropDown {
+    display: none;
   }
 
   .date {
-    font-size: 2vw !important;
+    font-size: 45px !important;
+    margin-top: 5vh !important;
+    margin-bottom: 5vh !important;
+  }
+
+  .signUpButton {
+    margin-top: 10vh;
+    box-shadow: 10px 10px 5px rgb(20, 20, 20);
+  }
+
+  .prizeDesc {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 150px;
+    color: white;
+    font-size: 17.5px;
+  }
+  .themeDesc {
+    color: white !important;
+    font-size: 30px !important;
   }
 }
 
@@ -82,23 +200,6 @@
 .humBack {
   position: absolute;
   display: block;
-}
-
-.themeDesc {
-  color: white !important;
-  font-size: 30px !important;
-}
-
-.prizeDesc {
-  width: 50%;
-  margin: auto;
-  padding-bottom: 150px;
-  color: white;
-  font-size: 17.5px;
-}
-
-.signUpButton {
-  box-shadow: 10px 10px 5px rgb(20, 20, 20);
 }
 
 .bold {

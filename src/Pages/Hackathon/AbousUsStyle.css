@@ -7,10 +7,17 @@
 .forAdminProfileText {
   text-align: left !important;
 }
-.paddingForDiv {
-  margin-left: 10%;
-  margin-right: 10%;
-  /* position: static; */
+@media (min-width: 768px) {
+
+  .paddingForDiv {
+    margin-left: 10%;
+    margin-right: 10%;
+    /* position: static; */
+  }
+  .forAdminProfileIcon {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 }
 .forAdminProfileImg img {
   margin-right: 0%;
@@ -118,5 +125,9 @@
   border-right: white solid;
 }
 .mobileAdminContainer {
-  margin: 5%;
+
+  width: 160px;
+  height: 310px;
+  float: left;
+
 }

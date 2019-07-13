@@ -7,6 +7,7 @@ import delite from "../../images/people/delite.jpg";
 import jman from "../../images/people/jman.png";
 import pixxl from "../../images/people/pixxl.png";
 import dejay from "../../images/people/dejay.png"
+import stve from "../../images/people/stve.jpg"
 import img3 from "../../images/AndySamberg.jpg";
 import FourOFourImage from '../../images/ErrorImage.png';
 import { Responsive } from 'semantic-ui-react';
@@ -15,7 +16,7 @@ class AdminsProflies extends Component {
     profileRow1: [
       {
         key: 0,
-        title: "Streamer and Organizer",
+        title: "Streamer, and Organizer",
         img: gator,
         name: "Gator",
         gitHubLink: "https://github.com/A1igator",
@@ -34,7 +35,7 @@ class AdminsProflies extends Component {
       {
         key: 2,
         title: "Streamer and Judge",
-        img: img3,
+        img: stve,
         name: "Steve",
         twitterLink: "https://twitter.com/countingsort",
         redditLink: "https://www.reddit.com/user/SteveCCL",

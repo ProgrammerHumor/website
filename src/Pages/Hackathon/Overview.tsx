@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import anime from 'animejs';
-import { Container, Header, Button, Grid, Segment } from "semantic-ui-react";
+import { Icon, Header, Button, Grid, Segment, Responsive } from "semantic-ui-react";
 import Countdown from "./Countdown";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -12,37 +12,59 @@ export default class Overview extends Component {
         position: 'absolute',
         top: '0',
         visibility: 'hidden'
-      }}></a>
-    <div className="intro">
-      <div>
-        <Header className="humHack">Hackathon</Header>
-        <Grid stackable columns="equal" divided>
-        <Grid.Row stretched>
-          <Grid.Column>
-            <Segment basic>
+      }}/>
+      <div className="intro">
+        <div>
+          <Grid stackable columns="equal" divided>
+          <Grid.Row>
+            <Grid.Column>
               <Header className="humDesc">
                 The Hackathon dedicated to making you laugh
               </Header>
-            </Segment>
-            <Segment basic>
               <Countdown date={new Date("2019-08-01T00:00:00")} />
-            </Segment>
-            <Segment basic>
               <Header className="date">August 1st to August 30th</Header>
-            </Segment>
-            <Segment basic>
-            <div className="signUpButton">
-              <Button size="huge" fluid color="vk">
-                <h2 className="bold">Sign Up</h2>
+              <Header inverted>Use one of the buttons below for updates!</Header>
+              <div className="footerButton">
+              <Button
+                href="https://discord.gg/7cbeUvC"
+                icon
+                color="red"
+                size="massive"
+              >
+                <Icon name="discord" />
               </Button>
-            </div>
-            </Segment>
-          </Grid.Column>
-          </Grid.Row>
-        </Grid>
+              <Button
+              href="https://www.reddit.com/r/ProgrammerHumor"
+              icon
+              color="red"
+              size="massive"
+            >
+              <Icon name="reddit" />
+            </Button>
+            <Button
+              href=""
+              icon
+              color="red"
+              size="massive"
+            >
+              <Icon name="mail" />
+            </Button>
+              </div>
+              <div className="signUpButton">
+                <Button href="mailto:sponsors@programmerhumor.org" size="huge" fluid color="vk">
+                  <h2 className="bold">Sponsor The Event</h2>
+                </Button>
+              </div>
+            <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" id="mobileDropDown" circular icon="chevron down" />
+
+            </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </div>
+      </div>
+      <Responsive {...Responsive.onlyComputer}>
         <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" circular icon="chevron down" />
-      </div>
-      </div>
+      </Responsive>
     </div >
   );
 }

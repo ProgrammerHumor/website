@@ -65,14 +65,6 @@ class footerCom extends React.Component {
           >
             <Icon name="discord" />
           </Button>
-          <Button
-            href="https://www.twitch.com"
-            icon
-            color="black"
-            size="large"
-          >
-            <Icon name="twitch" />
-          </Button>
         </div>
       );
     }
