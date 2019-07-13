@@ -209,32 +209,38 @@ class AdminsProflies extends Component {
           </div>
         </Responsive>
         <Responsive {...Responsive.onlyMobile}>
-          {this.state.profileRow1.map(pro => (
-            <div className="mobileAdminContainer">
-              <AdminProfile
-                title={pro.title}
-                img={pro.img}
-                name={pro.name}
-                gitHubLink={pro.gitHubLink}
-                discordLink={pro.discordLink}
-                redditLink={pro.redditLink}
-                isMobile={true}
-              />
+          <div className='AboutUsWholePage'>
+            <div>
+              {this.state.profileRow1.map(pro => (
+                <div className="mobileAdminContainer">
+                  <AdminProfile
+                    title={pro.title}
+                    img={pro.img}
+                    name={pro.name}
+                    gitHubLink={pro.gitHubLink}
+                    discordLink={pro.discordLink}
+                    redditLink={pro.redditLink}
+                    isMobile={true}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-          {this.state.profileRow2.map(pro => (
-            <div className="mobileAdminContainer">
-              <AdminProfile
-                title={pro.title}
-                img={pro.img}
-                name={pro.name}
-                gitHubLink={pro.gitHubLink}
-                discordLink={pro.discordLink}
-                redditLink={pro.redditLink}
-                isMobile={true}
-              />
+            <div>
+              {this.state.profileRow2.map(pro => (
+                <div className="mobileAdminContainer">
+                  <AdminProfile
+                    title={pro.title}
+                    img={pro.img}
+                    name={pro.name}
+                    gitHubLink={pro.gitHubLink}
+                    discordLink={pro.discordLink}
+                    redditLink={pro.redditLink}
+                    isMobile={true}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </Responsive>
       </div>
     );
