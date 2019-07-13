@@ -49,7 +49,7 @@ export default class Overview extends Component {
             <Icon name="reddit" />
           </Button>
           <Button
-            href="https://www.reddit.com/r/ProgrammerHumor"
+            href=""
             icon
             color="red"
             size="massive"
@@ -58,7 +58,7 @@ export default class Overview extends Component {
           </Button>
             </div>
             <div className="signUpButton">
-              <Button size="huge" fluid color="vk">
+              <Button href="mailto:sponsors@programmerhumor.org" size="huge" fluid color="vk">
                 <h2 className="bold">Sponsor The Event</h2>
               </Button>
             </div>
