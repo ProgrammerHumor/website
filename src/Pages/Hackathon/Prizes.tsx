@@ -17,22 +17,25 @@ export default class Prizes extends Component {
               <div className="prizeBox" id="firstPlace">
                 <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/gold-medal.png"/>
                 <Header style= {{marginTop: "3px"}} size="medium" inverted>1st place</Header>
-                <div className="prizeDesc">TBD</div>
+                <div className="prizeDesc">$250 Digital Oceans Credits.<br/><br/>
+                Jetbrains Annual Personal Subscription</div>
               </div>
             </Grid.Column>
             <Grid.Column>
             <div className="prizeBox" id="secondPlace">
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-silver.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>2nd place</Header>
-              <div className="prizeDesc">TBD</div>
+              <div className="prizeDesc">$175 Digital Oceans Credits<br/><br/>
+              Jetbrains Annual Personal Subscription</div>
             </div>
             </Grid.Column>
             <Grid.Column>
             <div className="prizeBox" id="thirdPlace">
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-bronze.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>3rd place</Header>
-              <div className="prizeDesc">TBD</div>
-            </div>
+              <div className="prizeDesc">$75 Digital Oceans Credits<br/><br/>
+              Jetbrains Annual Personal Subscription</div>
+              </div>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -46,21 +49,24 @@ export default class Prizes extends Component {
               <div className="prizeBox" id="firstPlace">
                 <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/gold-medal.png"/>
                 <Header style= {{marginTop: "3px"}} size="medium" inverted>1st place</Header>
-                <div className="prizeDesc">TBD</div>
+                <div className="prizeDesc">$250 Digital Oceans Credits.<br/><br/>
+                Jetbrains Annual Personal Subscription</div>
               </div>
             </Grid.Column>
             <Grid.Column>
             <div className="prizeBox" id="secondPlace">
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-silver.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>2nd place</Header>
-              <div className="prizeDesc">TBD</div>
+              <div className="prizeDesc">$175 Digital Oceans Credits<br/><br/>
+              Jetbrains Annual Personal Subscription</div>
             </div>
             </Grid.Column>
             <Grid.Column>
             <div className="prizeBox" id="thirdPlace">
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-bronze.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>3rd place</Header>
-              <div className="prizeDesc">TBD</div>
+              <div className="prizeDesc">$75 Digital Oceans Credits<br/><br/>
+              Jetbrains Annual Personal Subscription</div>
             </div>
             </Grid.Column>
           </Grid.Row>
