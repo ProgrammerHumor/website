@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import "./AbousUsStyle.css";
 import {
-  Container,
   Icon,
   Image,
-  Menu,
-  Sidebar,
-  Responsive,
   Button,
-  Header
+  Header,
+  Responsive
 } from "semantic-ui-react";
 
 class AdminProfile extends Component {
@@ -21,81 +18,6 @@ class AdminProfile extends Component {
     highlightForOtherHalfBorder: "forAdminProfileTitle forAdminProfileTextArea"
   };
 
-  highlightBox = () => {
-    if (!this.props.isMobile) {
-      if (!this.props.checkPara(this.props.row1)) {
-        this.setState({
-          classNameForDiv: "paddingForDiv",
-          highlightForImageBorder: "HighlightImage",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
-        })
-      } else {
-        this.setState({
-          classNameForDiv: "forHighlightingPerson",
-          highlightForImageBorder: "HighlightImage",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile"
-        });
-      }
-    }
-    //console.log(this.state.highlighted);
-  };
-  unHighlightBox = () => {
-    if (!this.props.isMobile) {
-      if (!this.state.clickedIsTure) {
-        this.setState({
-          classNameForDiv: "paddingForDiv",
-          highlightForImageBorder: "",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea"
-        });
-      } else {
-        this.setState({
-          highlightForImageBorder: "",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea"
-        });
-      }
-      //console.log(this.state.highlightForOtherHalfBorder);
-    }
-    //console.log(this.state.highlighted);
-  };
-  whenClicked = () => {
-    if (!this.props.isMobile) {
-      if (!this.state.clickedIsTure) {
-        this.setState({
-          paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
-          clickedIsTure: true
-        });
-        this.props.displayPara(true);
-      } else {
-        this.setState({
-          paraToDisplay: "",
-          clickedIsTure: false
-        });
-        this.props.displayPara(false);
-      }
-    } else {
-      if (!this.state.clickedIsTure) {
-        this.setState({
-          highlightForImageBorder: "HighlightImage",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea HighlightOtherHalfOfAdmindProfile",
-          paraToDisplay: "THIs is the asdasd asd asd asd asd asd asd asd",
-          clickedIsTure: true
-        });
-      } else {
-        this.setState({
-          highlightForImageBorder: "",
-          highlightForOtherHalfBorder:
-            "forAdminProfileTitle forAdminProfileTextArea",
-          paraToDisplay: "",
-          clickedIsTure: false
-        });
-      }
-    }
-  };
   render() {
     return (
       <div>

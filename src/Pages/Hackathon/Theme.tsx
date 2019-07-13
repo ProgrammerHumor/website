@@ -8,7 +8,7 @@ export default class Theme extends Component {
     <div id="Theme">
       <div>
         <Header className="theme">Theme</Header>
-        <Image src={overeng}/>
+        <Image centered size="massive" src={overeng}/>
         <Header className="themeDesc">
           Come up with programs that make trivial actions complicated!
         </Header>

@@ -2,90 +2,78 @@ import React, { Component } from "react";
 import AdminProfile from "./AdminProfile";
 // import img1 from "./logo.png";
 // import img2 from "./BackgroundPattern.png";
+import gator from "../../images/people/gator.jpg";
+import delite from "../../images/people/delite.jpg";
+import jman from "../../images/people/jman.png";
+import pixxl from "../../images/people/pixxl.png";
+import dejay from "../../images/people/dejay.png"
 import img3 from "../../images/AndySamberg.jpg";
-import { Responsive } from "semantic-ui-react";
-
+import FourOFourImage from '../../images/ErrorImage.png';
+import { Responsive } from 'semantic-ui-react';
 class AdminsProflies extends Component {
   state = {
     profileRow1: [
       {
         key: 0,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+        title: "Streamer and Organizer",
+        img: gator,
+        name: "Gator",
+        gitHubLink: "https://github.com/A1igator",
+        redditLink: "https://www.reddit.com/user/xxaligatorxx",
+        discordLink: "https://discordapp.com/users/247019307253366784"
       },
       {
         key: 1,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+        title: "Judge and Organizer",
+        img: jman,
+        name: "Jman005",
+        gitHubLink: "https://github.com/jman005",
+        redditLink: "https://www.reddit.com/user/jman005",
+        discordLink: "https://discordapp.com/users/188089222958153728"
       },
       {
         key: 2,
-        title: "Celebrity",
+        title: "Streamer and Judge",
         img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+        name: "Steve",
+        twitterLink: "https://twitter.com/countingsort",
+        redditLink: "https://www.reddit.com/user/SteveCCL",
+        discordLink: "https://discordapp.com/users/249963729242947584"
       },
       {
         key: 3,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+        title: "Judge",
+        img: delite,
+        name: "Delite",
+        redditLink: "https://reddit.com/user/deliteplays",
+        discordLink: "https://discordapp.com/users/142242854167642122"
       },
       {
         key: 4,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
+        title: "Judge",
+        img: pixxl,
+        name: "PixxlMan",
         gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+        redditLink: "https://reddit.com/user/PixxlMan",
+        discordLink: "https://discordapp.com/users/273465815112613891"
       }
     ],
     profileRow2: [
       {
         key: 0,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+        title: "Judge",
+        img: dejay,
+        name: "DeJay",
+        redditLink: "https://reddit.com/user/iArentdeJay",
+        discordLink: "https://discordapp.com/users/194861788926443520"
       },
       {
         key: 1,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
+        title: "Judge and Website Creator",
+        img: FourOFourImage,
+        name: "Henry Morris",
+        gitHubLink: "https://github.com/404UsernameNotFound404",
+        redditLink: "https://www.reddit.com/user/JorrisMorris",
       },
       {
         key: 2,
@@ -95,8 +83,6 @@ class AdminsProflies extends Component {
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
         redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       },
       {
         key: 3,
@@ -106,8 +92,6 @@ class AdminsProflies extends Component {
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
         redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       },
       {
         key: 4,
@@ -117,8 +101,6 @@ class AdminsProflies extends Component {
         discordLink: "https://www.google.com/",
         gitHubLink: "https://www.google.com/",
         redditLink: "https://www.google.com/",
-        paraAboutSelf:
-          "I am a famous movie start who has nothing to do with website. I also enjoy other stuff, but right now I just want to fill space."
       }
     ],
     numberOfDisplayedParaRow1: 0,
@@ -154,13 +136,13 @@ class AdminsProflies extends Component {
   };
   checkRows = (Row1) => {
     if (Row1) {
-      if (this.state.numberOfDisplayedParaRow1 == 4) {
+      if (this.state.numberOfDisplayedParaRow1 === 4) {
         return false;
       } else {
         return true;
       }
     } else {
-      if (this.state.numberOfDisplayedParaRow2 == 4) {
+      if (this.state.numberOfDisplayedParaRow2 === 4) {
         return false;
       } else {
         return true;
@@ -178,6 +160,7 @@ class AdminsProflies extends Component {
                   title={pro.title}
                   img={pro.img}
                   name={pro.name}
+                  twitterLink={pro.twitterLink}
                   gitHubLink={pro.gitHubLink}
                   discordLink={pro.discordLink}
                   redditLink={pro.redditLink}
@@ -197,6 +180,7 @@ class AdminsProflies extends Component {
                   img={pro.img}
                   name={pro.name}
                   gitHubLink={pro.gitHubLink}
+                  twitterLink={pro.twitterLink}
                   discordLink={pro.discordLink}
                   redditLink={pro.redditLink}
                   isMobile={false}

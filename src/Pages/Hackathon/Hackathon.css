@@ -1,29 +1,15 @@
-@font-face {
-  font-family: "Steamy";
-  src: url("./Steamy.otf");
-}
-
-.overeng {
-  font-family: "Steamy", Fallback, sans-serif !important;
-  font-size: 10vw !important;
-  color: gold !important;
-  margin-top: 0% !important;
-  -webkit-text-stroke-width: 0.1vw;
-  -webkit-text-stroke-color: goldenrod;
-}
-
 .theme {
   color: white !important;
-  font-size: 7vh !important;
+  font-size: 55px !important;
   text-align: center;
-}
-
-#Theme {
-  background-color: rgb(37, 37, 37);
+  margin-top: 10px;
 }
 
 #Sponsors {
-  background-color: rgb(27, 27, 27);  
+  background-color: rgb(27, 27, 27);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 150px;
 }
 
 .intro {
@@ -31,12 +17,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 
 .date {
-  color: violet !important;
+  color: blueviolet !important;
   font-size: 5vw !important;
 }
 
@@ -57,7 +42,7 @@
 
   .humDesc {
     font-size: 5vw !important;
-    color: white !important;
+    color: greenyellow !important;
   }
 }
 
@@ -70,7 +55,7 @@
 
   .humDesc {
     font-size: 3vw !important;
-    color: white !important;
+    color: greenyellow !important;
   }
 
   .intro {
@@ -81,18 +66,11 @@
     position: relative;
   }
 
-  .scrollDown2 {
-    visibility: visible;
-    position: absolute;
-    bottom: 15%;
-    margin-left: auto;
-    margin-right: auto;
-    left: 48.5%;
-
+  .scrollDown {
+    margin-top: 10vh !important;
   }
 
   .date {
-    color: violet !important;
     font-size: 2vw !important;
   }
 }
@@ -114,8 +92,9 @@
 .prizeDesc {
   width: 50%;
   margin: auto;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
   color: white;
+  font-size: 17.5px;
 }
 
 .signUpButton {
