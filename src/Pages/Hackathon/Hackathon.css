@@ -91,11 +91,6 @@
     margin-bottom: 0 !important;
   }
 
-  .humHack {
-    font-size: 15vw !important;
-    color: white !important;
-  }
-
   .humDesc {
     font-size: 25px !important;
     color: greenyellow !important;
@@ -143,12 +138,16 @@
     white-space: normal !important;
     width: 92vw;
   }
+  .scrollDown {
+    margin-top: 100px !important;
+  }
 }
 
 @media (min-width: 768px) {
 
   .humDesc {
-    font-size: 75px !important;
+    font-size: 4.5vw !important;
+    margin-bottom: 10vh !important;
     color: greenyellow !important;
   }
 
@@ -161,15 +160,23 @@
   }
 
   .scrollDown {
-    margin-top: 10px !important;
+    position: absolute;
+    bottom: 10px;
+    /* margin-top: 10px !important; */
+  }
+
+  #mobileDropDown {
+    display: none;
   }
 
   .date {
     font-size: 45px !important;
+    margin-top: 5vh !important;
+    margin-bottom: 5vh !important;
   }
 
   .signUpButton {
-    margin-top: 100px;
+    margin-top: 10vh;
     box-shadow: 10px 10px 5px rgb(20, 20, 20);
   }
 
