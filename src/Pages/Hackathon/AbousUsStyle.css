@@ -4,6 +4,15 @@
   margin-bottom: 3%;
 }
 
+@media only screen and (max-width: 700px) { 
+  .AboutUsWholePage {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    margin-left: 5%;
+    width: 100%;
+  }
+}
 .forAdminProfileText {
   text-align: left !important;
 }
