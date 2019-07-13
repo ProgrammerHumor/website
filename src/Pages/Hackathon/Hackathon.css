@@ -119,6 +119,17 @@
     height: 140px;
     margin-bottom: 0;
   }
+  #Rules {
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  #FAQ {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
 }
 
 @media (min-width: 768px) {

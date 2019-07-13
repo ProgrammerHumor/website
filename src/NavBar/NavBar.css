@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-  .visible.dropDown {
+  .visible.dropDown:not(.multiple) {
     margin-bottom: 100vh;
   }
 }
