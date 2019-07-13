@@ -46,6 +46,7 @@
   margin-left: 200px;
   margin-right: 200px;
   margin-bottom: 150px;
+  margin-top: 150px;
 }
 
 #Rules {
@@ -133,6 +134,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 100px;
+    margin-top: 1600px;
   }
   .dropText {
     white-space: normal !important;

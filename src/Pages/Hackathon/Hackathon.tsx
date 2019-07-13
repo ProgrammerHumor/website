@@ -31,8 +31,8 @@ export default class HackathonPage extends Component {
         <Theme />
         <Sponsors />
         <Prizes />
-        <Judges/>
         <Rules />
+        <Judges/>
         <FAQ />
         <a href="https://icons8.com">Gold, Silver and Bronze Medal icon by Icons8</a>
       </div>

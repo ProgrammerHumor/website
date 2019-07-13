@@ -23,7 +23,7 @@ export default class Overview extends Component {
               </Header>
               <Countdown date={new Date("2019-08-01T00:00:00")} />
               <Header className="date">August 1st to August 30th</Header>
-              <Header inverted>Use one of the buttons below for updates!</Header>
+              <Header inverted>Join our discord for updates!</Header>
               <div className="footerButton">
               <Button
                 href="https://discord.gg/7cbeUvC"
@@ -33,22 +33,6 @@ export default class Overview extends Component {
               >
                 <Icon name="discord" />
               </Button>
-              <Button
-              href="https://www.reddit.com/r/ProgrammerHumor"
-              icon
-              color="red"
-              size="massive"
-            >
-              <Icon name="reddit" />
-            </Button>
-            <Button
-              href=""
-              icon
-              color="red"
-              size="massive"
-            >
-              <Icon name="mail" />
-            </Button>
               </div>
               <div className="signUpButton">
                 <Button href="mailto:sponsors@programmerhumor.org" size="huge" fluid color="vk">
@@ -56,7 +40,6 @@ export default class Overview extends Component {
                 </Button>
               </div>
             <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" id="mobileDropDown" circular icon="chevron down" />
-
             </Grid.Column>
             </Grid.Row>
           </Grid>
