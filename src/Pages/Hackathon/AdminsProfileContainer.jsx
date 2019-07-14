@@ -36,7 +36,6 @@ class AdminsProflies extends Component {
         title: "Streamer and Judge",
         img: stve,
         name: "Steve",
-        twitterLink: "https://twitter.com/countingsort",
         gitHubLink: "https://github.com/buffet",
         redditLink: "https://www.reddit.com/user/SteveCCL",
         discordLink: "https://discordapp.com/users/249963729242947584"
