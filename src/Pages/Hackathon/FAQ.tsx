@@ -17,7 +17,7 @@ export default class FAQ extends Component {
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="How will projects be judged?">
           <DropdownMenu>
-            <Message className="dropText">Shortly after the due date, our judges will assess your entry based on the judging criteria(TBA) (code quality is not included).</Message>            
+            <Message className="dropText">Shortly after the due date, our judges will assess your entry based on the judging criteria (TBA).</Message>            
           </DropdownMenu>
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="How can I form teams?">
