@@ -12,7 +12,7 @@ export default class FAQ extends Component {
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="How can one submit their entry?">
           <DropdownMenu>
-            <Message className="dropText">Once you've completed your entry, you will fill out our form (link will be provided after the Hackatho starts).</Message>            
+            <Message className="dropText">Once you've completed your entry, you will fill out our form (link will be provided after the Hackathon starts).</Message>            
           </DropdownMenu>
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="How will projects be judged?">
