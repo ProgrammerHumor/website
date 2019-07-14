@@ -71,6 +71,11 @@
     color: #888;
 }
 
+.dropText {
+  white-space: normal !important;
+  width: 80vw;
+}
+
 .date {
   color: greenyellow !important;
   font-size: 25px !important;
@@ -143,12 +148,12 @@
     margin-bottom: 100px;
     margin-top: 1000px;
   }
+  .scrollDown {
+    margin-top: 100px !important;
+  }
   .dropText {
     white-space: normal !important;
     width: 92vw;
-  }
-  .scrollDown {
-    margin-top: 100px !important;
   }
 }
 
