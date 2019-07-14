@@ -58,11 +58,11 @@ const NavBarMobile = ({
               <Dropdown.Item as={Link} smooth to="/Hackathon#Prizes">
                 Prizes
               </Dropdown.Item>
-              <Dropdown.Item as={Link} smooth to="/Hackathon#Judges">
-                Judges
-              </Dropdown.Item>
               <Dropdown.Item as={Link} smooth to="/Hackathon#Rules">
                 Rules
+              </Dropdown.Item>
+              <Dropdown.Item as={Link} smooth to="/Hackathon#Judges">
+                Judges
               </Dropdown.Item>
               <Dropdown.Item as={Link} smooth to="/Hackathon#FAQ">
                 FAQ
@@ -124,11 +124,11 @@ const NavBarDesktop = ({
           <Dropdown.Item as={Link} smooth to="/Hackathon#Prizes">
             Prizes
           </Dropdown.Item>
-          <Dropdown.Item as={Link} smooth to="/Hackathon#Judges">
-            Judges
-          </Dropdown.Item>
           <Dropdown.Item as={Link} smooth to="/Hackathon#Rules">
             Rules
+          </Dropdown.Item>
+          <Dropdown.Item as={Link} smooth to="/Hackathon#Judges">
+            Judges
           </Dropdown.Item>
           <Dropdown.Item as={Link} smooth to="/Hackathon#FAQ">
             FAQ
