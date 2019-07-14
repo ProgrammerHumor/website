@@ -26,7 +26,6 @@
 .prizeBox {
   margin-left: 20px;
   margin-right: 20px;
-  height: 200px;
   margin-bottom: 150px;
 }
 
@@ -100,13 +99,21 @@
     margin-top: 10px;
     box-shadow: 10px 10px 5px rgb(20, 20, 20);
   }
-  .prizeDesc {
+  .themeDesc2 {
     /* width: 50%; */
     margin: auto;
     /* padding-bottom: 150px; */
     color: white;
     font-size: 17.5px;
   }
+
+  .prizeDesc {
+    margin: auto;
+    padding-bottom: 25px;
+    color: white;
+    font-size: 17.5px;
+  }
+
   .themeDesc {
     color: white !important;
     font-size: 20px !important;
@@ -182,10 +189,20 @@
     box-shadow: 10px 10px 5px rgb(20, 20, 20);
   }
 
-  .prizeDesc {
+  .themeDesc2 {
     width: 50%;
     margin: auto;
     padding-bottom: 150px;
+    color: white;
+    font-size: 17.5px;
+  }
+
+  .prizeBox {
+    /* width: 50%; */
+    margin: auto;
+    padding-bottom: 25px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
     color: white;
     font-size: 17.5px;
   }
