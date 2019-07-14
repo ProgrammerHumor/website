@@ -15,7 +15,7 @@ class AdminsProflies extends Component {
     profileRow1: [
       {
         key: 0,
-        title: "Streamer, and Organizer",
+        title: "Streamer and Organizer",
         img: gator,
         name: "Gator",
         gitHubLink: "https://github.com/A1igator",
