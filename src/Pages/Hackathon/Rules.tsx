@@ -23,7 +23,7 @@ export default class Rules extends Component {
           <DropdownMenu>
             <Message className="dropText">Your program must be 100% legal and only use libraries which the creator permits you to use.</Message>
             <Message className="dropText">Your may not start programming before the start time.</Message>
-            <Message className="dropText">The program source code must be available.</Message>           
+            <Message className="dropText">The program source code must be available. For us to judge, it needs to use one of these <a href="https://choosealicense.com/licenses/">licenses</a>.</Message>           
             <Message className="dropText"> Any entry found to contain malicious code, including but not limited to: Cryptocurrency miners (unless this is directly related to your submission), viruses/file infectors, adware or spyware will be met with harsh punishment.</Message>
           </DropdownMenu>
         </Dropdown>

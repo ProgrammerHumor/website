@@ -179,18 +179,18 @@ class AdminsProflies extends Component {
           ))}
           {this.state.profileRow2.map(pro => {
             if (pro.key === 2){
-            return (
-            <div className="mobileAdminContainer">
-              <AdminProfile
-                title={pro.title}
-                img={pro.img}
-                name={pro.name}
-                gitHubLink={pro.gitHubLink}
-                discordLink={pro.discordLink}
-                redditLink={pro.redditLink}
-                isMobile={true}
-              />
-            </div>
+              return (
+              <div className="mobileAdminContainer">
+                <AdminProfile
+                  title={pro.title}
+                  img={pro.img}
+                  name={pro.name}
+                  gitHubLink={pro.gitHubLink}
+                  discordLink={pro.discordLink}
+                  redditLink={pro.redditLink}
+                  isMobile={true}
+                />
+              </div>
           )}})}
         </Responsive>
       </div>
