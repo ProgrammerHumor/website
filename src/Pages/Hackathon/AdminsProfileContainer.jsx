@@ -8,7 +8,6 @@ import jman from "../../images/people/jman.png";
 import pixxl from "../../images/people/pixxl.png";
 import dejay from "../../images/people/dejay.png"
 import stve from "../../images/people/stve.jpg"
-import img3 from "../../images/AndySamberg.jpg";
 import { Responsive } from "semantic-ui-react";
 
 class AdminsProflies extends Component {
@@ -62,6 +61,12 @@ class AdminsProflies extends Component {
     profileRow2: [
       {
         key: 0,
+      },
+      {
+        key: 1,
+      },
+      {
+        key: 2,
         title: "Judge",
         img: dejay,
         name: "DeJay",
@@ -69,71 +74,35 @@ class AdminsProflies extends Component {
         discordLink: "https://discordapp.com/users/194861788926443520"
       },
       {
-        key: 1,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-      },
-      {
-        key: 2,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
-      },
-      {
         key: 3,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
       },
       {
         key: 4,
-        title: "Celebrity",
-        img: img3,
-        name: "Andy Samberg",
-        discordLink: "https://www.google.com/",
-        gitHubLink: "https://www.google.com/",
-        redditLink: "https://www.google.com/",
       }
     ],
     numberOfDisplayedParaRow1: 0,
     numberOfDisplayedParaRow2: 0
   };
   displayParaRow1 = (bool) => {
-    console.log("display1");
     if (bool) {
       this.setState({
         numberOfDisplayedParaRow1: this.state.numberOfDisplayedParaRow1 + 1
       });
-      console.log(this.state.numberOfDisplayedParaRow1 + " row1");
     } else {
       this.setState({
         numberOfDisplayedParaRow1: this.state.numberOfDisplayedParaRow1 - 1
       });
-      console.log(this.state.numberOfDisplayedParaRow1 + " row1");
     }
   };
   displayParaRow2 = (bool) => {
-    console.log("display2");
     if (bool) {
       this.setState({
         numberOfDisplayedParaRow2: this.state.numberOfDisplayedParaRow2 + 1
       });
-      console.log(this.state.numberOfDisplayedParaRow2 + " row2");
     } else {
       this.setState({
         numberOfDisplayedParaRow2: this.state.numberOfDisplayedParaRow2 - 1
       });
-      console.log(this.state.numberOfDisplayedParaRow2 + " row2");
     }
   };
   checkRows = (Row1) => {
@@ -208,7 +177,9 @@ class AdminsProflies extends Component {
               />
             </div>
           ))}
-          {this.state.profileRow2.map(pro => (
+          {this.state.profileRow2.map(pro => {
+            if (pro.key === 2){
+            return (
             <div className="mobileAdminContainer">
               <AdminProfile
                 title={pro.title}
@@ -220,7 +191,7 @@ class AdminsProflies extends Component {
                 isMobile={true}
               />
             </div>
-          ))}
+          )}})}
         </Responsive>
       </div>
     );

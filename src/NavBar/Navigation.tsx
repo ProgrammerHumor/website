@@ -14,7 +14,6 @@ class Navigation extends Component {
 
 
   render() {
-    console.log(document.body.clientWidth);
     if (document.body.clientWidth <= 700) {
       return (
         <div className="App">

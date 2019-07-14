@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Header, Grid, Button, Dropdown, DropdownMenu, Message } from "semantic-ui-react";
-import { HashLink as Link } from 'react-router-hash-link';
 
 export default class Rules extends Component {
   render = () => (
@@ -20,7 +19,7 @@ export default class Rules extends Component {
             <Message className="dropText">To keep things somewhat fair, we unfortunately have to have a cap on team size. Prizes will be distributed evenly between winning teams.</Message>            
           </DropdownMenu>
         </Dropdown>
-        <Dropdown className="dropDown" fluid multiple text="Program Rules">
+        <Dropdown className="dropDown" fluid multiple text="Program rules">
           <DropdownMenu>
             <Message className="dropText">Your program must be 100% legal and only use libraries which the creator permits you to use.</Message>
             <Message className="dropText">Your may not start programming before the start time.</Message>

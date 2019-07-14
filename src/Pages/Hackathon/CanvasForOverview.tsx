@@ -159,13 +159,10 @@ class CanvasForOverview extends Component {
 
   componentWillUnmount = () => {
     this.LoopRuning = false;
-    console.log(this.LoopRuning);
   }
 
   anim = () => {
-  
-    console.log(this.LoopRuning)
-    if (this.LoopRuning){
+      if (this.LoopRuning){
       window.requestAnimationFrame( this.anim );
       ++this.frame;
       
