@@ -17,7 +17,7 @@ export default class Prizes extends Component {
               <div className="prizeBox" id="firstPlace">
                 <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/gold-medal.png"/>
                 <Header style= {{marginTop: "3px"}} size="medium" inverted>1st place</Header>
-                <div className="prizeDesc">$250 DigitalOcean Credits.<br/><br/>
+                <div className="prizeDesc">$250 DigitalOcean Credits<br/><br/>
                 Jetbrains Annual Personal Subscription</div>
               </div>
             </Grid.Column>
