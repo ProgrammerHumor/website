@@ -22,12 +22,12 @@ export default class FAQ extends Component {
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="How can I form teams?">
           <DropdownMenu>
-            <Message className="dropText">You can invite your friends, or, if you have never heard of those magical creatures, look for people on the subreddit or our <a href="https://discord.gg/7cbeUvC">Discord Server</a>. You can even go solo! Anything works as long as team.length &lt;= 4</Message>            
+            <Message className="dropText">You can invite your friends, or, if you have never heard of those magical creatures, look for people on the subreddit or our <a href="https://discord.gg/UuYDUSX">Discord Server</a>. You can even go solo! Anything works as long as team.length &lt;= 4</Message>            
           </DropdownMenu>
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="Help! I need additional info.">
           <DropdownMenu>
-            <Message className="dropText"> You can ask either on the subreddit post, or on the <a href="https://discord.gg/7cbeUvC">Discord Server</a>. We recommend joining Discord since you would be more likely to get assistance quickly there.</Message>            
+            <Message className="dropText"> You can ask either on the subreddit post, or on the <a href="https://discord.gg/UuYDUSX">Discord Server</a>. We recommend joining Discord since you would be more likely to get assistance quickly there.</Message>            
           </DropdownMenu>
         </Dropdown>
     </div>
