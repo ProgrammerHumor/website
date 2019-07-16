@@ -26,7 +26,7 @@ export default class HackathonPage extends Component {
     this.waitForElement();
     return (
       <div>
-        <CanvasForOverview />
+        {!("webkitLineBreak" in document.documentElement.style) && <CanvasForOverview />}
         <Overview />
         <Theme />
         <Sponsors />
