@@ -8,6 +8,7 @@ import jman from "../../images/people/jman.png";
 import pixxl from "../../images/people/pixxl.png";
 import dejay from "../../images/people/dejay.png"
 import stve from "../../images/people/stve.jpg"
+import patrik from "../../images/people/patrik.webp"
 import { Responsive } from "semantic-ui-react";
 
 class AdminsProflies extends Component {
@@ -53,7 +54,6 @@ class AdminsProflies extends Component {
         title: "Judge",
         img: pixxl,
         name: "PixxlMan",
-        gitHubLink: "https://www.google.com/",
         redditLink: "https://reddit.com/user/PixxlMan",
         discordLink: "https://discordapp.com/users/273465815112613891"
       }
@@ -61,17 +61,23 @@ class AdminsProflies extends Component {
     profileRow2: [
       {
         key: 0,
-      },
-      {
-        key: 1,
-      },
-      {
-        key: 2,
         title: "Judge",
         img: dejay,
         name: "DeJay",
         redditLink: "https://reddit.com/user/iArentdeJay",
         discordLink: "https://discordapp.com/users/194861788926443520"
+      },
+      {
+        key: 1,
+        title: "Judge",
+        img: patrik,
+        name: "Patrik",
+        gitHubLink: "https://github.com/PartikXop",
+        redditLink: "https://reddit.com/user/PatrikxPatrola",
+        discordLink: "https://discordapp.com/users/343546982918520833"
+      },
+      {
+        key: 2,
       },
       {
         key: 3,
@@ -178,7 +184,7 @@ class AdminsProflies extends Component {
             </div>
           ))}
           {this.state.profileRow2.map(pro => {
-            if (pro.key === 2){
+            if (pro.key === 0 || pro.key === 1){
               return (
               <div className="mobileAdminContainer">
                 <AdminProfile
