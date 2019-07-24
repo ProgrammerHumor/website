@@ -28,7 +28,7 @@ class footerCom extends React.Component {
               <Icon name="reddit" />
             </Button>
             <Button
-              href="https://discord.gg/UuYDUSX"
+              href="https://discord.gg/programmerhumor"
               icon
               color="black"
               size="massive"
