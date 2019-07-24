@@ -26,7 +26,7 @@ export default class Overview extends Component {
               <Header inverted>Join our discord for updates!</Header>
               <div className="footerButton">
               <Button
-                href="https://discord.gg/UuYDUSX"
+                href="https://discord.gg/programmerhumor"
                 icon
                 color="red"
                 size="massive"
