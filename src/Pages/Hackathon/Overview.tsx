@@ -27,7 +27,7 @@ export default class Overview extends Component {
               <Button
                 href="https://discord.gg/ph"
                 icon
-                color="red"
+                color="blue"
                 size="massive"
               >
                 <Icon name="discord" />
@@ -35,7 +35,7 @@ export default class Overview extends Component {
               <Button
                 href="https://www.twitch.tv/programmerhumor"
                 icon
-                color="red"
+                color="purple"
                 size="massive"
               >
                 <Icon name="twitch" />
