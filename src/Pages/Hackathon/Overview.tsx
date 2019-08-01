@@ -20,7 +20,12 @@ export default class Overview extends Component {
               <Header className="humDesc">
                 The Hackathon dedicated to making you laugh
               </Header>
-              <Header inverted style={{fontSize: "75px"}}>The Event Has Begun!</Header>
+              <Responsive {...Responsive.onlyComputer}>
+                <Header inverted style={{fontSize: "8em"}}>The Event Has Begun!</Header>
+              </Responsive>
+              <Responsive {...Responsive.onlyMobile}>
+                <Header inverted style={{fontSize: "4em"}}>The Event Has Begun!</Header>
+              </Responsive>
               <Header className="date">August 1st to August 30th</Header>
               <Header inverted>Join our Discord and watch us on Twitch!</Header>
               <div className="footerButton">
@@ -40,11 +45,6 @@ export default class Overview extends Component {
               >
                 <Icon name="twitch" />
               </Button>
-              </div>
-              <div className="signUpButton">
-                <Button href="mailto:sponsors@programmerhumor.org" size="huge" fluid color="vk">
-                  <h2 className="bold">Sponsor The Event</h2>
-                </Button>
               </div>
             <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" id="mobileDropDown" circular icon="chevron down" />
             </Grid.Column>
