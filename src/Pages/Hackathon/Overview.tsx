@@ -20,7 +20,7 @@ export default class Overview extends Component {
               <Header className="humDesc">
                 The Hackathon dedicated to making you laugh
               </Header>
-              <Header inverted style={{fontSize: "75px"}}>The Event Has Begon!</Header>
+              <Header inverted style={{fontSize: "75px"}}>The Event Has Begun!</Header>
               <Header className="date">August 1st to August 30th</Header>
               <Header inverted>Join our Discord and watch us on Twitch!</Header>
               <div className="footerButton">
