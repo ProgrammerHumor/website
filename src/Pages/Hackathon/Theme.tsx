@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Header, Image } from "semantic-ui-react";
-import { HashLink as Link } from 'react-router-hash-link';
+import ReactMarkdown from 'react-markdown';
 import overeng from "../../images/Overeng.png";
 
 export default class Theme extends Component {
@@ -12,10 +12,7 @@ export default class Theme extends Component {
         <Header className="themeDesc">
           Come up with programs that make trivial actions complicated!
         </Header>
-        <div className="themeDesc2">
-          Our subreddit has had a far-reaching history of making simple applications impossible to use. In our first Hackathon, you'll join that legacy by creating a program in any language of your choice which is as tedious to use as possible. Command line applications, GUIs, websites or anything else under the sun is permitted. We want creativity.
-          If you'd like some examples of what to make, go to our subreddit and see <a href="https://www.reddit.com/r/ProgrammerHumor/search?q=flair_name%3A%22(Bad)%20UI%22&restrict_sr=1&sort=top">posts labeled "Bad UI"</a>. 
-        </div>
+        <ReactMarkdown className="themeDesc2" source={"## Judging Criteria\nYou will be judged on these three aspects:\n### UI Overengineering\nEx: you make the UI have way more features than it needs. Keep in mind while some bad UI posts fit this, not all do.\n### Code Overengineering\nEx: you future proof the crap out of your program, by writing code that accomedates every scenario.\n### DevOps Overengineering\nEx: you have the best serverless design of having a million kubernetes containers.\n\nKeep in mind you do not have to have your project fit all the criterias above. You can do all or focus on one. We won't judge any other aspect of your project."} />
       </div>
     </div>
   );

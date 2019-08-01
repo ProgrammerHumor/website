@@ -109,7 +109,6 @@
     margin: auto;
     /* padding-bottom: 150px; */
     color: white;
-    font-size: 17.5px;
   }
 
   .prizeDesc {
@@ -198,8 +197,9 @@
     width: 50%;
     margin: auto;
     padding-bottom: 150px;
+    margin-top: 50px;
     color: white;
-    font-size: 17.5px;
+    line-height: 2px;
   }
 
   .prizeBox {

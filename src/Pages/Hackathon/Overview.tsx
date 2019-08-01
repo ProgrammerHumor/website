@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import anime from 'animejs';
 import { Icon, Header, Button, Grid, Segment, Responsive } from "semantic-ui-react";
-import Countdown from "./Countdown";
 import { HashLink as Link } from "react-router-hash-link";
 
 export default class Overview extends Component {
@@ -21,17 +20,25 @@ export default class Overview extends Component {
               <Header className="humDesc">
                 The Hackathon dedicated to making you laugh
               </Header>
-              <Countdown date={new Date("2019-08-01T00:00:00")} />
+              <Header inverted style={{fontSize: "75px"}}>The Event Has Begon!</Header>
               <Header className="date">August 1st to August 30th</Header>
-              <Header inverted>Join our discord for updates!</Header>
+              <Header inverted>Join our Discord and watch us on Twitch!</Header>
               <div className="footerButton">
               <Button
-                href="https://discord.gg/UuYDUSX"
+                href="https://discord.gg/ph"
                 icon
                 color="red"
                 size="massive"
               >
                 <Icon name="discord" />
+              </Button>
+              <Button
+                href="https://www.twitch.tv/programmerhumor"
+                icon
+                color="red"
+                size="massive"
+              >
+                <Icon name="twitch" />
               </Button>
               </div>
               <div className="signUpButton">

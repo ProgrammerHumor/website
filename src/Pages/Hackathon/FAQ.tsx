@@ -25,6 +25,11 @@ export default class FAQ extends Component {
             <Message className="dropText">You can invite your friends, or, if you have never heard of those magical creatures, look for people on the subreddit or our <a href="https://discord.gg/UuYDUSX">Discord Server</a>. You can even go solo! Anything works as long as team.length &lt;= 4</Message>            
           </DropdownMenu>
         </Dropdown>
+        <Dropdown className="dropDown" fluid multiple text="Is it too late to join now?">
+          <DropdownMenu>
+            <Message className="dropText">As long as it's not August 31st, it is not too late. You can start programming at anytime and work on it as long as you want!</Message>            
+          </DropdownMenu>
+        </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="Help! I need additional info.">
           <DropdownMenu>
             <Message className="dropText"> You can ask either on the subreddit post, or on the <a href="https://discord.gg/UuYDUSX">Discord Server</a>. We recommend joining Discord since you would be more likely to get assistance quickly there.</Message>            
