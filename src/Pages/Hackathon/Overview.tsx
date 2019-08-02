@@ -26,7 +26,7 @@ export default class Overview extends Component {
               <Responsive {...Responsive.onlyMobile}>
                 <Header inverted style={{fontSize: "4em"}}>The Event Has Begun!</Header>
               </Responsive>
-              <Header className="date">August 1st to August 30th</Header>
+              <Header className="date">August 1st to August 31th</Header>
               <Header inverted>Join our Discord and watch us on Twitch!</Header>
               <div className="footerButton">
               <Button
