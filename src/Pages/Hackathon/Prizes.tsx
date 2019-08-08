@@ -10,14 +10,13 @@ export default class Prizes extends Component {
         <Responsive {...Responsive.onlyComputer}>
         <Grid stackable columns="5" divided>
           <Grid.Row>
-            
               <Grid.Column/>
-            
             <Grid.Column>
               <div className="prizeBox" id="firstPlace">
                 <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/gold-medal.png"/>
                 <Header style= {{marginTop: "3px"}} size="medium" inverted>1st place</Header>
                 <div className="prizeDesc">$250 DigitalOcean Credits<br/><br/>
+                Reddit Platinum<br/><br/>
                 JetBrains Annual Personal Subscription</div>
               </div>
             </Grid.Column>
@@ -26,7 +25,8 @@ export default class Prizes extends Component {
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-silver.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>2nd place</Header>
               <div className="prizeDesc">$175 DigitalOcean Credits<br/><br/>
-              JetBrains Annual Personal Subscription</div>
+              Two Reddit Golds<br/><br/>
+              JetBrains Annual Personal Subscription (if any are left)</div>
             </div>
             </Grid.Column>
             <Grid.Column>
@@ -34,8 +34,20 @@ export default class Prizes extends Component {
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-bronze.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>3rd place</Header>
               <div className="prizeDesc">$75 DigitalOcean Credits<br/><br/>
-              JetBrains Annual Personal Subscription</div>
+              Reddit Gold<br/><br/>
+              JetBrains Annual Personal Subscription (if any are left)</div>
               </div>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column/>
+            <Grid.Column/>
+            <Grid.Column>
+            <div className="prizeBox" id="peoplePlace">
+              <img src="https://img.icons8.com/dusk/48/000000/conference-call.png"/>
+              <Header style= {{marginTop: "3px"}} size="medium" inverted>People's Favorite</Header>
+              <div className="prizeDesc">Reddit Platinum<br/><br/></div>
+            </div>
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -43,13 +55,12 @@ export default class Prizes extends Component {
         <Responsive {...Responsive.onlyMobile}>
         <Grid stackable columns="5" divided>
           <Grid.Row>
-            
-            
             <Grid.Column>
               <div className="prizeBox" id="firstPlace">
                 <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/gold-medal.png"/>
                 <Header style= {{marginTop: "3px"}} size="medium" inverted>1st place</Header>
                 <div className="prizeDesc">$250 Digital Oceans Credits.<br/><br/>
+                Reddit Platinum<br/><br/>
                 Jetbrains Annual Personal Subscription</div>
               </div>
             </Grid.Column>
@@ -58,7 +69,8 @@ export default class Prizes extends Component {
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-silver.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>2nd place</Header>
               <div className="prizeDesc">$175 Digital Oceans Credits<br/><br/>
-              Jetbrains Annual Personal Subscription</div>
+              Two Reddit Golds<br/><br/>
+              Jetbrains Annual Personal Subscription (if any are left)</div>
             </div>
             </Grid.Column>
             <Grid.Column>
@@ -66,7 +78,17 @@ export default class Prizes extends Component {
               <img style={{marginTop:"-4px"}} src="https://img.icons8.com/color/48/000000/olympic-medal-bronze.png"/>
               <Header style= {{marginTop: "3px"}} size="medium" inverted>3rd place</Header>
               <div className="prizeDesc">$75 Digital Oceans Credits<br/><br/>
-              Jetbrains Annual Personal Subscription</div>
+              Reddit Gold<br/><br/>
+              Jetbrains Annual Personal Subscription (if any are left)</div>
+            </div>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+            <div className="prizeBox" id="peoplePlace">
+              <img src="https://img.icons8.com/dusk/48/000000/conference-call.png"/>
+              <Header style= {{marginTop: "3px"}} size="medium" inverted>People's Favorite</Header>
+              <div className="prizeDesc">Reddit Platinum<br/><br/></div>
             </div>
             </Grid.Column>
           </Grid.Row>
