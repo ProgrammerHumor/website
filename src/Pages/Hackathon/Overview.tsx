@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import anime from 'animejs';
 import { Icon, Header, Button, Grid, Segment, Responsive } from "semantic-ui-react";
 import { HashLink as Link } from "react-router-hash-link";
 
@@ -45,6 +44,11 @@ export default class Overview extends Component {
               >
                 <Icon name="twitch" />
               </Button>
+              </div>
+              <div className="signUpButton">
+                <Button href="https://forms.gle/KnbNsP5MvbV7ctii8" size="huge" fluid color="vk">
+                  <h2 className="bold">Submit Your Entry</h2>
+                </Button>
               </div>
             <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" id="mobileDropDown" circular icon="chevron down" />
             </Grid.Column>
