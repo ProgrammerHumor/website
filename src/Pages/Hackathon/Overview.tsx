@@ -20,10 +20,10 @@ export default class Overview extends Component {
                 The Hackathon dedicated to making you laugh
               </Header>
               <Responsive {...Responsive.onlyComputer}>
-                <Header inverted style={{fontSize: "8em"}}>The Event Has Begun!</Header>
+                <Header inverted style={{fontSize: "8em"}}>The event has ended!</Header>
               </Responsive>
               <Responsive {...Responsive.onlyMobile}>
-                <Header inverted style={{fontSize: "4em"}}>The Event Has Begun!</Header>
+                <Header inverted style={{fontSize: "4em"}}>The event has ended!</Header>
               </Responsive>
               <Header className="date">August 1st to August 31th</Header>
               <Header inverted>Join our Discord and watch us on Twitch!</Header>
@@ -46,9 +46,6 @@ export default class Overview extends Component {
               </Button>
               </div>
               <div className="signUpButton">
-                <Button href="https://forms.gle/KnbNsP5MvbV7ctii8" size="huge" fluid color="vk">
-                  <h2 className="bold">Submit Your Entry</h2>
-                </Button>
               </div>
             <Button as={Link} smooth to="/Hackathon#Theme" className="scrollDown" id="mobileDropDown" circular icon="chevron down" />
             </Grid.Column>
