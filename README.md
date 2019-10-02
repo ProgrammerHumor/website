@@ -1,6 +1,10 @@
 This is the code for the ProgrammerHumor website written in React with TyepScript. Some parts of hackathon are not well coded due to the deadline of starting the hackathon.
 
-## Available Scripts
+## How to Run
+
+Firstly, to install dependencies, you need to run:
+
+### `yarn`
 
 In the project directory, you can run:
 
