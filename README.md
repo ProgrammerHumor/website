@@ -1,4 +1,4 @@
-This is the code for the ProgrammerHumor website written in React with TyepScript. Some parts of hackathon are not well coded due to the deadline of starting the hackathon.
+This is the code for the ProgrammerHumor website written in React with TypeScript. Some parts of hackathon are not well coded due to the deadline of starting the hackathon.
 
 ## How to Run
 
