@@ -27,7 +27,7 @@ export default class FAQ extends Component {
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="Is it too late to join now?">
           <DropdownMenu>
-            <Message className="dropText">As long as it's not August 31st, it is not too late. You can start programming at anytime and work on it as long as you want!</Message>            
+            <Message className="dropText">Yes</Message>            
           </DropdownMenu>
         </Dropdown>
         <Dropdown className="dropDown" fluid multiple text="Help! I need additional info.">
