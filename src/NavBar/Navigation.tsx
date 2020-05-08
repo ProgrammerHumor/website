@@ -32,7 +32,6 @@ class Navigation extends Component {
     } else {
       return (
         <div className='App'>
-          <div id="pageBackground" className="desktopPageBackground">
             <NavBar>
               <Switch>
                 <Route path="/Home" exact component={Home} />
@@ -41,7 +40,6 @@ class Navigation extends Component {
               </Switch>
             </NavBar>
           </div>
-        </div>
       );
     }
   }

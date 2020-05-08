@@ -22,7 +22,7 @@ class footerCom extends React.Component {
             <Button
               href="https://www.reddit.com/r/ProgrammerHumor"
               icon
-              color="black"
+              color="orange"
               size="massive"
             >
               <Icon name="reddit" />
@@ -30,7 +30,7 @@ class footerCom extends React.Component {
             <Button
               href="https://discord.gg/ph"
               icon
-              color="black"
+              color="violet"
               size="massive"
             >
               <Icon name="discord" />
@@ -38,7 +38,7 @@ class footerCom extends React.Component {
             <Button
               href="https://www.twitch.tv/programmerhumor"
               icon
-              color="black"
+              color="purple"
               size="massive"
             >
               <Icon name="twitch" />

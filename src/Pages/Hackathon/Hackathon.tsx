@@ -26,13 +26,13 @@ export default class HackathonPage extends Component {
     this.waitForElement();
     return (
       <div>
-        {!("webkitLineBreak" in document.documentElement.style) && <CanvasForOverview />}
+        {/* {!("webkitLineBreak" in document.documentElement.style) && <CanvasForOverview />} */}
         <Overview />
-        <Theme />
-        <Sponsors />
-        <Prizes />
+        {/* <Theme /> */}
+        {/* <Sponsors /> */}
+        {/* <Prizes /> */}
         <Rules />
-        <Judges/>
+        {/* <Judges/> */}
         <FAQ />
         <a href="https://icons8.com">Gold, Silver and Bronze Medal icon by Icons8</a>
       </div>

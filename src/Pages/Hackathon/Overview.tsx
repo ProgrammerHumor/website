@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Icon, Header, Button, Grid, Segment, Responsive } from "semantic-ui-react";
 import { HashLink as Link } from "react-router-hash-link";
+import Countdown from "./Countdown";
 
 export default class Overview extends Component {
   render = () => (
@@ -19,13 +20,8 @@ export default class Overview extends Component {
               <Header className="humDesc">
                 The Hackathon dedicated to making you laugh
               </Header>
-              <Responsive {...Responsive.onlyComputer}>
-                <Header inverted style={{fontSize: "8em"}}>The event has ended!</Header>
-              </Responsive>
-              <Responsive {...Responsive.onlyMobile}>
-                <Header inverted style={{fontSize: "4em"}}>The event has ended!</Header>
-              </Responsive>
-              <Header className="date">August 1st to August 31th</Header>
+              <Countdown date={new Date("2020-08-16T00:00:00")} />
+              <Header className="date">August 16th to August 22nd</Header>
               <Header inverted>Join our Discord and watch us on Twitch!</Header>
               <div className="footerButton">
               <Button

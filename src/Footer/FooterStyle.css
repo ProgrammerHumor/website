@@ -1,15 +1,5 @@
-.forFooterBackground {
-  background-color: rgb(0, 0, 0);
-  left: 0;
-  right: 0;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  margin: auto;
-  bottom: 0;
-}
-
 .forFooterBackgroundMobile {
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
   height: fit-content;
   padding: 1em 0;
@@ -23,7 +13,7 @@
 .footer img {
   width: 50% !important;
   height: 75% !important;
-  opacity: 0.5%;
+  opacity: 1 !important;
   margin: auto;
 }
 

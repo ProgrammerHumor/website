@@ -3,11 +3,11 @@
 }
 
 .description {
-  color: #ccc !important;
+  color: white !important;
 }
 
 .goToHackathonButton {
-  background-color: #5d5f82 !important;
+  background-color: #FF4500 !important;
   margin-top: 3vh !important;
   margin-bottom: 6vh !important;
   padding-top:20px !important;

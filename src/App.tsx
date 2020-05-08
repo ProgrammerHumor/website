@@ -5,18 +5,17 @@ import "./App.css";
 import 'semantic-ui-css/semantic.min.css'
 
 import Navigation from "./NavBar/Navigation";
-import NavBar from './NavBar/NavBar';
 import Footer from './Footer/footer';
 
 class App extends Component {
   render = () => (
     <Router>
-      <div>
+          <div id="pageBackground" className="desktopPageBackground">
         <Navigation />
         <div className="forFooterBackgroundMobile">
           <Footer />
         </div>
-      </div>
+        </div>
     </Router>
   );
 }
