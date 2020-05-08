@@ -17,13 +17,11 @@ class Navigation extends Component {
     if (document.body.clientWidth <= 700) {
       return (
         <div className="App">
-
           <div id="pageBackground" className="mobilePageBackground">
             <NavBar>
               <Switch>
-                <Route path="/Home" exact component={Home} />
                 <Route path="/Hackathon" component={Hackathon} />
-                <Route path="/" render={() => <Redirect to="/Home" />} />
+                <Route path="/" component={Home}/>} />
               </Switch>
             </NavBar>
           </div>
@@ -34,9 +32,8 @@ class Navigation extends Component {
         <div className='App'>
             <NavBar>
               <Switch>
-                <Route path="/Home" exact component={Home} />
                 <Route path="/Hackathon" component={Hackathon} />
-                <Route path="/" render={() => <Redirect to="/Home" />} />
+                <Route path="/" component={Home}/>
               </Switch>
             </NavBar>
           </div>
